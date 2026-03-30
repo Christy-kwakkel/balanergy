@@ -8,7 +8,7 @@
 import { useEffect, useRef, useState } from "react";
 import { MapPin, Phone, Mail, Clock, ChevronDown, Menu, X, Star, Calendar } from "lucide-react";
 
-const ONLINE_AGENDA_URL = "https://balanergy.salonized.com/bookings/new";
+const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 
 const HERO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/hero-massage-7TjQGLyDBijKFozQs3yYZd.webp";
 const STUDIO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/about-mascha-dvPzjAqj7qTAQ57W5UwV4y.webp";
