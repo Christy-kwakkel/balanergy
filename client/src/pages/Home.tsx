@@ -102,22 +102,22 @@ const treatments = [
 
 const reviews = [
   {
-    name: "Sandra V.",
+    name: "Claudia Scholten",
     rating: 5,
-    text: "Mascha heeft gouden handen! De Thaise yogamassage was precies wat ik nodig had na een stressvolle periode. Ik voelde me daarna zo licht en ontspannen. Zeker een aanrader!",
-    date: "2024",
+    text: "Want all the attention and time for you? Want to stretch and relax? Need some loving attention? Balanergy has it all. The Thai yoga massage is highly recommended.",
+    date: "7 years ago",
   },
   {
-    name: "Peter K.",
+    name: "Gerbrig Noordenbos",
     rating: 5,
-    text: "Professionele en persoonlijke aanpak. Mascha luistert goed naar wat je nodig hebt en past de behandeling daar perfect op aan. De sfeer in de praktijk is heerlijk rustig.",
-    date: "2024",
+    text: "Today I had a wonderful massage with Mascha from Balanergy. Highly recommended! Mascha is very enthusiastic, sweet, and knowledgeable. I had several aches and pains, but the massage largely alleviated them. I felt completely relaxed and happy and will definitely schedule another appointment!",
+    date: "5 years ago",
   },
   {
-    name: "Marieke B.",
+    name: "Angelique Junte",
     rating: 5,
-    text: "Al jaren kom ik bij Balanergy voor mijn maandelijkse massage. De voetreflexologie is fantastisch – je merkt echt dat Mascha weet wat ze doet. Altijd een fijn moment voor mezelf.",
-    date: "2024",
+    text: "At Mascha's, you can have your massage done exactly as you wish. She is proactive, even when you have physical complaints, and advises on what she thinks is best. She gives fantastic massages; my body feels ready to face the world again afterwards.",
+    date: "7 years ago",
   },
 ];
 
