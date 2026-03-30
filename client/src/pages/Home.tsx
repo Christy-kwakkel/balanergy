@@ -419,14 +419,14 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="p-5 flex flex-col h-full">
+                <div className="p-5 flex flex-col h-full" style={{ minHeight: "420px" }}>
                   <p className="font-body text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#8DA089" }}>
                     {t.subtitle}
                   </p>
                   <h3 className="font-display text-xl font-semibold mb-3" style={{ color: "#3E3A37" }}>
                     {t.title}
                   </h3>
-                  <p className="font-body text-sm leading-relaxed mb-6 flex-grow" style={{ color: "#6B6560" }}>
+                  <p className="font-body text-sm leading-relaxed flex-grow" style={{ color: "#6B6560" }}>
                     {t.description}
                   </p>
 
