@@ -447,8 +447,8 @@ export default function Home() {
                     href={ONLINE_AGENDA_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-center btn-primary text-sm w-full"
-                    style={{ padding: "0.6rem 1rem" }}
+                    className="block text-center btn-primary text-sm w-full font-semibold"
+                    style={{ padding: "0.75rem 1rem", display: "flex", alignItems: "center", justifyContent: "center" }}
                   >
                     Boek Nu
                   </a>
