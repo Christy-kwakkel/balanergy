@@ -419,19 +419,19 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="p-5 flex flex-col h-full">
+                <div className="p-5 flex flex-col h-full justify-between">
                   <p className="font-body text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#8DA089" }}>
                     {t.subtitle}
                   </p>
                   <h3 className="font-display text-xl font-semibold mb-3" style={{ color: "#3E3A37" }}>
                     {t.title}
                   </h3>
-                  <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560", height: "7.8em", overflow: "hidden", marginBottom: "0" }}>
+                  <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560", height: "9.1em", overflow: "hidden", marginBottom: "0" }}>
                     {t.description}
                   </p>
 
                   {/* Prices */}
-                  <div className="border-t pt-4 mb-4" style={{ borderColor: "rgba(198,156,109,0.25)" }}>
+                  <div className="border-t pt-4 mb-4 mt-auto" style={{ borderColor: "rgba(198,156,109,0.25)" }}>
                     {t.prices.map((p, pi) => (
                       <div key={pi} className="flex justify-between items-center py-1">
                         <span className="font-body text-sm" style={{ color: "#6B6560" }}>
