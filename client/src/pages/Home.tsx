@@ -393,11 +393,12 @@ export default function Home() {
             {treatments.map((t, i) => (
               <div
                 key={t.id}
-                className="treatment-card rounded-xl overflow-hidden fade-up"
+                className="treatment-card rounded-xl overflow-hidden fade-up flex flex-col"
                 style={{
                   backgroundColor: "#FCF9F5",
                   boxShadow: "0 4px 20px rgba(62,58,55,0.08)",
                   animationDelay: `${i * 0.1}s`,
+                  height: "100%",
                 }}
               >
                 {/* Image */}
@@ -418,14 +419,14 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="p-5">
+                <div className="p-5 flex flex-col h-full">
                   <p className="font-body text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#8DA089" }}>
                     {t.subtitle}
                   </p>
                   <h3 className="font-display text-xl font-semibold mb-3" style={{ color: "#3E3A37" }}>
                     {t.title}
                   </h3>
-                  <p className="font-body text-sm leading-relaxed mb-4" style={{ color: "#6B6560" }}>
+                  <p className="font-body text-sm leading-relaxed mb-6 flex-grow" style={{ color: "#6B6560" }}>
                     {t.description}
                   </p>
 
