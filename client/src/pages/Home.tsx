@@ -426,7 +426,7 @@ export default function Home() {
                   <h3 className="font-display text-xl font-semibold mb-3" style={{ color: "#3E3A37" }}>
                     {t.title}
                   </h3>
-                  <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden", marginBottom: "0" }}>
+                  <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560", height: "7.8em", overflow: "hidden", marginBottom: "0" }}>
                     {t.description}
                   </p>
 
