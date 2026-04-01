@@ -1,54 +1,51 @@
 /**
- * BALANERGY BEHANDELINGEN PAGE
+ * BALANERGY ARRANGEMENTEN PAGE
  * Design: "Warme Aarde – Organisch & Sensueel"
- * All treatments on one page with smaller tiles
+ * Arrangements and special packages
  */
 
 import { Link } from "wouter";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, ArrowRight } from "lucide-react";
 
 const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 
 const THAI_MASSAGE_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/thai-massage-card-2Too8mGBKCNKbSUtmar8wB.webp";
-const REFLEXOLOGY_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/reflexology-card-EQ6LwzB9aYoSACiAE3ScrU.webp";
-const RELAXATION_IMAGE = "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80";
-const YOGA_IMAGE = "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80";
+const STUDIO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/about-mascha-dvPzjAqj7qTAQ57W5UwV4y.webp";
 
-const treatments = [
+const arrangements = [
   {
-    id: "thai",
-    title: "Thaise Yogamassage",
-    subtitle: "Op de mat",
+    id: "arrangement-winter",
+    title: "Winter Arrangement",
+    subtitle: "Seizoensarrangement",
     description:
-      "De traditionele vorm van yogamassage, zoals die in Noord-Thailand ook het meest wordt gegeven. Op een comfortabele kapok rolmatras worden yoga stretches gecombineerd met acupressuur massage. Geschikt voor iedereen, van 10 tot 100 jaar.",
+      "Stimulerende massage met westerse en oosterse technieken met essentiële olie naar keuze. Start met een scrub van rug, nek, schouders en achterkant benen. Daarna volgt een massage van rug, nek, schouders, benen, armen en voeten.",
+    image: STUDIO_IMAGE,
+    prices: [
+      { duration: "60 min", price: "€ 59,-" },
+      { duration: "90 min", price: "€ 79,-" },
+    ],
+    tag: "Seizoen",
+  },
+  {
+    id: "arrangement-combi",
+    title: "Combi Thai & Reflexologie",
+    subtitle: "Arrangement",
+    description:
+      "Heerlijke Thaise yogamassage gecombineerd met 15-20 minuten voetreflexologie. Start met een warm voetenbad en een kopje kruidenthee. Bij 90 minuten komt het hele lichaam aan bod.",
     image: THAI_MASSAGE_IMAGE,
     prices: [
       { duration: "60 min", price: "€ 59,-" },
-      { duration: "75 min", price: "€ 69,-" },
       { duration: "90 min", price: "€ 79,-" },
-    ],
-    tag: "Meest geboekt",
-  },
-  {
-    id: "reflexology",
-    title: "Voetreflexologie",
-    subtitle: "Thais & Westers",
-    description:
-      "Een combinatie van westerse en Thaise voetreflexologie. Bij 60 minuten worden ook de onderbenen tot en met de knie gemasseerd. Ook mogelijk als pure voetmassage inclusief voetenbad en scrub.",
-    image: REFLEXOLOGY_IMAGE,
-    prices: [
-      { duration: "30 min", price: "€ 35,-" },
-      { duration: "60 min", price: "€ 55,-" },
     ],
     tag: null,
   },
   {
-    id: "relaxation",
-    title: "Ontspanningsmassage",
-    subtitle: "Anti-stress & Herstel",
+    id: "arrangement-pregnancy",
+    title: "Zwangerschapsmassage",
+    subtitle: "Speciaal voor toekomstige moeders",
     description:
-      "Van ontspannend tot therapeutisch, van klassieke oliemassage tot sportmassage. Het zwaartepunt ligt bij rug, nek en schouders, maar ook handen, voeten en hoofd komen aan bod. Na afloop krijg je een miniflesje massageolie mee.",
-    image: RELAXATION_IMAGE,
+      "Een zachte, veilige massage speciaal ontworpen voor zwangere vrouwen. Ondersteunt het lichaam bij de veranderingen en helpt bij ontspanning en welzijn.",
+    image: STUDIO_IMAGE,
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
@@ -56,20 +53,20 @@ const treatments = [
     tag: null,
   },
   {
-    id: "yoga",
-    title: "Personal Yoga Training",
-    subtitle: "Op maat",
+    id: "arrangement-gift",
+    title: "Cadeaubon",
+    subtitle: "Het perfecte geschenk",
     description:
-      "Personal Yoga Training en Les Mills Body Balance Training op maat. Of je nu beginner bent of gevorderd, de les wordt volledig afgestemd op jouw niveau, doelen en lichaam.",
-    image: YOGA_IMAGE,
+      "Geef het geschenk van ontspanning en welzijn. Een cadeaubon voor elke gelegenheid — kies zelf het bedrag en de geldigheidsduur.",
+    image: THAI_MASSAGE_IMAGE,
     prices: [
-      { duration: "Op aanvraag", price: "Prijs op aanvraag" },
+      { duration: "Naar keuze", price: "Prijs op aanvraag" },
     ],
     tag: null,
   },
 ];
 
-export default function Behandelingen() {
+export default function Arrangementen() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#FCF9F5" }}>
       {/* Header */}
@@ -87,23 +84,13 @@ export default function Behandelingen() {
               </a>
             </Link>
             <Link href="/behandelingen">
-              <a className="font-body text-sm font-medium" style={{ color: "#8DA089" }}>
+              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
                 Behandelingen
               </a>
             </Link>
             <Link href="/arrangementen">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
+              <a className="font-body text-sm font-medium" style={{ color: "#8DA089" }}>
                 Arrangementen
-              </a>
-            </Link>
-            <Link href="/workshops">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
-                Workshops
-              </a>
-            </Link>
-            <Link href="/personal-training">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
-                Personal Training
               </a>
             </Link>
             <Link href="/over-mij">
@@ -135,56 +122,53 @@ export default function Behandelingen() {
         <section className="py-12 md:py-16">
           <div className="container">
             <h1 className="font-display text-4xl md:text-5xl font-bold mb-2" style={{ color: "#3E3A37" }}>
-              Behandelingen & Prijzen
+              Arrangementen & Acties
             </h1>
             <p className="font-body text-lg" style={{ color: "#8DA089" }}>
-              Van ontspannend tot therapeutisch — er is altijd een behandeling die op dit moment bij jou past
+              Speciale pakketten en aanbiedingen
             </p>
           </div>
         </section>
 
-        {/* Treatments Grid */}
+        {/* Arrangements Grid */}
         <section className="py-12">
           <div className="container">
-            <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
-              Onze Behandelingen
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {treatments.map((treatment) => (
-                <div key={treatment.id} className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {arrangements.map((arrangement) => (
+                <div key={arrangement.id} className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full">
                   {/* Image */}
-                  <div className="relative h-32 overflow-hidden">
+                  <div className="relative h-40 overflow-hidden">
                     <img
-                      src={treatment.image}
-                      alt={treatment.title}
+                      src={arrangement.image}
+                      alt={arrangement.title}
                       className="w-full h-full object-cover"
                     />
-                    {treatment.tag && (
+                    {arrangement.tag && (
                       <div
-                        className="absolute top-2 left-2 px-2 py-1 rounded text-xs font-semibold text-white"
+                        className="absolute top-3 left-3 px-3 py-1 rounded text-xs font-semibold text-white"
                         style={{ backgroundColor: "#C69C6D" }}
                       >
-                        {treatment.tag}
+                        {arrangement.tag}
                       </div>
                     )}
                   </div>
 
                   {/* Content */}
-                  <div className="p-4 flex flex-col flex-grow">
-                    <p className="font-body text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#8DA089" }}>
-                      {treatment.subtitle}
+                  <div className="p-5 flex flex-col flex-grow">
+                    <p className="font-body text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "#8DA089" }}>
+                      {arrangement.subtitle}
                     </p>
-                    <h3 className="font-display text-base font-bold mb-2" style={{ color: "#3E3A37" }}>
-                      {treatment.title}
+                    <h3 className="font-display text-lg font-bold mb-3" style={{ color: "#3E3A37" }}>
+                      {arrangement.title}
                     </h3>
-                    <p className="font-body text-xs leading-relaxed mb-3 flex-grow" style={{ color: "#6B6560" }}>
-                      {treatment.description}
+                    <p className="font-body text-sm leading-relaxed mb-4 flex-grow" style={{ color: "#6B6560" }}>
+                      {arrangement.description}
                     </p>
 
                     {/* Prices */}
-                    <div className="space-y-1 mb-3 pb-3 border-b" style={{ borderColor: "#E8D5C4" }}>
-                      {treatment.prices.map((price, idx) => (
-                        <div key={idx} className="flex justify-between font-body text-xs">
+                    <div className="space-y-2 mb-4 pb-4 border-b" style={{ borderColor: "#E8D5C4" }}>
+                      {arrangement.prices.map((price, idx) => (
+                        <div key={idx} className="flex justify-between font-body text-sm">
                           <span style={{ color: "#6B6560" }}>{price.duration}</span>
                           <span className="font-semibold" style={{ color: "#C69C6D" }}>
                             {price.price}
@@ -198,7 +182,7 @@ export default function Behandelingen() {
                       href={ONLINE_AGENDA_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full py-1.5 rounded font-body text-xs font-semibold text-white text-center transition-opacity hover:opacity-90"
+                      className="w-full py-2 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
                       style={{ backgroundColor: "#8DA089" }}
                     >
                       BOEK NU
@@ -214,27 +198,20 @@ export default function Behandelingen() {
         <section className="py-12">
           <div className="container text-center">
             <h2 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
-              Klaar voor je behandeling?
+              Klaar voor een arrangement?
             </h2>
             <p className="font-body text-lg mb-6" style={{ color: "#6B6560" }}>
-              Bekijk onze arrangementen of boek direct online
+              Boek direct online of neem contact op voor meer informatie
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={ONLINE_AGENDA_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90 text-center"
-                style={{ backgroundColor: "#8DA089" }}
-              >
-                ONLINE AGENDA
-              </a>
-              <Link href="/arrangementen">
-                <a className="px-8 py-3 rounded font-body text-sm font-semibold border-2 transition-all hover:opacity-90 text-center" style={{ borderColor: "#8DA089", color: "#8DA089" }}>
-                  ARRANGEMENTEN
-                </a>
-              </Link>
-            </div>
+            <a
+              href={ONLINE_AGENDA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "#8DA089" }}
+            >
+              ONLINE AGENDA
+            </a>
           </div>
         </section>
       </main>

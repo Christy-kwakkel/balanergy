@@ -2,21 +2,32 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
+import { useEffect } from "react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Behandelingen from "./pages/Behandelingen";
+import Arrangementen from "./pages/Arrangementen";
 import OverMij from "./pages/OverMij";
 import Contact from "./pages/Contact";
+import Workshops from "./pages/Workshops";
+import PersonalTraining from "./pages/PersonalTraining";
 
 
 function Router() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/behandelingen"} component={Behandelingen} />
+      <Route path={"/arrangementen"} component={Arrangementen} />
       <Route path={"/over-mij"} component={OverMij} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/workshops"} component={Workshops} />
+      <Route path={"/personal-training"} component={PersonalTraining} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
