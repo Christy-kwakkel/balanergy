@@ -1,7 +1,7 @@
-/**
+/*
  * BALANERGY BEHANDELINGEN PAGE
  * Design: "Warme Aarde – Organisch & Sensueel"
- * All treatments and arrangements on one page, no submenus
+ * All treatments on one page, no submenus
  */
 
 import { Link } from "wouter";
@@ -10,20 +10,28 @@ import Navigation from "@/components/Navigation";
 
 const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 
-const THAI_MASSAGE_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/thai-massage-card-2Too8mGBKCNKbSUtmar8wB.webp";
-const REFLEXOLOGY_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/reflexology-card-EQ6LwzB9aYoSACiAE3ScrU.webp";
-const RELAXATION_IMAGE = "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80";
-const YOGA_IMAGE = "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80";
-const STUDIO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/about-mascha-dvPzjAqj7qTAQ57W5UwV4y.webp";
-
 const treatments = [
+  {
+    id: "ontspanning",
+    title: "Ontspanning of Sportmassages",
+    subtitle: "Op tafel",
+    description:
+      "Van ontspannend tot therapeutisch, van klassieke oliemassage tot sportmassage. Het zwaartepunt ligt bij rug, nek en schouders, maar ook handen, voeten en hoofd komen aan bod. Na afloop krijg je een miniflesje massageolie mee.",
+    prices: [
+      { duration: "30 min", price: "€ 35,-" },
+      { duration: "45 min", price: "€ 45,-" },
+      { duration: "60 min", price: "€ 55,-" },
+      { duration: "75 min", price: "€ 65,-" },
+      { duration: "90 min", price: "€ 75,-" },
+      { duration: "120 min", price: "€ 85,-" },
+    ],
+  },
   {
     id: "thai",
     title: "Thaise Yogamassage",
     subtitle: "Op de mat",
     description:
       "De traditionele vorm van yogamassage, zoals die in Noord-Thailand ook het meest wordt gegeven. Op een comfortabele kapok rolmatras worden yoga stretches gecombineerd met acupressuur massage. Geschikt voor iedereen, van 10 tot 100 jaar.",
-    image: THAI_MASSAGE_IMAGE,
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "75 min", price: "€ 69,-" },
@@ -33,70 +41,14 @@ const treatments = [
   },
   {
     id: "reflexology",
-    title: "Voetreflexologie",
+    title: "Voetmassage & Reflexologie",
     subtitle: "Thais & Westers",
     description:
       "Een combinatie van westerse en Thaise voetreflexologie. Bij 60 minuten worden ook de onderbenen tot en met de knie gemasseerd. Ook mogelijk als pure voetmassage inclusief voetenbad en scrub.",
-    image: REFLEXOLOGY_IMAGE,
     prices: [
       { duration: "30 min", price: "€ 35,-" },
       { duration: "60 min", price: "€ 55,-" },
     ],
-    tag: null,
-  },
-  {
-    id: "relaxation",
-    title: "Ontspanningsmassage",
-    subtitle: "Anti-stress & Herstel",
-    description:
-      "Van ontspannend tot therapeutisch, van klassieke oliemassage tot sportmassage. Het zwaartepunt ligt bij rug, nek en schouders, maar ook handen, voeten en hoofd komen aan bod. Na afloop krijg je een miniflesje massageolie mee.",
-    image: RELAXATION_IMAGE,
-    prices: [
-      { duration: "60 min", price: "€ 59,-" },
-      { duration: "90 min", price: "€ 79,-" },
-    ],
-    tag: null,
-  },
-  {
-    id: "yoga",
-    title: "Personal Yoga Training",
-    subtitle: "Op maat",
-    description:
-      "Personal Yoga Training en Les Mills Body Balance Training op maat. Of je nu beginner bent of gevorderd, de les wordt volledig afgestemd op jouw niveau, doelen en lichaam.",
-    image: YOGA_IMAGE,
-    prices: [
-      { duration: "Op aanvraag", price: "Prijs op aanvraag" },
-    ],
-    tag: null,
-  },
-];
-
-const arrangements = [
-  {
-    id: "arrangement-winter",
-    title: "Winter Arrangement",
-    subtitle: "Seizoensarrangement",
-    description:
-      "Stimulerende massage met westerse en oosterse technieken met essentiële olie naar keuze. Start met een scrub van rug, nek, schouders en achterkant benen. Daarna volgt een massage van rug, nek, schouders, benen, armen en voeten.",
-    image: STUDIO_IMAGE,
-    prices: [
-      { duration: "60 min", price: "€ 59,-" },
-      { duration: "90 min", price: "€ 79,-" },
-    ],
-    tag: "Seizoen",
-  },
-  {
-    id: "arrangement-combi",
-    title: "Combi Thai & Reflexologie",
-    subtitle: "Arrangement",
-    description:
-      "Heerlijke Thaise yogamassage gecombineerd met 15-20 minuten voetreflexologie. Start met een warm voetenbad en een kopje kruidenthee. Bij 90 minuten komt het hele lichaam aan bod.",
-    image: THAI_MASSAGE_IMAGE,
-    prices: [
-      { duration: "60 min", price: "€ 59,-" },
-      { duration: "90 min", price: "€ 79,-" },
-    ],
-    tag: null,
   },
 ];
 
@@ -132,126 +84,43 @@ export default function Behandelingen() {
                   className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
                   style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
                 >
-                  {/* Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={t.image}
-                      alt={t.title}
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="p-6 flex-1 flex flex-col">
                     {t.tag && (
-                      <span
-                        className="absolute top-3 left-3 text-xs font-body font-semibold px-3 py-1 rounded-full"
-                        style={{ backgroundColor: "#C69C6D", color: "white", letterSpacing: "0.04em" }}
-                      >
+                      <span className="inline-block px-3 py-1 rounded text-xs font-semibold mb-3 w-fit" style={{ backgroundColor: "#C69C6D", color: "white" }}>
                         {t.tag}
                       </span>
                     )}
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-5 flex flex-col h-full justify-between">
-                    <p className="font-body text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#8DA089" }}>
-                      {t.subtitle}
-                    </p>
-                    <h3 className="font-display text-xl font-semibold mb-3" style={{ color: "#3E3A37" }}>
+                    <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
                       {t.title}
                     </h3>
-                    <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560", height: "9.1em", overflow: "hidden", marginBottom: "0" }}>
+                    <p className="font-body text-xs font-semibold mb-3" style={{ color: "#8DA089" }}>
+                      {t.subtitle}
+                    </p>
+                    <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
                       {t.description}
                     </p>
+                  </div>
 
-                    {/* Prices */}
-                    <div className="border-t pt-4 mb-4 mt-auto" style={{ borderColor: "rgba(198,156,109,0.25)" }}>
-                      {t.prices.map((p, pi) => (
-                        <div key={pi} className="flex justify-between items-center py-1">
-                          <span className="font-body text-sm" style={{ color: "#6B6560" }}>
-                            {p.duration}
-                          </span>
-                          <span className="font-body text-sm font-semibold" style={{ color: "#3E3A37" }}>
-                            {p.price}
-                          </span>
+                  {/* Divider */}
+                  <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
+
+                  {/* Prices */}
+                  <div className="p-6">
+                    <div className="space-y-2 mb-6">
+                      {t.prices.map((p, idx) => (
+                        <div key={idx} className="flex justify-between font-body text-sm">
+                          <span style={{ color: "#6B6560" }}>{p.duration}</span>
+                          <span style={{ color: "#8DA089", fontWeight: "600" }}>{p.price}</span>
                         </div>
                       ))}
                     </div>
 
+                    {/* Book Button */}
                     <a
                       href={ONLINE_AGENDA_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
-                      style={{ backgroundColor: "#8DA089" }}
-                    >
-                      BOEK NU
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Arrangements Section */}
-        <section className="py-12" style={{ backgroundColor: "rgba(141,160,137,0.05)" }}>
-          <div className="container">
-            <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
-              Arrangementen & Acties
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {arrangements.map((a) => (
-                <div
-                  key={a.id}
-                  className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
-                  style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
-                >
-                  {/* Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={a.image}
-                      alt={a.title}
-                      className="w-full h-full object-cover"
-                    />
-                    {a.tag && (
-                      <span
-                        className="absolute top-3 left-3 text-xs font-body font-semibold px-3 py-1 rounded-full"
-                        style={{ backgroundColor: "#C69C6D", color: "white", letterSpacing: "0.04em" }}
-                      >
-                        {a.tag}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-5 flex flex-col h-full justify-between">
-                    <p className="font-body text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: "#8DA089" }}>
-                      {a.subtitle}
-                    </p>
-                    <h3 className="font-display text-xl font-semibold mb-3" style={{ color: "#3E3A37" }}>
-                      {a.title}
-                    </h3>
-                    <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560", height: "9.1em", overflow: "hidden", marginBottom: "0" }}>
-                      {a.description}
-                    </p>
-
-                    {/* Prices */}
-                    <div className="border-t pt-4 mb-4 mt-auto" style={{ borderColor: "rgba(198,156,109,0.25)" }}>
-                      {a.prices.map((p, pi) => (
-                        <div key={pi} className="flex justify-between items-center py-1">
-                          <span className="font-body text-sm" style={{ color: "#6B6560" }}>
-                            {p.duration}
-                          </span>
-                          <span className="font-body text-sm font-semibold" style={{ color: "#3E3A37" }}>
-                            {p.price}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <a
-                      href={ONLINE_AGENDA_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
+                      className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
                       style={{ backgroundColor: "#8DA089" }}
                     >
                       BOEK NU
@@ -264,12 +133,12 @@ export default function Behandelingen() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12">
+        <section className="py-16 md:py-24">
           <div className="container text-center">
-            <h2 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6" style={{ color: "#3E3A37" }}>
               Klaar om je afspraak in te boeken?
             </h2>
-            <p className="font-body text-lg mb-6" style={{ color: "#6B6560" }}>
+            <p className="font-body text-lg mb-8 max-w-2xl mx-auto" style={{ color: "#6B6560" }}>
               Kies je behandeling en boek direct online via onze agenda
             </p>
             <a
@@ -300,6 +169,7 @@ export default function Behandelingen() {
               <ul className="space-y-2 font-body text-sm">
                 <li><Link href="/"><a className="opacity-80 hover:opacity-100">Home</a></Link></li>
                 <li><Link href="/behandelingen"><a className="opacity-80 hover:opacity-100">Behandelingen</a></Link></li>
+                <li><Link href="/arrangementen"><a className="opacity-80 hover:opacity-100">Arrangementen</a></Link></li>
                 <li><Link href="/over-mij"><a className="opacity-80 hover:opacity-100">Over Mij</a></Link></li>
                 <li><Link href="/contact"><a className="opacity-80 hover:opacity-100">Contact</a></Link></li>
               </ul>
