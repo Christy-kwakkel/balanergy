@@ -218,8 +218,10 @@ export default function Behandelingen() {
               <ul className="space-y-2 font-body text-sm">
                 <li><Link href="/"><a className="opacity-80 hover:opacity-100">Home</a></Link></li>
                 <li><Link href="/behandelingen"><a className="opacity-80 hover:opacity-100">Behandelingen</a></Link></li>
-                <li><Link href="/arrangementen"><a className="opacity-80 hover:opacity-100">Arrangementen</a></Link></li>
                 <li><Link href="/over-mij"><a className="opacity-80 hover:opacity-100">Over Mij</a></Link></li>
+                <li><Link href="/arrangementen"><a className="opacity-80 hover:opacity-100">Arrangementen</a></Link></li>
+                <li><Link href="/workshops"><a className="opacity-80 hover:opacity-100">Workshops & Opleidingen</a></Link></li>
+                <li><Link href="/personal-training"><a className="opacity-80 hover:opacity-100">Personal Training</a></Link></li>
                 <li><Link href="/contact"><a className="opacity-80 hover:opacity-100">Contact</a></Link></li>
               </ul>
             </div>

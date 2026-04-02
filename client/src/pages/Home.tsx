@@ -113,7 +113,7 @@ export default function Home() {
               </div>
               <div className="text-center">
                 <p className="font-display text-4xl font-bold mb-2" style={{ color: "#8DA089" }}>
-                  6×
+                  3×
                 </p>
                 <p className="font-body text-sm" style={{ color: "#6B6560" }}>
                   Opleiding in Thailand
@@ -147,7 +147,7 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Link href="/behandelingen">
-                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer">
+                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Behandelingen
                   </h3>
@@ -161,7 +161,7 @@ export default function Home() {
                 </div>
               </Link>
               <Link href="/arrangementen">
-                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer">
+                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Arrangementen
                   </h3>
@@ -175,7 +175,7 @@ export default function Home() {
                 </div>
               </Link>
               <Link href="/workshops">
-                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer">
+                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Workshops & Opleidingen
                   </h3>
@@ -264,10 +264,10 @@ export default function Home() {
               <ul className="space-y-2 font-body text-sm">
                 <li><Link href="/"><a className="opacity-80 hover:opacity-100">Home</a></Link></li>
                 <li><Link href="/behandelingen"><a className="opacity-80 hover:opacity-100">Behandelingen</a></Link></li>
-                <li><Link href="/arrangementen"><a className="opacity-80 hover:opacity-100">Arrangementen</a></Link></li>
-                <li><Link href="/workshops"><a className="opacity-80 hover:opacity-100">Workshops</a></Link></li>
-                <li><Link href="/personal-training"><a className="opacity-80 hover:opacity-100">Personal Training</a></Link></li>
                 <li><Link href="/over-mij"><a className="opacity-80 hover:opacity-100">Over Mij</a></Link></li>
+                <li><Link href="/arrangementen"><a className="opacity-80 hover:opacity-100">Arrangementen</a></Link></li>
+                <li><Link href="/workshops"><a className="opacity-80 hover:opacity-100">Workshops & Opleidingen</a></Link></li>
+                <li><Link href="/personal-training"><a className="opacity-80 hover:opacity-100">Personal Training</a></Link></li>
                 <li><Link href="/contact"><a className="opacity-80 hover:opacity-100">Contact</a></Link></li>
               </ul>
             </div>
