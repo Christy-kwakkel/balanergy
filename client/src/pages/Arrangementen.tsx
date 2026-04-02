@@ -13,23 +13,27 @@ const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy
 const acties = [
   {
     title: "Kom kennis maken met Thaise yogamassage",
-    description: "Krijg een massage van 60/90 minuten voor slechts 52,50/72,50! Per persoon eenmalig te boeken tegen dit scherpe actietarief.",
-    price: "52,50 / 72,50",
-    duration: "60 / 90 min",
+    description: "Krijg een massage tegen dit scherpe actietarief! Per persoon eenmalig te boeken tegen deze speciale prijs.",
+    prices: [
+      { duration: "60 min", price: "€ 52,50" },
+      { duration: "90 min", price: "€ 72,50" },
+    ],
     note: "Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
   },
   {
     title: "Kom kennis maken met voetreflexologie",
-    description: "Boek een behandeling van 45 minuten voor slechts 42,50. Thaise en westerse technieken worden gecombineerd.",
-    price: "42,50",
-    duration: "45 min",
+    description: "Boek een behandeling met Thaise en westerse technieken gecombineerd tegen dit scherpe actietarief.",
+    prices: [
+      { duration: "45 min", price: "€ 42,50" },
+    ],
     note: "Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
   },
   {
     title: "Scrub, achterkant lichaam",
-    description: "Ontdoe je huid van dode huidcellen. Scrub van rug, billen (indien gewenst) en achterkant benen voor slechts 6,95 extra bij je behandeling.",
-    price: "6,95",
-    duration: "Extra",
+    description: "Ontdoe je huid van dode huidcellen. Scrub van rug, billen (indien gewenst) en achterkant benen extra bij je behandeling.",
+    prices: [
+      { duration: "Extra", price: "€ 6,95" },
+    ],
     note: "Voeg toe bij je boeking in de opmerkingen.",
   },
 ];
@@ -38,22 +42,28 @@ const seizoensArrangementen = [
   {
     title: "Winter arrangement",
     subtitle: "Tafel",
-    duration: "60/90 minuten",
-    price: "59,- / 79,-",
+    prices: [
+      { duration: "60 min", price: "€ 59,-" },
+      { duration: "90 min", price: "€ 79,-" },
+    ],
     description: "Stimulerende massage met westerse en oosterse technieken met essentiële olie naar keuze. Start met scrub van rug, nek, schouders en achterkant benen. Daarna massage van alle lichaamsdelen inclusief voeten.",
   },
   {
     title: "Balsem Sinaasappel-Kaneel arrangement",
     subtitle: "Tafel",
-    duration: "60/90 minuten",
-    price: "59,- / 79,-",
+    prices: [
+      { duration: "60 min", price: "€ 59,-" },
+      { duration: "90 min", price: "€ 79,-" },
+    ],
     description: "Start met kaneel of sinaasappel etherische oliebad van voeten. Insmering met verwarmende therapeutische balsem, gevolgd door massage met verwarmde essentiële olie.",
   },
   {
     title: "Balsem kaneel/sinaasappel arrangement Thais",
     subtitle: "Mat",
-    duration: "60/90 minuten",
-    price: "62,50 / 82,50",
+    prices: [
+      { duration: "60 min", price: "€ 62,50" },
+      { duration: "90 min", price: "€ 82,50" },
+    ],
     description: "Start met warm voetbad met essentiële olie. Insmering met verwarmende therapeutische balsem, gevolgd door Thaise massage met keuze uit ontspannende of therapeutische massage.",
   },
 ];
@@ -62,41 +72,50 @@ const vasteArrangementen = [
   {
     title: "Antistress massage",
     subtitle: "Tafel",
-    duration: "60/90 minuten",
-    price: "59,- / 79,-",
+    prices: [
+      { duration: "60 min", price: "€ 59,-" },
+      { duration: "90 min", price: "€ 79,-" },
+    ],
     description: "Ontspannende massage met zwaartepunt op rug, nek, schouders, handen, voeten en hoofd. Na afloop krijg je een miniflesje massageolie met anti-stress essentiële olie mee naar huis.",
   },
   {
     title: "Thai Western massage",
     subtitle: "Mat & Tafel",
-    duration: "90 minuten",
-    price: "82,50",
+    prices: [
+      { duration: "90 min", price: "€ 82,50" },
+    ],
     description: "Start op mat met voetbad, massage van armen, handen, voeten, benen en rug met yogastretches. Vervolgens op tafel rug, nek, schouders en hoofd.",
   },
   {
     title: "Combi Thaise yogamassage en voetreflexologie",
     subtitle: "Mat",
-    duration: "60/90 minuten",
-    price: "59,- / 79,-",
+    prices: [
+      { duration: "60 min", price: "€ 59,-" },
+      { duration: "90 min", price: "€ 79,-" },
+    ],
     description: "Thaise yogamassage met ongeveer 15-20 minuten voetreflexologie. Start met warm voetenbad en kopje kruiden- of vruchtenthee naar keuze.",
   },
   {
     title: "Indian summer arrangement",
     subtitle: "Tafel",
-    duration: "60/90 minuten",
-    price: "59,- / 79,-",
+    prices: [
+      { duration: "60 min", price: "€ 59,-" },
+      { duration: "90 min", price: "€ 79,-" },
+    ],
     description: "Start met voetenbad en kopje thee, daarna stevige scrub van rug en achterkant benen, gevolgd door massage van rug, nek, schouders, achterkant benen en bilspieren.",
   },
   {
     title: "Samui zwangerschapsarrangement",
     subtitle: "Tafel of Mat",
-    duration: "60/90 minuten",
-    price: "59,- / 79,-",
+    prices: [
+      { duration: "60 min", price: "€ 59,-" },
+      { duration: "90 min", price: "€ 79,-" },
+    ],
     description: "Speciaal voor zwangeren. Start met warm voetenbad met lavendelolie en kopje kruidenthee. Ontspannende massage van hoofd, gezicht, nek, schouders, armen, handen en voeten.",
   },
 ];
 
-function ArrangementCard({ title, subtitle, duration, price, description }: { title: string; subtitle: string; duration: string; price: string; description: string }) {
+function ArrangementCard({ title, subtitle, prices, description, note }: { title: string; subtitle: string; prices: Array<{ duration: string; price: string }>; description: string; note?: string }) {
   return (
     <div
       className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
@@ -119,12 +138,66 @@ function ArrangementCard({ title, subtitle, duration, price, description }: { ti
 
       {/* Price and Duration */}
       <div className="p-6">
-        <div className="space-y-2 mb-6">
-          <div className="flex justify-between font-body text-sm">
-            <span style={{ color: "#6B6560" }}>{duration}</span>
-            <span style={{ color: "#8DA089", fontWeight: "600" }}>{price}</span>
-          </div>
+        <div className="space-y-2 mb-3">
+          {prices.map((p, idx) => (
+            <div key={idx} className="flex justify-between font-body text-sm">
+              <span style={{ color: "#6B6560" }}>{p.duration}</span>
+              <span style={{ color: "#8DA089", fontWeight: "600" }}>{p.price}</span>
+            </div>
+          ))}
         </div>
+        {note && (
+          <p className="font-body text-xs mb-4 italic" style={{ color: "#C69C6D" }}>
+            {note}
+          </p>
+        )}
+
+        {/* Book Button */}
+        <a
+          href={ONLINE_AGENDA_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
+          style={{ backgroundColor: "#8DA089" }}
+        >
+          BOEK NU
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function ActieCard({ title, prices, description, note }: { title: string; prices: Array<{ duration: string; price: string }>; description: string; note: string }) {
+  return (
+    <div
+      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
+      style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
+    >
+      <div className="p-6 flex-1 flex flex-col">
+        <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
+          {title}
+        </h3>
+        <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
+          {description}
+        </p>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
+
+      {/* Price and Duration */}
+      <div className="p-6">
+        <div className="space-y-2 mb-3">
+          {prices.map((p, idx) => (
+            <div key={idx} className="flex justify-between font-body text-sm">
+              <span style={{ color: "#6B6560" }}>{p.duration}</span>
+              <span style={{ color: "#8DA089", fontWeight: "600" }}>{p.price}</span>
+            </div>
+          ))}
+        </div>
+        <p className="font-body text-xs mb-4 italic" style={{ color: "#C69C6D" }}>
+          {note}
+        </p>
 
         {/* Book Button */}
         <a
@@ -171,47 +244,7 @@ export default function Arrangementen() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               {acties.map((actie, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
-                  style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
-                >
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
-                      {actie.title}
-                    </h3>
-                    <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
-                      {actie.description}
-                    </p>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
-
-                  {/* Price and Duration */}
-                  <div className="p-6">
-                    <div className="space-y-2 mb-3">
-                      <div className="flex justify-between font-body text-sm">
-                        <span style={{ color: "#6B6560" }}>{actie.duration}</span>
-                        <span style={{ color: "#8DA089", fontWeight: "600" }}>{actie.price}</span>
-                      </div>
-                    </div>
-                    <p className="font-body text-xs mb-4 italic" style={{ color: "#C69C6D" }}>
-                      {actie.note}
-                    </p>
-
-                    {/* Book Button */}
-                    <a
-                      href={ONLINE_AGENDA_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
-                      style={{ backgroundColor: "#8DA089" }}
-                    >
-                      BOEK NU
-                    </a>
-                  </div>
-                </div>
+                <ActieCard key={idx} {...actie} />
               ))}
             </div>
           </div>
