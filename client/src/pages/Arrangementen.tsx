@@ -98,36 +98,45 @@ const vasteArrangementen = [
 
 function ArrangementCard({ title, subtitle, duration, price, description }: { title: string; subtitle: string; duration: string; price: string; description: string }) {
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6 flex flex-col h-full">
-      <div className="mb-4">
-        <h3 className="font-display text-lg font-bold mb-1" style={{ color: "#3E3A37" }}>
+    <div
+      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
+      style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
+    >
+      <div className="p-6 flex-1 flex flex-col">
+        <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
           {title}
         </h3>
-        <p className="font-body text-xs font-semibold" style={{ color: "#8DA089" }}>
+        <p className="font-body text-xs font-semibold mb-3" style={{ color: "#8DA089" }}>
           {subtitle}
         </p>
+        <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
+          {description}
+        </p>
       </div>
-      <p className="font-body text-sm leading-relaxed mb-4 flex-1" style={{ color: "#6B6560" }}>
-        {description}
-      </p>
-      <div className="border-t my-4" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
-      <div className="flex justify-between items-center mb-4">
-        <span className="font-body text-xs" style={{ color: "#6B6560" }}>
-          {duration}
-        </span>
-        <span className="font-display text-lg font-bold" style={{ color: "#8DA089" }}>
-          {price}
-        </span>
+
+      {/* Divider */}
+      <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
+
+      {/* Price and Duration */}
+      <div className="p-6">
+        <div className="space-y-2 mb-6">
+          <div className="flex justify-between font-body text-sm">
+            <span style={{ color: "#6B6560" }}>{duration}</span>
+            <span style={{ color: "#8DA089", fontWeight: "600" }}>{price}</span>
+          </div>
+        </div>
+
+        {/* Book Button */}
+        <a
+          href={ONLINE_AGENDA_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
+          style={{ backgroundColor: "#8DA089" }}
+        >
+          BOEK NU
+        </a>
       </div>
-      <a
-        href={ONLINE_AGENDA_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full py-2 rounded font-body text-xs font-semibold text-white text-center transition-opacity hover:opacity-90"
-        style={{ backgroundColor: "#8DA089" }}
-      >
-        BOEK NU
-      </a>
     </div>
   );
 }
@@ -162,34 +171,46 @@ export default function Arrangementen() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               {acties.map((actie, idx) => (
-                <div key={idx} className="bg-white rounded-lg shadow-sm p-6 flex flex-col h-full">
-                  <h3 className="font-display text-lg font-bold mb-2" style={{ color: "#3E3A37" }}>
-                    {actie.title}
-                  </h3>
-                  <p className="font-body text-sm leading-relaxed mb-4 flex-1" style={{ color: "#6B6560" }}>
-                    {actie.description}
-                  </p>
-                  <div className="border-t my-4" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="font-body text-xs" style={{ color: "#6B6560" }}>
-                      {actie.duration}
-                    </span>
-                    <span className="font-display text-lg font-bold" style={{ color: "#8DA089" }}>
-                      {actie.price}
-                    </span>
+                <div
+                  key={idx}
+                  className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
+                  style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
+                >
+                  <div className="p-6 flex-1 flex flex-col">
+                    <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
+                      {actie.title}
+                    </h3>
+                    <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
+                      {actie.description}
+                    </p>
                   </div>
-                  <p className="font-body text-xs mb-4 italic" style={{ color: "#C69C6D" }}>
-                    {actie.note}
-                  </p>
-                  <a
-                    href={ONLINE_AGENDA_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-2 rounded font-body text-xs font-semibold text-white text-center transition-opacity hover:opacity-90"
-                    style={{ backgroundColor: "#8DA089" }}
-                  >
-                    BOEK NU
-                  </a>
+
+                  {/* Divider */}
+                  <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
+
+                  {/* Price and Duration */}
+                  <div className="p-6">
+                    <div className="space-y-2 mb-3">
+                      <div className="flex justify-between font-body text-sm">
+                        <span style={{ color: "#6B6560" }}>{actie.duration}</span>
+                        <span style={{ color: "#8DA089", fontWeight: "600" }}>{actie.price}</span>
+                      </div>
+                    </div>
+                    <p className="font-body text-xs mb-4 italic" style={{ color: "#C69C6D" }}>
+                      {actie.note}
+                    </p>
+
+                    {/* Book Button */}
+                    <a
+                      href={ONLINE_AGENDA_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
+                      style={{ backgroundColor: "#8DA089" }}
+                    >
+                      BOEK NU
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
