@@ -105,9 +105,6 @@ export default function Contact() {
                   <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
                     <strong>Op afspraak</strong> — Bekijk de online agenda voor beschikbaarheid.
                   </p>
-                  <p className="font-body text-base" style={{ color: "#6B6560" }}>
-                    <strong>Zaterdag:</strong> Alleen op aanvraag
-                  </p>
                 </div>
               </div>
             </div>
