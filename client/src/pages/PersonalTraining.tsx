@@ -234,6 +234,23 @@ export default function PersonalTraining() {
           </div>
         </section>
 
+        {/* Cancellation Policy Section */}
+        <section className="py-12 bg-white">
+          <div className="container max-w-3xl">
+            <div className="bg-yellow-50 border-l-4 p-6" style={{ borderColor: "#C69C6D", backgroundColor: "rgba(198,156,109,0.1)" }}>
+              <p className="font-body text-base font-semibold mb-3" style={{ color: "#3E3A37" }}>
+                ⚠️ Annuleringsbeleid
+              </p>
+              <p className="font-body text-base leading-relaxed mb-3" style={{ color: "#6B6560" }}>
+                <strong>Let op:</strong> Vanwege de volle agenda worden afspraken die minder dan 24 uur van tevoren worden afgezegd, ongeacht de reden, in rekening gebracht.
+              </p>
+              <p className="font-body text-base leading-relaxed" style={{ color: "#6B6560" }}>
+                <strong>Uitzondering:</strong> Wanneer je iemand anders in jouw plaats laat komen voor dezelfde tijdsduur, dan geldt dit niet.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-16 md:py-24">
           <div className="container text-center">
