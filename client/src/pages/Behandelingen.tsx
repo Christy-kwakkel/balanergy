@@ -14,9 +14,9 @@ const treatments = [
   {
     id: "ontspanning",
     title: "Ontspanningsmassage",
-    subtitle: "Relaxation",
+    subtitle: "Ontspanning",
     description:
-      "Deep relaxation massage with essential oils. Minimum 45 minutes for true relaxation. Can be performed firmer if preferred.",
+      "Diepe ontspanningsmassage met essentiële oliën. Minimaal 45 minuten voor ware ontspanning. Kan steviger uitgevoerd worden als je dat wilt.",
     prices: [
       { duration: "45 min", price: "€ 45,-" },
       { duration: "60 min", price: "€ 55,-" },
@@ -28,9 +28,9 @@ const treatments = [
   {
     id: "sportmassage",
     title: "Sportmassage",
-    subtitle: "Complaint-based",
+    subtitle: "Klachtgericht",
     description:
-      "For pain, injuries, and overuse of specific body parts. Not just for athletes—for anyone with movement complaints including headaches, lower back pain, and neck/shoulder issues.",
+      "Voor pijn, blessures en overbelasting van specifieke lichaamsdelen. Niet alleen voor sporters—voor iedereen met bewegingsklachten zoals hoofdpijn, rugpijn en nek-/schouderklachten.",
     prices: [
       { duration: "30 min", price: "€ 35,-" },
       { duration: "45 min", price: "€ 45,-" },
@@ -43,9 +43,9 @@ const treatments = [
   {
     id: "combinatiemassage",
     title: "Combinatiemassage",
-    subtitle: "Combination",
+    subtitle: "Combinatie",
     description:
-      "Mix of relaxation and sports massage. Treats specific problem areas while maintaining overall relaxation. Minimum 45 minutes.",
+      "Mix van ontspannings- en sportmassage. Behandelt specifieke probleemgebieden terwijl je overall ontspanning behoudt. Minimaal 45 minuten.",
     prices: [
       { duration: "45 min", price: "€ 45,-" },
       { duration: "60 min", price: "€ 55,-" },
@@ -57,9 +57,9 @@ const treatments = [
   {
     id: "rugpijnmassage",
     title: "Rugpijnmassage",
-    subtitle: "Specialized",
+    subtitle: "Gespecialiseerd",
     description:
-      "Specialized upper and lower back treatment combining Thai acupressure and complaint-focused massage. Uses special Thai balm for deep muscle work.",
+      "Gespecialiseerde behandeling van boven- en onderrug met Thaise acupressuur en klachtgerichte massage. Gebruikt speciale Thaise balsem voor diep spierwerk.",
     prices: [
       { duration: "30 min", price: "€ 35,-" },
       { duration: "45 min", price: "€ 45,-" },
@@ -68,9 +68,9 @@ const treatments = [
   {
     id: "hoofdpijnmassages",
     title: "Hoofdpijnmassages",
-    subtitle: "Specialized",
+    subtitle: "Gespecialiseerd",
     description:
-      "Three specialized types: stress/tension headaches, neck/shoulder-related headaches, and sinus congestion headaches with peppermint oil and Thai balm.",
+      "Drie gespecialiseerde typen: stress-/spanningsmigraine, nek-/schouder-gerelateerde hoofdpijn, en sinuscongestie-hoofdpijn met pepermuntolie en Thaise balsem.",
     prices: [
       { duration: "30 min", price: "€ 35,-" },
     ],
@@ -78,9 +78,9 @@ const treatments = [
   {
     id: "thai",
     title: "Thaise Yogamassage",
-    subtitle: "Thai",
+    subtitle: "Thais",
     description:
-      "Traditional Thai yoga massage combining stretching and acupressure techniques. Suitable for everyone from 10 to 100 years old.",
+      "Traditionele Thaise yogamassage met strekking en acupressuurtechnieken. Geschikt voor iedereen van 10 tot 100 jaar oud.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "75 min", price: "€ 69,-" },
@@ -91,9 +91,9 @@ const treatments = [
   {
     id: "reflexology",
     title: "Voetreflexologie",
-    subtitle: "Reflexology",
+    subtitle: "Reflexologie",
     description:
-      "Foot reflexology and massage combining Thai and Western techniques. At 60 minutes, lower legs up to the knee are also massaged.",
+      "Voetreflexologie en massage met Thaise en westerse technieken. Bij 60 minuten worden ook de onderbenen tot aan de knie gemasseerd.",
     prices: [
       { duration: "30 min", price: "€ 35,-" },
       { duration: "60 min", price: "€ 55,-" },
