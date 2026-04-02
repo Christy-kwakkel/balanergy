@@ -6,6 +6,7 @@
 
 import { Link } from "wouter";
 import { Phone, Mail } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 const STUDIO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/about-mascha-dvPzjAqj7qTAQ57W5UwV4y.webp";
@@ -13,47 +14,7 @@ const STUDIO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/f
 export default function OverMij() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#FCF9F5" }}>
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
-        <div className="container py-4 flex justify-between items-center">
-          <Link href="/">
-            <a className="font-display text-2xl font-bold" style={{ color: "#3E3A37" }}>
-              Balanergy
-            </a>
-          </Link>
-          <nav className="hidden md:flex gap-8">
-            <Link href="/">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
-                Home
-              </a>
-            </Link>
-            <Link href="/behandelingen">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
-                Behandelingen
-              </a>
-            </Link>
-            <Link href="/over-mij">
-              <a className="font-body text-sm font-medium" style={{ color: "#8DA089" }}>
-                Over Mij
-              </a>
-            </Link>
-            <Link href="/contact">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
-                Contact
-              </a>
-            </Link>
-          </nav>
-          <a
-            href={ONLINE_AGENDA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded font-body text-sm font-semibold text-white"
-            style={{ backgroundColor: "#8DA089" }}
-          >
-            BOEK NU
-          </a>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Main Content */}
       <main className="flex-1">

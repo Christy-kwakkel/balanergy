@@ -6,6 +6,7 @@
 
 import { Link } from "wouter";
 import { Phone, Mail, ArrowRight } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 const HERO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/hero-massage-7TjQGLyDBijKFozQs3yYZd.webp";
@@ -31,68 +32,12 @@ const reviews = [
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#FCF9F5" }}>
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
-        <div className="container py-4 flex justify-between items-center">
-          <Link href="/">
-            <a className="font-display text-2xl font-bold" style={{ color: "#3E3A37" }}>
-              Balanergy
-            </a>
-          </Link>
-          <nav className="hidden md:flex gap-8">
-            <Link href="/">
-              <a className="font-body text-sm font-medium" style={{ color: "#8DA089" }}>
-                Home
-              </a>
-            </Link>
-            <Link href="/behandelingen">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
-                Behandelingen
-              </a>
-            </Link>
-            <Link href="/arrangementen">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
-                Arrangementen
-              </a>
-            </Link>
-            <Link href="/workshops">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
-                Workshops
-              </a>
-            </Link>
-            <Link href="/personal-training">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
-                Personal Training
-              </a>
-            </Link>
-            <Link href="/over-mij">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
-                Over Mij
-              </a>
-            </Link>
-            <Link href="/contact">
-              <a className="font-body text-sm font-medium hover:opacity-70" style={{ color: "#6B6560" }}>
-                Contact
-              </a>
-            </Link>
-          </nav>
-          <a
-            href={ONLINE_AGENDA_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded font-body text-sm font-semibold text-white"
-            style={{ backgroundColor: "#8DA089" }}
-          >
-            BOEK NU
-          </a>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Main Content */}
       <main className="flex-1">
         {/* Hero Section */}
-        <section
-          className="relative h-96 md:h-screen flex items-center justify-start overflow-hidden"
+        <section className="relative h-screen flex items-center overflow-hidden"
           style={{
             backgroundImage: `url('${HERO_IMAGE}')`,
             backgroundSize: "cover",
@@ -112,18 +57,18 @@ export default function Home() {
               <p className="font-body text-lg mb-8 max-w-xl" style={{ color: "#F5F1ED" }}>
                 Balanergy is de praktijk van Mascha Kwakkel in IJsselmuiden — centraal gelegen tussen Kampen en Zwolle. Hier staat jouw lichaam en geest centraal.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex gap-4">
                 <a
                   href={ONLINE_AGENDA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90 text-center"
+                  className="px-6 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
                   style={{ backgroundColor: "#C69C6D" }}
                 >
                   AFSPRAAK BOEKEN
                 </a>
                 <Link href="/behandelingen">
-                  <a className="px-6 py-3 rounded font-body text-sm font-semibold border-2 transition-all hover:opacity-90 text-center" style={{ borderColor: "white", color: "white" }}>
+                  <a className="px-6 py-3 rounded font-body text-sm font-semibold border-2 transition-all hover:opacity-90" style={{ borderColor: "white", color: "white" }}>
                     BEKIJK BEHANDELINGEN
                   </a>
                 </Link>
@@ -200,60 +145,46 @@ export default function Home() {
             <h2 className="font-display text-4xl font-bold mb-12" style={{ color: "#3E3A37" }}>
               Onze Diensten
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Link href="/behandelingen">
-                <a className="group bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all">
-                  <h3 className="font-display text-lg font-bold mb-3" style={{ color: "#3E3A37" }}>
+                <a className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+                  <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Behandelingen
                   </h3>
-                  <p className="font-body text-sm mb-4" style={{ color: "#6B6560" }}>
-                    Massages en behandelingen
+                  <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
+                    Ontdek onze volledige aanbod van massages en behandelingen met prijzen
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
-                    <span className="font-body text-xs font-semibold">Bekijk meer</span>
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                    <span className="font-body text-sm font-semibold">Bekijk meer</span>
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </div>
                 </a>
               </Link>
-              <Link href="/arrangementen">
-                <a className="group bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all">
-                  <h3 className="font-display text-lg font-bold mb-3" style={{ color: "#3E3A37" }}>
-                    Arrangementen
+              <Link href="/over-mij">
+                <a className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+                  <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
+                    Over Mij
                   </h3>
-                  <p className="font-body text-sm mb-4" style={{ color: "#6B6560" }}>
-                    Speciale pakketten
+                  <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
+                    Leer meer over Mascha en haar filosofie achter Balanergy
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
-                    <span className="font-body text-xs font-semibold">Bekijk meer</span>
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                    <span className="font-body text-sm font-semibold">Lees meer</span>
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </div>
                 </a>
               </Link>
-              <Link href="/workshops">
-                <a className="group bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all">
-                  <h3 className="font-display text-lg font-bold mb-3" style={{ color: "#3E3A37" }}>
-                    Workshops
+              <Link href="/contact">
+                <a className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+                  <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
+                    Contact
                   </h3>
-                  <p className="font-body text-sm mb-4" style={{ color: "#6B6560" }}>
-                    Leer van Mascha
+                  <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
+                    Vind onze locatie, openingstijden en contactgegevens
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
-                    <span className="font-body text-xs font-semibold">Bekijk meer</span>
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </a>
-              </Link>
-              <Link href="/personal-training">
-                <a className="group bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all">
-                  <h3 className="font-display text-lg font-bold mb-3" style={{ color: "#3E3A37" }}>
-                    Personal Training
-                  </h3>
-                  <p className="font-body text-sm mb-4" style={{ color: "#6B6560" }}>
-                    Op maat coaching
-                  </p>
-                  <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
-                    <span className="font-body text-xs font-semibold">Bekijk meer</span>
-                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                    <span className="font-body text-sm font-semibold">Contacteer ons</span>
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </div>
                 </a>
               </Link>
@@ -298,18 +229,18 @@ export default function Home() {
             <p className="font-body text-lg mb-8 max-w-2xl mx-auto" style={{ color: "#6B6560" }}>
               Kies je behandeling en boek direct online via onze agenda, of neem contact met ons op
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href={ONLINE_AGENDA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90 text-center"
+                className="px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
                 style={{ backgroundColor: "#8DA089" }}
               >
                 ONLINE AGENDA
               </a>
               <Link href="/contact">
-                <a className="px-8 py-3 rounded font-body text-sm font-semibold border-2 transition-all hover:opacity-90 text-center" style={{ borderColor: "#8DA089", color: "#8DA089" }}>
+                <a className="px-8 py-3 rounded font-body text-sm font-semibold border-2 transition-all hover:opacity-90" style={{ borderColor: "#8DA089", color: "#8DA089" }}>
                   CONTACTEER ONS
                 </a>
               </Link>
