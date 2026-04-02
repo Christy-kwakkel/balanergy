@@ -13,25 +13,74 @@ const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy
 const treatments = [
   {
     id: "ontspanning",
-    title: "Ontspanning of Sportmassages",
-    subtitle: "Op tafel",
+    title: "Ontspanningsmassage",
+    subtitle: "Relaxation",
     description:
-      "Van ontspannend tot therapeutisch, van klassieke oliemassage tot sportmassage. Het zwaartepunt ligt bij rug, nek en schouders, maar ook handen, voeten en hoofd komen aan bod. Na afloop krijg je een miniflesje massageolie mee.",
+      "Deep relaxation massage with essential oils. Minimum 45 minutes for true relaxation. Can be performed firmer if preferred.",
+    prices: [
+      { duration: "45 min", price: "€ 45,-" },
+      { duration: "60 min", price: "€ 55,-" },
+      { duration: "75 min", price: "€ 65,-" },
+      { duration: "90 min", price: "€ 75,-" },
+      { duration: "120 min", price: "€ 95,-" },
+    ],
+  },
+  {
+    id: "sportmassage",
+    title: "Sportmassage",
+    subtitle: "Complaint-based",
+    description:
+      "For pain, injuries, and overuse of specific body parts. Not just for athletes—for anyone with movement complaints including headaches, lower back pain, and neck/shoulder issues.",
     prices: [
       { duration: "30 min", price: "€ 35,-" },
       { duration: "45 min", price: "€ 45,-" },
       { duration: "60 min", price: "€ 55,-" },
       { duration: "75 min", price: "€ 65,-" },
       { duration: "90 min", price: "€ 75,-" },
-      { duration: "120 min", price: "€ 85,-" },
+      { duration: "120 min", price: "€ 95,-" },
+    ],
+  },
+  {
+    id: "combinatiemassage",
+    title: "Combinatiemassage",
+    subtitle: "Combination",
+    description:
+      "Mix of relaxation and sports massage. Treats specific problem areas while maintaining overall relaxation. Minimum 45 minutes.",
+    prices: [
+      { duration: "45 min", price: "€ 45,-" },
+      { duration: "60 min", price: "€ 55,-" },
+      { duration: "75 min", price: "€ 65,-" },
+      { duration: "90 min", price: "€ 75,-" },
+      { duration: "120 min", price: "€ 95,-" },
+    ],
+  },
+  {
+    id: "rugpijnmassage",
+    title: "Rugpijnmassage",
+    subtitle: "Specialized",
+    description:
+      "Specialized upper and lower back treatment combining Thai acupressure and complaint-focused massage. Uses special Thai balm for deep muscle work.",
+    prices: [
+      { duration: "30 min", price: "€ 35,-" },
+      { duration: "45 min", price: "€ 45,-" },
+    ],
+  },
+  {
+    id: "hoofdpijnmassages",
+    title: "Hoofdpijnmassages",
+    subtitle: "Specialized",
+    description:
+      "Three specialized types: stress/tension headaches, neck/shoulder-related headaches, and sinus congestion headaches with peppermint oil and Thai balm.",
+    prices: [
+      { duration: "30 min", price: "€ 35,-" },
     ],
   },
   {
     id: "thai",
     title: "Thaise Yogamassage",
-    subtitle: "Op de mat",
+    subtitle: "Thai",
     description:
-      "De traditionele vorm van yogamassage, zoals die in Noord-Thailand ook het meest wordt gegeven. Op een comfortabele kapok rolmatras worden yoga stretches gecombineerd met acupressuur massage. Geschikt voor iedereen, van 10 tot 100 jaar.",
+      "Traditional Thai yoga massage combining stretching and acupressure techniques. Suitable for everyone from 10 to 100 years old.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "75 min", price: "€ 69,-" },
@@ -41,10 +90,10 @@ const treatments = [
   },
   {
     id: "reflexology",
-    title: "Voetmassage & Reflexologie",
-    subtitle: "Thais & Westers",
+    title: "Voetreflexologie",
+    subtitle: "Reflexology",
     description:
-      "Een combinatie van westerse en Thaise voetreflexologie. Bij 60 minuten worden ook de onderbenen tot en met de knie gemasseerd. Ook mogelijk als pure voetmassage inclusief voetenbad en scrub.",
+      "Foot reflexology and massage combining Thai and Western techniques. At 60 minutes, lower legs up to the knee are also massaged.",
     prices: [
       { duration: "30 min", price: "€ 35,-" },
       { duration: "60 min", price: "€ 55,-" },
