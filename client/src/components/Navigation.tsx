@@ -13,10 +13,10 @@ const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy
 const navItems = [
   { label: "Home", href: "/" },
   { label: "Behandelingen", href: "/behandelingen" },
+  { label: "Over Mij", href: "/over-mij" },
   { label: "Arrangementen", href: "/arrangementen" },
   { label: "Workshops & Opleidingen", href: "/workshops" },
   { label: "Personal Training", href: "/personal-training" },
-  { label: "Over Mij", href: "/over-mij" },
   { label: "Contact", href: "/contact" },
 ];
 
