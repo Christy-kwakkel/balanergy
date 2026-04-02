@@ -147,7 +147,7 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Link href="/behandelingen">
-                <a className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer">
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Behandelingen
                   </h3>
@@ -158,10 +158,10 @@ export default function Home() {
                     <span className="font-body text-sm font-semibold">Bekijk meer</span>
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </div>
-                </a>
+                </div>
               </Link>
               <Link href="/over-mij">
-                <a className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer">
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Over Mij
                   </h3>
@@ -172,10 +172,10 @@ export default function Home() {
                     <span className="font-body text-sm font-semibold">Lees meer</span>
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </div>
-                </a>
+                </div>
               </Link>
               <Link href="/contact">
-                <a className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all">
+                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer">
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Contact
                   </h3>
@@ -186,7 +186,7 @@ export default function Home() {
                     <span className="font-body text-sm font-semibold">Contacteer ons</span>
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </div>
-                </a>
+                </div>
               </Link>
             </div>
           </div>
