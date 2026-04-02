@@ -9,6 +9,8 @@ import Behandelingen from "./pages/Behandelingen";
 import Arrangementen from "./pages/Arrangementen";
 import OverMij from "./pages/OverMij";
 import Contact from "./pages/Contact";
+import Workshops from "./pages/Workshops";
+import PersonalTraining from "./pages/PersonalTraining";
 
 
 function Router() {
@@ -19,6 +21,8 @@ function Router() {
       <Route path={"/arrangementen"} component={Arrangementen} />
       <Route path={"/over-mij"} component={OverMij} />
       <Route path={"/contact"} component={Contact} />
+      <Route path={"/workshops"} component={Workshops} />
+      <Route path={"/personal-training"} component={PersonalTraining} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

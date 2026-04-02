@@ -57,18 +57,18 @@ export default function Home() {
               <p className="font-body text-lg mb-8 max-w-xl" style={{ color: "#F5F1ED" }}>
                 Balanergy is de praktijk van Mascha Kwakkel in IJsselmuiden — centraal gelegen tussen Kampen en Zwolle. Hier staat jouw lichaam en geest centraal.
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-start">
                 <a
                   href={ONLINE_AGENDA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  className="px-6 py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
                   style={{ backgroundColor: "#C69C6D" }}
                 >
                   AFSPRAAK BOEKEN
                 </a>
                 <Link href="/behandelingen">
-                  <a className="px-6 py-3 rounded font-body text-sm font-semibold border-2 transition-all hover:opacity-90" style={{ borderColor: "white", color: "white" }}>
+                  <a className="px-6 py-3 rounded font-body text-sm font-semibold border-2 text-center transition-all hover:opacity-90" style={{ borderColor: "white", color: "white" }}>
                     BEKIJK BEHANDELINGEN
                   </a>
                 </Link>
@@ -264,6 +264,9 @@ export default function Home() {
               <ul className="space-y-2 font-body text-sm">
                 <li><Link href="/"><a className="opacity-80 hover:opacity-100">Home</a></Link></li>
                 <li><Link href="/behandelingen"><a className="opacity-80 hover:opacity-100">Behandelingen</a></Link></li>
+                <li><Link href="/arrangementen"><a className="opacity-80 hover:opacity-100">Arrangementen</a></Link></li>
+                <li><Link href="/workshops"><a className="opacity-80 hover:opacity-100">Workshops</a></Link></li>
+                <li><Link href="/personal-training"><a className="opacity-80 hover:opacity-100">Personal Training</a></Link></li>
                 <li><Link href="/over-mij"><a className="opacity-80 hover:opacity-100">Over Mij</a></Link></li>
                 <li><Link href="/contact"><a className="opacity-80 hover:opacity-100">Contact</a></Link></li>
               </ul>
