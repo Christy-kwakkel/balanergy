@@ -124,10 +124,10 @@ export default function Contact() {
                     <p>
                       Afspraken kunt u inboeken via:
                     </p>
-                    <ul className="space-y-2 ml-4">
+                    <ul className="space-y-3 ml-4">
                       <li>✓ Online agenda (direct beschikbaarheid zien)</li>
-                      <li>✓ Telefonisch: 06-42874405</li>
-                      <li>✓ Via mail/app: balanergy@hotmail.com</li>
+                      <li>✓ Telefonisch/app: <a href="tel:0642874405" className="font-semibold hover:opacity-70" style={{ color: "#8DA089" }}>06-42874405</a></li>
+                      <li>✓ Via mail: <a href="mailto:balanergy@hotmail.com" className="font-semibold hover:opacity-70" style={{ color: "#8DA089" }}>balanergy@hotmail.com</a></li>
                     </ul>
                     <p className="mt-4">
                       <strong>Tip:</strong> Heb je een specifieke voorkeur voor een dag of tijdstip? Plan dan bij voorkeur minimaal twee afspraken vooruit.

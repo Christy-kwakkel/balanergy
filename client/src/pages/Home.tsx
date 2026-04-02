@@ -13,19 +13,19 @@ const HERO_IMAGE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJX
 
 const reviews = [
   {
-    name: "Claudia Scholten",
+    name: "Claudia S.",
     rating: 5,
-    text: "Want all the attention and time for you? Want to stretch and relax? Need some loving attention? Balanergy has it all. The Thai yoga massage is highly recommended.",
+    text: "Wil je alle aandacht en tijd voor jezelf? Wil je stretchen en ontspannen? Balanergy heeft het allemaal. De Thaise yogamassage is zeer aan te bevelen.",
   },
   {
-    name: "Gerbrig Noordenbos",
+    name: "Gerbrig N.",
     rating: 5,
-    text: "Today I had a wonderful massage with Mascha from Balanergy. Highly recommended! Mascha is very enthusiastic, sweet, and knowledgeable. I felt completely relaxed and happy and will definitely schedule another appointment!",
+    text: "Vandaag had ik een heerlijke massage met Mascha van Balanergy. Zeer aan te bevelen! Mascha is erg enthousiast, lief en kundig. Ik voelde me volledig ontspannen en blij en zal zeker nog een afspraak inplannen!",
   },
   {
-    name: "Angelique Junte",
+    name: "Angelique J.",
     rating: 5,
-    text: "At Mascha's, you can have your massage done exactly as you wish. She gives fantastic massages; my body feels ready to face the world again afterwards.",
+    text: "Bij Mascha kun je je massage precies zo laten doen als je wilt. Ze geeft fantastische massages; mijn lichaam voelt zich klaar om de wereld weer aan te gaan.",
   },
 ];
 
@@ -160,30 +160,30 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
-              <Link href="/over-mij">
+              <Link href="/arrangementen">
                 <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer">
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
-                    Over Mij
+                    Arrangementen
                   </h3>
                   <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
-                    Leer meer over Mascha en haar filosofie achter Balanergy
+                    Ontdek onze speciale arrangementen en acties
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
-                    <span className="font-body text-sm font-semibold">Lees meer</span>
+                    <span className="font-body text-sm font-semibold">Bekijk meer</span>
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </Link>
-              <Link href="/contact">
+              <Link href="/workshops">
                 <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer">
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
-                    Contact
+                    Workshops & Opleidingen
                   </h3>
                   <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
-                    Vind onze locatie, openingstijden en contactgegevens
+                    Leer technieken en verdiep je kennis met onze workshops
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
-                    <span className="font-body text-sm font-semibold">Contacteer ons</span>
+                    <span className="font-body text-sm font-semibold">Bekijk meer</span>
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>

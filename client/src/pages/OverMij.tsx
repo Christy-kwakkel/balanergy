@@ -108,52 +108,94 @@ export default function OverMij() {
             <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
               Mijn Opleidingen
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-display text-xl font-bold mb-4" style={{ color: "#3E3A37" }}>
-                  Hoofd Opleidingen
-                </h3>
-                <ul className="space-y-3 font-body text-base" style={{ color: "#6B6560" }}>
-                  <li className="flex items-start gap-3">
-                    <span className="text-xl mt-1" style={{ color: "#8DA089" }}>✓</span>
-                    <span>Traditionele Thaise Yogamassage (ITM Chiang Mai)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-xl mt-1" style={{ color: "#8DA089" }}>✓</span>
-                    <span>Klassieke Ontspanningsmassage</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-xl mt-1" style={{ color: "#8DA089" }}>✓</span>
-                    <span>Voetreflexologie</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-xl mt-1" style={{ color: "#8DA089" }}>✓</span>
-                    <span>Sportmassage</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-display text-xl font-bold mb-4" style={{ color: "#3E3A37" }}>
-                  Specialisaties & Certificaten
-                </h3>
-                <ul className="space-y-3 font-body text-base" style={{ color: "#6B6560" }}>
-                  <li className="flex items-start gap-3">
-                    <span className="text-xl mt-1" style={{ color: "#8DA089" }}>✓</span>
-                    <span>2023 – Triggerpointherapie</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-xl mt-1" style={{ color: "#8DA089" }}>✓</span>
-                    <span>2021 – Beweegcoach & Trainingsleer</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-xl mt-1" style={{ color: "#8DA089" }}>✓</span>
-                    <span>2019 – Docentenopleiding Power Yoga 2</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-xl mt-1" style={{ color: "#8DA089" }}>✓</span>
-                    <span>2018 – Docentenopleiding Thaise Yogamassage Gevorderden</span>
-                  </li>
-                </ul>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="font-display text-lg font-bold mb-4" style={{ color: "#3E3A37" }}>
+                    Thaise Massage & Voetreflexologie
+                  </h3>
+                  <ul className="space-y-2 font-body text-base" style={{ color: "#6B6560" }}>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2018 – Docentenopleiding Thaise Yogamassage Gevorderden</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2018 – Docentenopleiding Voetreflexologie</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2018 – Thaise Kruidenstempelmassage</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2016 – Docentenopleiding Thaise Yogamassage Beginners</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2016 – Opleiding Sen (Energielijnen)</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2015 – Basis en Gevorderden Opleiding Thaise Yogamassage</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2015 – Opleiding Thaise Voetreflexologie</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2015 – Opleiding Therapeutische Yogamassage</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-display text-lg font-bold mb-4" style={{ color: "#3E3A37" }}>
+                    Yoga, Coaching & Specialisaties
+                  </h3>
+                  <ul className="space-y-2 font-body text-base" style={{ color: "#6B6560" }}>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2023 – Triggerpointherapie</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2022 – Sportmassage</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2021 – Beweegcoach</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2021 – Trainingsleer</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2021 – Inspanningsfysiologie</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2021 – Functionele Anatomie</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2019 – Docentenopleiding Power Yoga 2</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2018 – Docentenopleiding Power Yoga 1</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2015 – Docentenopleiding Kinderyoga</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-lg mt-1" style={{ color: "#8DA089" }}>✓</span>
+                      <span>2014 – Basisopleiding Ontspanningsmassage & Klachtgerichte Massage</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
