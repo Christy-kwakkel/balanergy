@@ -18,6 +18,7 @@ const navItems = [
   { label: "Workshops & Opleidingen", href: "/workshops" },
   { label: "Personal Training", href: "/personal-training" },
   { label: "Contact", href: "/contact" },
+  { label: "Info", href: "/info" },
 ];
 
 export default function Navigation() {

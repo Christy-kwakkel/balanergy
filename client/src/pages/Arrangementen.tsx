@@ -337,6 +337,7 @@ export default function Arrangementen() {
                 <li><Link href="/workshops" className="opacity-80 hover:opacity-100">Workshops & Opleidingen</Link></li>
                 <li><Link href="/personal-training" className="opacity-80 hover:opacity-100">Personal Training</Link></li>
                 <li><Link href="/contact" className="opacity-80 hover:opacity-100">Contact</Link></li>
+                <li><Link href="/info" className="opacity-80 hover:opacity-100">Info</Link></li>
               </ul>
             </div>
             <div>

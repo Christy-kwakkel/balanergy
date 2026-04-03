@@ -11,6 +11,7 @@ import OverMij from "./pages/OverMij";
 import Contact from "./pages/Contact";
 import Workshops from "./pages/Workshops";
 import PersonalTraining from "./pages/PersonalTraining";
+import Info from "./pages/Info";
 
 
 function Router() {
@@ -23,6 +24,7 @@ function Router() {
       <Route path={"/contact"} component={Contact} />
       <Route path={"/workshops"} component={Workshops} />
       <Route path={"/personal-training"} component={PersonalTraining} />
+      <Route path={"/info"} component={Info} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
