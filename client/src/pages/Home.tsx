@@ -62,7 +62,7 @@ export default function Home() {
                   href={ONLINE_AGENDA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90 w-full sm:w-auto"
+                  className="inline-block px-6 py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
                   style={{ backgroundColor: "#C69C6D" }}
                 >
                   AFSPRAAK BOEKEN
@@ -234,7 +234,7 @@ export default function Home() {
                 href={ONLINE_AGENDA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90 w-full sm:w-auto"
+                className="inline-block px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
                 style={{ backgroundColor: "#8DA089" }}
               >
                 ONLINE AGENDA
