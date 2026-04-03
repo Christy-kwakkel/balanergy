@@ -68,7 +68,7 @@ export default function Info() {
                     <h3 className="font-display text-xl font-bold mb-2" style={{ color: "#3E3A37" }}>
                       {doc.title}
                     </h3>
-                    <p className="font-body text-sm" style={{ color: "#6B6560" }}>
+                    <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560", height: "3em", overflow: "hidden" }}>
                       {doc.description}
                     </p>
                   </div>
