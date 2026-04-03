@@ -29,8 +29,7 @@ const documents = [
     title: "Anamnese Formulier",
     description: "Gezondheids- en anamneseformulier voor nieuwe klanten",
     date: "Op aanvraag",
-    url: "#",
-    disabled: true,
+    url: "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/Anamneseformuliermassagetherapie_4db9c927.pdf",
   },
 ];
 
@@ -125,7 +124,7 @@ export default function Info() {
                   style={{ backgroundColor: "#8DA089" }}
                 >
                   <Phone size={16} />
-                  BEL: 06-42874405
+                  bel: 06-42874405
                 </a>
                 <a
                   href="mailto:balanergy@hotmail.com"
@@ -133,7 +132,7 @@ export default function Info() {
                   style={{ backgroundColor: "#8DA089" }}
                 >
                   <Mail size={16} />
-                  MAIL: balanergy@hotmail.com
+                  mail: balanergy@hotmail.com
                 </a>
               </div>
             </div>
