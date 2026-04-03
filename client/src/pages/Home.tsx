@@ -152,7 +152,7 @@ export default function Home() {
                     Behandelingen
                   </h3>
                   <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
-                    Ontdek onze volledige aanbod van massages en behandelingen met prijzen
+                    Ontdek onze volledige aanbod van massages en behandelingen met prijzen.
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
                     <span className="font-body text-sm font-semibold">Bekijk meer</span>
@@ -161,12 +161,12 @@ export default function Home() {
                 </div>
               </Link>
               <Link href="/arrangementen">
-                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer" onClick={() => window.scrollTo(0, 0)} style={{height: '195px'}}>
+                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer" onClick={() => window.scrollTo(0, 0)} style={{height: '195px', height: '195px'}}>
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Arrangementen
                   </h3>
                   <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
-                    Ontdek onze speciale arrangementen, seizoensgebonden aanbiedingen en acties met korting
+                    Ontdek onze speciale arrangementen, seizoensgebonden aanbiedingen en acties met korting.
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
                     <span className="font-body text-sm font-semibold">Bekijk meer</span>
@@ -180,7 +180,7 @@ export default function Home() {
                     Workshops & Opleidingen
                   </h3>
                   <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
-                    Leer technieken en verdiep je kennis met onze workshops
+                    Leer technieken en verdiep je kennis met onze workshops.
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
                     <span className="font-body text-sm font-semibold">Bekijk meer</span>
@@ -196,7 +196,7 @@ export default function Home() {
         <section className="py-16 md:py-24" style={{ backgroundColor: "rgba(141,160,137,0.05)" }}>
           <div className="container">
             <h2 className="font-display text-4xl font-bold mb-12" style={{ color: "#3E3A37" }}>
-              Wat klanten zeggen
+              Wat cliënten zeggen
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {reviews.map((review, idx) => (
