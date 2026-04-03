@@ -21,8 +21,7 @@ const documents = [
     title: "Persoonsgegevens Formulier",
     description: "Formulier voor het invullen van uw persoonsgegevens",
     date: "Op aanvraag",
-    url: "#",
-    disabled: true,
+    url: "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/Uwpersoonsgegevens_01ec79e5.pdf",
   },
   {
     id: "anamnese",
@@ -63,7 +62,6 @@ export default function Info() {
                   style={{
                     backgroundColor: "white",
                     borderColor: "#E8DDD5",
-                    opacity: doc.disabled ? 0.6 : 1,
                   }}
                 >
                   <div className="mb-4">
@@ -81,26 +79,16 @@ export default function Info() {
                     </p>
                   </div>
 
-                  {doc.disabled ? (
-                    <button
-                      disabled
-                      className="w-full py-3 rounded font-body text-sm font-semibold text-center transition-opacity opacity-50 cursor-not-allowed"
-                      style={{ backgroundColor: "#8DA089", color: "white" }}
-                    >
-                      BINNENKORT BESCHIKBAAR
-                    </button>
-                  ) : (
-                    <a
-                      href={doc.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
-                      style={{ backgroundColor: "#8DA089" }}
-                    >
-                      <Download size={16} />
-                      DOWNLOAD
-                    </a>
-                  )}
+                  <a
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
+                    style={{ backgroundColor: "#8DA089" }}
+                  >
+                    <Download size={16} />
+                    DOWNLOAD
+                  </a>
                 </div>
               ))}
             </div>
