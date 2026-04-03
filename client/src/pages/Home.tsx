@@ -151,7 +151,7 @@ export default function Home() {
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Behandelingen
                   </h3>
-                  <p className="font-body text-base mb-4" style={{ color: "#6B6560", height: "2.5em", overflow: "hidden" }}>
+                  <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
                     Ontdek onze volledige aanbod van massages en behandelingen met prijzen
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
@@ -165,7 +165,7 @@ export default function Home() {
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Arrangementen
                   </h3>
-                  <p className="font-body text-base mb-4" style={{ color: "#6B6560", height: "2.5em", overflow: "hidden" }}>
+                  <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
                     Ontdek onze speciale arrangementen en acties
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
@@ -179,7 +179,7 @@ export default function Home() {
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Workshops & Opleidingen
                   </h3>
-                  <p className="font-body text-base mb-4" style={{ color: "#6B6560", height: "2.5em", overflow: "hidden" }}>
+                  <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
                     Leer technieken en verdiep je kennis met onze workshops
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
