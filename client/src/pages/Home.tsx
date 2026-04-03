@@ -166,7 +166,7 @@ export default function Home() {
                     Arrangementen
                   </h3>
                   <p className="font-body text-base mb-4" style={{ color: "#6B6560" }}>
-                    Ontdek onze speciale arrangementen, seizoensgebonden aanbiedingen en acties met korting.
+                    Ontdek onze speciale arrangementen, seizoensgebonden aanbiedingen en acties.
                   </p>
                   <div className="flex items-center gap-2" style={{ color: "#8DA089" }}>
                     <span className="font-body text-sm font-semibold">Bekijk meer</span>
