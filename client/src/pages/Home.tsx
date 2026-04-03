@@ -161,7 +161,7 @@ export default function Home() {
                 </div>
               </Link>
               <Link href="/arrangementen">
-                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer" onClick={() => window.scrollTo(0, 0)} style={{height: '195px', height: '195px'}}>
+                <div className="group bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer" onClick={() => window.scrollTo(0, 0)} style={{height: '195px'}}>
                   <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
                     Arrangementen
                   </h3>
