@@ -57,18 +57,18 @@ export default function Home() {
               <p className="font-body text-lg mb-8 max-w-xl" style={{ color: "#F5F1ED" }}>
                 Balanergy is de praktijk van Mascha Kwakkel in IJsselmuiden — centraal gelegen tussen Kampen en Zwolle. Hier staat jouw lichaam en geest centraal.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-start">
+              <div className="flex flex-col gap-4 justify-start">
                 <a
                   href={ONLINE_AGENDA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
+                  className="px-6 py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90 w-full sm:w-auto"
                   style={{ backgroundColor: "#C69C6D" }}
                 >
                   AFSPRAAK BOEKEN
                 </a>
                 <Link href="/behandelingen">
-                  <a className="px-6 py-3 rounded font-body text-sm font-semibold border-2 text-center transition-all hover:opacity-90" style={{ borderColor: "white", color: "white" }}>
+                  <a className="px-6 py-3 rounded font-body text-sm font-semibold border-2 text-center transition-all hover:opacity-90 w-full sm:w-auto" style={{ borderColor: "white", color: "white" }}>
                     BEKIJK BEHANDELINGEN
                   </a>
                 </Link>
@@ -222,25 +222,25 @@ export default function Home() {
 
         {/* CTA Section */}
         <section className="py-16 md:py-24">
-          <div className="container text-center">
+          <div className="container">
             <h2 className="font-display text-4xl font-bold mb-6" style={{ color: "#3E3A37" }}>
               Klaar om je afspraak in te boeken?
             </h2>
-            <p className="font-body text-lg mb-8 max-w-2xl mx-auto" style={{ color: "#6B6560" }}>
+            <p className="font-body text-lg mb-8" style={{ color: "#6B6560" }}>
               Kies je behandeling en boek direct online via onze agenda, of neem contact met ons op
             </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <div className="flex flex-col gap-4 justify-start">
               <a
                 href={ONLINE_AGENDA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                className="px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90 w-full sm:w-auto"
                 style={{ backgroundColor: "#8DA089" }}
               >
                 ONLINE AGENDA
               </a>
               <Link href="/contact">
-                <a className="px-8 py-3 rounded font-body text-sm font-semibold border-2 transition-all hover:opacity-90" style={{ borderColor: "#8DA089", color: "#8DA089" }}>
+                <a className="px-8 py-3 rounded font-body text-sm font-semibold border-2 transition-all hover:opacity-90 w-full sm:w-auto" style={{ borderColor: "#8DA089", color: "#8DA089" }}>
                   CONTACTEER ONS
                 </a>
               </Link>
