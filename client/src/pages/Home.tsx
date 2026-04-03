@@ -63,7 +63,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block px-6 py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
-                  style={{ backgroundColor: "#C69C6D" }}
+                  style={{ backgroundColor: "#C69C6D", width: '200px' }}
                 >
                   AFSPRAAK BOEKEN
                 </a>
@@ -235,7 +235,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                style={{ backgroundColor: "#8DA089" }}
+                style={{ backgroundColor: "#8DA089", width: '175px' }}
               >
                 ONLINE AGENDA
               </a>
