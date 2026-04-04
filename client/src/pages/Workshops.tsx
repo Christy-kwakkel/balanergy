@@ -4,9 +4,9 @@
  * Workshops and training courses on one page, clearly separated
  */
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "wouter";
-import { Phone, Mail, BookOpen } from "lucide-react";
+import { Phone, Mail, BookOpen, ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
 
 const CONTACT_PHONE = "06-42874405";
@@ -16,42 +16,48 @@ const workshops = [
   {
     id: "ontspanning-achterkant",
     title: "Ontspanningsmassage Achterkant Lichaam",
-    description: "Leer nek-, schouder- en rugontspanningsmassagetechnieken. Inclusief handout met technieken en basiskennis.",
+    description: "Leer nek-, schouder- en rugontspanningsmassagetechnieken.",
+    fullDescription: "Leer nek-, schouder- en rugontspanningsmassagetechnieken. Inclusief handout met technieken en basiskennis.",
     duration: "2,5-4 uur (1-2 personen)",
     price: "€99 per persoon / €175 voor 2 personen",
   },
   {
     id: "thaise-level1",
     title: "Thaise Massage Level 1",
-    description: "Thaise acupressuur en yogamassage voorkant lichaam (voeten, benen, armen, handen, buik, borst, hoofd). Kan zonder massagetafel.",
+    description: "Thaise acupressuur en yogamassage voorkant lichaam.",
+    fullDescription: "Thaise acupressuur en yogamassage voorkant lichaam (voeten, benen, armen, handen, buik, borst, hoofd). Kan zonder massagetafel.",
     duration: "2,5-4 uur (1-2 personen)",
     price: "€125 per persoon / €225 voor 2 personen",
   },
   {
     id: "thaise-level2",
     title: "Thaise Massage Level 2",
-    description: "Thaise massage achterkant lichaam en zijposities (voeten, benen, billen, rug, nek, schouders). Aanvulling op Level 1. Kan zonder massagetafel.",
+    description: "Thaise massage achterkant lichaam en zijposities.",
+    fullDescription: "Thaise massage achterkant lichaam en zijposities (voeten, benen, billen, rug, nek, schouders). Aanvulling op Level 1. Kan zonder massagetafel.",
     duration: "2,5-4 uur (1-2 personen)",
     price: "€125 per persoon / €225 voor 2 personen",
   },
   {
     id: "ontspanning-hoofd",
     title: "Ontspanningsmassage Hoofd, Handen en Voeten",
-    description: "Leer hoofd-, hand- en voetontspanningsmassagetechnieken. Inclusief handout met technieken en basiskennis.",
+    description: "Leer hoofd-, hand- en voetontspanningsmassagetechnieken.",
+    fullDescription: "Leer hoofd-, hand- en voetontspanningsmassagetechnieken. Inclusief handout met technieken en basiskennis.",
     duration: "2 uur",
     price: "€75 per persoon / €140 voor 2 personen",
   },
   {
     id: "ontspanning-heel",
     title: "Ontspanningsmassage Hele Lichaam",
-    description: "Volledige lichaamsmassage ontspanning (nek, schouders, rug, benen, armen, handen, hoofd, voeten). Inclusief handout met technieken en basiskennis.",
+    description: "Volledige lichaamsmassage ontspanning voor het hele lichaam.",
+    fullDescription: "Volledige lichaamsmassage ontspanning (nek, schouders, rug, benen, armen, handen, hoofd, voeten). Inclusief handout met technieken en basiskennis.",
     duration: "5-6 uur",
     price: "€225 per persoon",
   },
   {
     id: "klachtgerichte",
     title: "Klachtgerichte/Sportmassage",
-    description: "Klachtgerichte massage (nek, schouders, rug, heup-/bekkenspieren, bovenbenen). Inclusief handout met technieken en basiskennis.",
+    description: "Klachtgerichte massage voor specifieke pijngebieden.",
+    fullDescription: "Klachtgerichte massage (nek, schouders, rug, heup-/bekkenspieren, bovenbenen). Inclusief handout met technieken en basiskennis.",
     duration: "3-3,5 uur",
     price: "€125 per persoon / €225 voor 2 personen",
   },
@@ -61,32 +67,188 @@ const trainings = [
   {
     id: "thaise-level1",
     title: "Opleiding Thaise Yogamassage Level 1",
-    description: "Leer de basisprincipes van Thaise yogamassage. Voorkant lichaamstechnieken inclusief voeten, benen, armen, handen, buik, borst en hoofd. Maximaal 2 personen per training.",
+    description: "Leer de basisprincipes van Thaise yogamassage.",
+    fullDescription: "Leer de basisprincipes van Thaise yogamassage. Voorkant lichaamstechnieken inclusief voeten, benen, armen, handen, buik, borst en hoofd. Maximaal 2 personen per training.",
     duration: "Meerdere sessies",
     price: "Op aanvraag",
   },
   {
     id: "thaise-level2",
     title: "Opleiding Thaise Yogamassage Level 2",
-    description: "Geavanceerde Thaise yogamassagetechnieken voor achterkant lichaam en zijposities. Aanvulling op Level 1. Maximaal 2 personen per training.",
+    description: "Geavanceerde Thaise yogamassagetechnieken voor achterkant lichaam.",
+    fullDescription: "Geavanceerde Thaise yogamassagetechnieken voor achterkant lichaam en zijposities. Aanvulling op Level 1. Maximaal 2 personen per training.",
     duration: "Meerdere sessies",
     price: "Op aanvraag",
   },
   {
     id: "klachtgerichte",
     title: "Opleiding Klachtgerichte Massage",
-    description: "Professionele klachtgerichte massagetraining. Leer specifieke pijngebieden en bewegingsklachten behandelen. Maximaal 2 personen per training.",
+    description: "Professionele klachtgerichte massagetraining.",
+    fullDescription: "Professionele klachtgerichte massagetraining. Leer specifieke pijngebieden en bewegingsklachten behandelen. Maximaal 2 personen per training.",
     duration: "Meerdere sessies",
     price: "Op aanvraag",
   },
   {
     id: "ontspanning-volledig",
     title: "Volledige Opleiding Ontspanningsmassage",
-    description: "Volledige ontspanningsmassagetraining voor het hele lichaam. Inclusief water, kruidenthee en cursusmateriaal. Beschikbaar in het Nederlands of Engels.",
+    description: "Volledige ontspanningsmassagetraining voor het hele lichaam.",
+    fullDescription: "Volledige ontspanningsmassagetraining voor het hele lichaam. Inclusief water, kruidenthee en cursusmateriaal. Beschikbaar in het Nederlands of Engels.",
     duration: "Meerdere sessies",
     price: "Op aanvraag",
   },
 ];
+
+// Workshop Card Component with Expandable Description
+function WorkshopCard({ id, title, description, fullDescription, duration, price }: { id: string; title: string; description: string; fullDescription: string; duration: string; price: string }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div
+      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
+      style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
+    >
+      <div className="p-6 flex-1 flex flex-col">
+        <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
+          {title}
+        </h3>
+        <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "3em", overflow: "hidden" }}>
+          {description}
+        </p>
+
+        {/* Expandable Full Description */}
+        <div className="mb-4">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="inline-flex items-center gap-2 font-body text-sm font-semibold transition-all"
+            style={{ color: "#8DA089" }}
+          >
+            <span>{isExpanded ? "Lees minder" : "Lees meer"}</span>
+            <ChevronDown
+              size={16}
+              style={{
+                transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
+                transition: "transform 0.3s ease",
+              }}
+            />
+          </button>
+
+          {isExpanded && (
+            <div
+              className="mt-4 p-4 rounded bg-white border"
+              style={{ borderColor: "rgba(141,160,137,0.2)", backgroundColor: "rgba(141,160,137,0.05)" }}
+            >
+              <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560" }}>
+                {fullDescription}
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
+
+      {/* Details */}
+      <div className="p-6">
+        <div className="space-y-2 mb-6">
+          <div className="flex justify-between font-body text-sm">
+            <span style={{ color: "#6B6560" }}>Duur:</span>
+            <span style={{ color: "#8DA089", fontWeight: "600" }}>{duration}</span>
+          </div>
+          <div className="flex justify-between font-body text-sm">
+            <span style={{ color: "#6B6560" }}>Prijs:</span>
+            <span style={{ color: "#8DA089", fontWeight: "600" }}>{price}</span>
+          </div>
+        </div>
+
+        {/* Contact Button */}
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
+          style={{ backgroundColor: "#8DA089" }}
+        >
+          INTERESSE?
+        </a>
+      </div>
+    </div>
+  );
+}
+
+// Training Card Component with Expandable Description
+function TrainingCard({ id, title, description, fullDescription, duration, price }: { id: string; title: string; description: string; fullDescription: string; duration: string; price: string }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div
+      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
+      style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
+    >
+      <div className="p-6 flex-1 flex flex-col">
+        <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
+          {title}
+        </h3>
+        <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "3em", overflow: "hidden" }}>
+          {description}
+        </p>
+
+        {/* Expandable Full Description */}
+        <div className="mb-4">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="inline-flex items-center gap-2 font-body text-sm font-semibold transition-all"
+            style={{ color: "#8DA089" }}
+          >
+            <span>{isExpanded ? "Lees minder" : "Lees meer"}</span>
+            <ChevronDown
+              size={16}
+              style={{
+                transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
+                transition: "transform 0.3s ease",
+              }}
+            />
+          </button>
+
+          {isExpanded && (
+            <div
+              className="mt-4 p-4 rounded bg-white border"
+              style={{ borderColor: "rgba(141,160,137,0.2)", backgroundColor: "rgba(141,160,137,0.05)" }}
+            >
+              <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560" }}>
+                {fullDescription}
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
+
+      {/* Details */}
+      <div className="p-6">
+        <div className="space-y-2 mb-6">
+          <div className="flex justify-between font-body text-sm">
+            <span style={{ color: "#6B6560" }}>Duur:</span>
+            <span style={{ color: "#8DA089", fontWeight: "600" }}>{duration}</span>
+          </div>
+          <div className="flex justify-between font-body text-sm">
+            <span style={{ color: "#6B6560" }}>Prijs:</span>
+            <span style={{ color: "#8DA089", fontWeight: "600" }}>{price}</span>
+          </div>
+        </div>
+
+        {/* Contact Button */}
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
+          style={{ backgroundColor: "#8DA089" }}
+        >
+          INTERESSE?
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export default function Workshops() {
   useEffect(() => {
@@ -120,46 +282,7 @@ export default function Workshops() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {workshops.map((workshop) => (
-                <div
-                  key={workshop.id}
-                  className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
-                  style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
-                >
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
-                      {workshop.title}
-                    </h3>
-                    <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
-                      {workshop.description}
-                    </p>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
-
-                  {/* Details */}
-                  <div className="p-6">
-                    <div className="space-y-2 mb-6">
-                      <div className="flex justify-between font-body text-sm">
-                        <span style={{ color: "#6B6560" }}>Duur:</span>
-                        <span style={{ color: "#8DA089", fontWeight: "600" }}>{workshop.duration}</span>
-                      </div>
-                      <div className="flex justify-between font-body text-sm">
-                        <span style={{ color: "#6B6560" }}>Prijs:</span>
-                        <span style={{ color: "#8DA089", fontWeight: "600" }}>{workshop.price}</span>
-                      </div>
-                    </div>
-
-                    {/* Contact Button */}
-                    <a
-                      href={`mailto:${CONTACT_EMAIL}`}
-                      className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
-                      style={{ backgroundColor: "#8DA089" }}
-                    >
-                      INTERESSE?
-                    </a>
-                  </div>
-                </div>
+                <WorkshopCard key={workshop.id} {...workshop} />
               ))}
             </div>
           </div>
@@ -173,46 +296,7 @@ export default function Workshops() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {trainings.map((training) => (
-                <div
-                  key={training.id}
-                  className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
-                  style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
-                >
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
-                      {training.title}
-                    </h3>
-                    <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
-                      {training.description}
-                    </p>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
-
-                  {/* Details */}
-                  <div className="p-6">
-                    <div className="space-y-2 mb-6">
-                      <div className="flex justify-between font-body text-sm">
-                        <span style={{ color: "#6B6560" }}>Duur:</span>
-                        <span style={{ color: "#8DA089", fontWeight: "600" }}>{training.duration}</span>
-                      </div>
-                      <div className="flex justify-between font-body text-sm">
-                        <span style={{ color: "#6B6560" }}>Prijs:</span>
-                        <span style={{ color: "#8DA089", fontWeight: "600" }}>{training.price}</span>
-                      </div>
-                    </div>
-
-                    {/* Contact Button */}
-                    <a
-                      href={`mailto:${CONTACT_EMAIL}`}
-                      className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
-                      style={{ backgroundColor: "#8DA089" }}
-                    >
-                      INTERESSE?
-                    </a>
-                  </div>
-                </div>
+                <TrainingCard key={training.id} {...training} />
               ))}
             </div>
           </div>

@@ -4,16 +4,19 @@
  * All arrangements, actions, and special offers on one page
  */
 
+import { useState } from "react";
 import { Link } from "wouter";
-import { Phone, Mail, Sparkles } from "lucide-react";
+import { Phone, Mail, Sparkles, ChevronDown } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import ExpandableCard from "@/components/ExpandableCard";
 
 const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 
 const acties = [
   {
     title: "Kom kennis maken met Thaise yogamassage",
-    description: "Krijg een massage tegen dit scherpe actietarief! Per persoon eenmalig te boeken tegen deze speciale prijs.",
+    description: "Krijg een massage tegen dit scherpe actietarief!",
+    fullDescription: "Krijg een massage tegen dit scherpe actietarief! Per persoon eenmalig te boeken tegen deze speciale prijs.",
     prices: [
       { duration: "60 min", price: "€ 52,50" },
       { duration: "90 min", price: "€ 72,50" },
@@ -22,7 +25,8 @@ const acties = [
   },
   {
     title: "Kom kennis maken met voetreflexologie",
-    description: "Boek een behandeling met Thaise en westerse technieken gecombineerd tegen dit scherpe actietarief.",
+    description: "Boek een behandeling met Thaise en westerse technieken.",
+    fullDescription: "Boek een behandeling met Thaise en westerse technieken gecombineerd tegen dit scherpe actietarief.",
     prices: [
       { duration: "45 min", price: "€ 42,50" },
     ],
@@ -30,7 +34,8 @@ const acties = [
   },
   {
     title: "Scrub, achterkant lichaam",
-    description: "Ontdoe je huid van dode huidcellen. Scrub van rug, billen (indien gewenst) en achterkant benen extra bij je behandeling.",
+    description: "Ontdoe je huid van dode huidcellen.",
+    fullDescription: "Ontdoe je huid van dode huidcellen. Scrub van rug, billen (indien gewenst) en achterkant benen extra bij je behandeling.",
     prices: [
       { duration: "Extra", price: "€ 6,95" },
     ],
@@ -42,29 +47,32 @@ const seizoensArrangementen = [
   {
     title: "Winter arrangement",
     subtitle: "Tafel",
+    description: "Stimulerende massage met westerse en oosterse technieken.",
+    fullDescription: "Stimulerende massage met westerse en oosterse technieken met essentiële olie naar keuze. Start met scrub van rug, nek, schouders en achterkant benen. Daarna massage van alle lichaamsdelen inclusief voeten.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
     ],
-    description: "Stimulerende massage met westerse en oosterse technieken met essentiële olie naar keuze. Start met scrub van rug, nek, schouders en achterkant benen. Daarna massage van alle lichaamsdelen inclusief voeten.",
   },
   {
     title: "Balsem sinaasappel-kaneel arrangement",
     subtitle: "Tafel",
+    description: "Start met kaneel of sinaasappel etherische oliebad.",
+    fullDescription: "Start met kaneel of sinaasappel etherische oliebad van voeten. Insmering met verwarmende therapeutische balsem, gevolgd door massage met verwarmde essentiële olie.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
     ],
-    description: "Start met kaneel of sinaasappel etherische oliebad van voeten. Insmering met verwarmende therapeutische balsem, gevolgd door massage met verwarmde essentiële olie.",
   },
   {
     title: "Balsem sinaasappel-kaneel arrangement Thais",
     subtitle: "Mat",
+    description: "Start met warm voetbad met essentiële olie.",
+    fullDescription: "Start met warm voetbad met essentiële olie. Insmering met verwarmende therapeutische balsem, gevolgd door Thaise massage met keuze uit ontspannende of therapeutische massage.",
     prices: [
       { duration: "60 min", price: "€ 62,50" },
       { duration: "90 min", price: "€ 82,50" },
     ],
-    description: "Start met warm voetbad met essentiële olie. Insmering met verwarmende therapeutische balsem, gevolgd door Thaise massage met keuze uit ontspannende of therapeutische massage.",
   },
 ];
 
@@ -72,46 +80,51 @@ const vasteArrangementen = [
   {
     title: "Antistress massage",
     subtitle: "Tafel",
+    description: "Ontspannende massage met zwaartepunt op rug, nek en schouders.",
+    fullDescription: "Ontspannende massage met zwaartepunt op rug, nek, schouders, handen, voeten en hoofd. Na afloop krijg je een miniflesje massageolie met anti-stress essentiële olie mee naar huis.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
     ],
-    description: "Ontspannende massage met zwaartepunt op rug, nek, schouders, handen, voeten en hoofd. Na afloop krijg je een miniflesje massageolie met anti-stress essentiële olie mee naar huis.",
   },
   {
     title: "Thai Western massage",
     subtitle: "Mat & Tafel",
+    description: "Start op mat met voetbad, massage met yogastretches.",
+    fullDescription: "Start op mat met voetbad, massage van armen, handen, voeten, benen en rug met yogastretches. Vervolgens op tafel rug, nek, schouders en hoofd.",
     prices: [
       { duration: "90 min", price: "€ 82,50" },
     ],
-    description: "Start op mat met voetbad, massage van armen, handen, voeten, benen en rug met yogastretches. Vervolgens op tafel rug, nek, schouders en hoofd.",
   },
   {
     title: "Combi Thaise yogamassage en voetreflexologie",
     subtitle: "Mat",
+    description: "Thaise yogamassage met voetreflexologie en warm voetenbad.",
+    fullDescription: "Thaise yogamassage met ongeveer 15-20 minuten voetreflexologie. Start met warm voetenbad en kopje kruiden- of vruchtenthee naar keuze.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
     ],
-    description: "Thaise yogamassage met ongeveer 15-20 minuten voetreflexologie. Start met warm voetenbad en kopje kruiden- of vruchtenthee naar keuze.",
   },
   {
     title: "Indian summer arrangement",
     subtitle: "Tafel",
+    description: "Start met voetenbad en kopje thee, daarna stevige scrub.",
+    fullDescription: "Start met voetenbad en kopje thee, daarna stevige scrub van rug en achterkant benen, gevolgd door massage van rug, nek, schouders, achterkant benen en bilspieren.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
     ],
-    description: "Start met voetenbad en kopje thee, daarna stevige scrub van rug en achterkant benen, gevolgd door massage van rug, nek, schouders, achterkant benen en bilspieren.",
   },
   {
     title: "Samui zwangerschapsarrangement",
     subtitle: "Tafel of Mat",
+    description: "Speciaal voor zwangeren met warm voetenbad en lavendelolie.",
+    fullDescription: "Speciaal voor zwangeren. Start met warm voetenbad met lavendelolie en kopje kruidenthee. Ontspannende massage van hoofd, gezicht, nek, schouders, armen, handen en voeten.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
     ],
-    description: "Speciaal voor zwangeren. Start met warm voetenbad met lavendelolie en kopje kruidenthee. Ontspannende massage van hoofd, gezicht, nek, schouders, armen, handen en voeten.",
   },
 ];
 
@@ -167,7 +180,9 @@ function ArrangementCard({ title, subtitle, prices, description, note }: { title
   );
 }
 
-function ActieCard({ title, prices, description, note }: { title: string; prices: Array<{ duration: string; price: string }>; description: string; note: string }) {
+function ActieCard({ title, description, fullDescription, prices, note }: { title: string; description: string; fullDescription: string; prices: Array<{ duration: string; price: string }>; note: string }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div
       className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
@@ -177,9 +192,38 @@ function ActieCard({ title, prices, description, note }: { title: string; prices
         <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
           {title}
         </h3>
-        <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
+        <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "3em", overflow: "hidden" }}>
           {description}
         </p>
+
+        {/* Expandable Full Description */}
+        <div className="mb-4">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="inline-flex items-center gap-2 font-body text-sm font-semibold transition-all"
+            style={{ color: "#8DA089" }}
+          >
+            <span>{isExpanded ? "Lees minder" : "Lees meer"}</span>
+            <ChevronDown
+              size={16}
+              style={{
+                transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
+                transition: "transform 0.3s ease",
+              }}
+            />
+          </button>
+
+          {isExpanded && (
+            <div
+              className="mt-4 p-4 rounded bg-white border"
+              style={{ borderColor: "rgba(141,160,137,0.2)", backgroundColor: "rgba(141,160,137,0.05)" }}
+            >
+              <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560" }}>
+                {fullDescription}
+              </p>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Divider */}
@@ -258,7 +302,7 @@ export default function Arrangementen() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {seizoensArrangementen.map((arr, idx) => (
-                <ArrangementCard key={idx} {...arr} />
+                <ExpandableCard key={idx} {...arr} subtitle={arr.subtitle} />
               ))}
             </div>
           </div>
@@ -272,7 +316,7 @@ export default function Arrangementen() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {vasteArrangementen.map((arr, idx) => (
-                <ArrangementCard key={idx} {...arr} />
+                <ExpandableCard key={idx} {...arr} subtitle={arr.subtitle} />
               ))}
             </div>
           </div>
