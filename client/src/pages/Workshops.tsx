@@ -14,50 +14,26 @@ const CONTACT_EMAIL = "balanergy@hotmail.com";
 
 const workshops = [
   {
-    id: "ontspanning-achterkant",
-    title: "Ontspanningsmassage Achterkant Lichaam",
-    description: "Leer nek-, schouder- en rugontspanningsmassagetechnieken.",
-    fullDescription: "Leer nek-, schouder- en rugontspanningsmassagetechnieken. Inclusief handout met technieken en basiskennis.",
-    duration: "2,5-4 uur (1-2 personen)",
-    price: "€99 per persoon / €175 voor 2 personen",
-  },
-  {
-    id: "thaise-level1",
-    title: "Thaise Massage Level 1",
-    description: "Thaise acupressuur en yogamassage voorkant lichaam.",
-    fullDescription: "Thaise acupressuur en yogamassage voorkant lichaam (voeten, benen, armen, handen, buik, borst, hoofd). Kan zonder massagetafel.",
-    duration: "2,5-4 uur (1-2 personen)",
-    price: "€125 per persoon / €225 voor 2 personen",
-  },
-  {
-    id: "thaise-level2",
-    title: "Thaise Massage Level 2",
-    description: "Thaise massage achterkant lichaam en zijposities.",
-    fullDescription: "Thaise massage achterkant lichaam en zijposities (voeten, benen, billen, rug, nek, schouders). Aanvulling op Level 1. Kan zonder massagetafel.",
-    duration: "2,5-4 uur (1-2 personen)",
-    price: "€125 per persoon / €225 voor 2 personen",
-  },
-  {
     id: "ontspanning-hoofd",
-    title: "Ontspanningsmassage Hoofd, Handen en Voeten",
-    description: "Leer hoofd-, hand- en voetontspanningsmassagetechnieken.",
-    fullDescription: "Leer hoofd-, hand- en voetontspanningsmassagetechnieken. Inclusief handout met technieken en basiskennis.",
+    title: "Workshop ontspanningsmassage hoofd, handen en voeten",
+    description: "Leer de belangrijkste grepen en technieken.",
+    fullDescription: "Je leert in vogelvlucht de belangrijkste grepen en technieken voor ontspanningsmassage van hoofd, handen en voeten, do's and don'ts, de opbouw van een massage, materiaalgebruik en houding. Inclusief handout met de grepen en basale kennis van je workshop om mee naar huis te nemen.",
     duration: "2 uur",
     price: "€75 per persoon / €140 voor 2 personen",
   },
   {
     id: "ontspanning-heel",
-    title: "Ontspanningsmassage Hele Lichaam",
-    description: "Volledige lichaamsmassage ontspanning voor het hele lichaam.",
-    fullDescription: "Volledige lichaamsmassage ontspanning (nek, schouders, rug, benen, armen, handen, hoofd, voeten). Inclusief handout met technieken en basiskennis.",
+    title: "Workshop ontspanningsmassage hele lichaam",
+    description: "Leer de belangrijkste grepen en technieken voor het hele lichaam.",
+    fullDescription: "Je leert in vogelvlucht de belangrijkste grepen en technieken voor ontspanningsmassage van het hele lichaam, do's and don'ts, de opbouw van een massage, materiaalgebruik en houding. Inclusief handout met de grepen en basale kennis van je workshop om mee naar huis te nemen.",
     duration: "5-6 uur",
     price: "€225 per persoon",
   },
   {
     id: "klachtgerichte",
-    title: "Klachtgerichte/Sportmassage",
-    description: "Klachtgerichte massage voor specifieke pijngebieden.",
-    fullDescription: "Klachtgerichte massage (nek, schouders, rug, heup-/bekkenspieren, bovenbenen). Inclusief handout met technieken en basiskennis.",
+    title: "Workshop klachtgerichte/sport massage",
+    description: "Leer klachtgerichte massage voor specifieke lichaamsdelen.",
+    fullDescription: "Je leert in vogelvlucht de belangrijkste grepen en technieken voor klacht gerichte massage van de nek, shoulders, rug en bil- en bekkenspierenovenbenenen achterkant, do's and don'ts, de opbouw van een massage, materiaalgebruik en houding. Inclusief handout met de grepen en basale kennis van je workshop om mee naar huis te nemen.\n\nGeef bij je boeking duidelijk aan of de workshop voor 1 of 2 personen moet worden. Indien je alleen komt, dan neem je een model mee op wie je kunt oefenen.",
     duration: "3-3,5 uur",
     price: "€125 per persoon / €225 voor 2 personen",
   },
@@ -66,35 +42,27 @@ const workshops = [
 const trainings = [
   {
     id: "thaise-level1",
-    title: "Opleiding Thaise Yogamassage Level 1",
-    description: "Leer de basisprincipes van Thaise yogamassage.",
-    fullDescription: "Leer de basisprincipes van Thaise yogamassage. Voorkant lichaamstechnieken inclusief voeten, benen, armen, handen, buik, borst en hoofd. Maximaal 2 personen per training.",
-    duration: "Meerdere sessies",
-    price: "Op aanvraag",
-  },
-  {
-    id: "thaise-level2",
-    title: "Opleiding Thaise Yogamassage Level 2",
-    description: "Geavanceerde Thaise yogamassagetechnieken voor achterkant lichaam.",
-    fullDescription: "Geavanceerde Thaise yogamassagetechnieken voor achterkant lichaam en zijposities. Aanvulling op Level 1. Maximaal 2 personen per training.",
-    duration: "Meerdere sessies",
-    price: "Op aanvraag",
+    title: "Volledige opleiding Thaise yogamassage level 1",
+    description: "Wil je Thaise yogamassage leren?",
+    fullDescription: "Wil je Thaise yogamassage leren? Dat kan in duo's (of eventueel alleen, dan neem je een model mee), door de opleiding BalaneryThai Yoga massage te doen, volgens de principes en leermethoden van ITM Chiangmai. Iedereen kan zich aanmelden, zowel leken als (ervaren) masseurs.\n\nDe opleiding certificeert je om daarna in te stromen op level 2, het gevorderden level met nog meer houdingenm.\n\nWat leer je?\n- 64 basisposities van Thaise yogamassage level 1\n- Voorkant posities, van voeten tot gezicht, zittende houdingenm, shoulders en bovenrug\n- De belangrijkste energielijnen, de Sen lijnen\n- Je leert stretches en acupressuur punten\n- Diepe buikmassage, Hara werk\n- Je leert op de juiste manier gebruik te maken van je lichaamgewicht, door je duimen, handpalmen, ellebogen, knieën en voeten te gebruiken in de massage\n\nWat krijg je?\n- Een duidelijk lesboek met uitleg en aanduidingen\n- Een praktijkexamen aan het einde van je opleiding met internationale certificering\n- Lestijden en data in overleg, de opleiding bestaat uit 6 lessen van 2,5 a 3 uur. In de eerste 4 lessen leer je de 64 posities, de 5e les is herhaling en examentraining, vragen stellen en achtergronden, de 6e les is het praktijkexamen\n- Inclusief een gratis Thaise yogamassage van 60 minuten!\n- Onbeperkt water en kruidenthee\n- Onbeperkte mogelijkheid tot het stellen van vragen via de telefoon of mail na de opleiding",
+    duration: "6 lessen van 2,5-3 uur",
+    price: "€699 per persoon",
   },
   {
     id: "klachtgerichte",
-    title: "Opleiding Klachtgerichte Massage",
+    title: "Volledige opleiding klachtgerichte massage",
     description: "Professionele klachtgerichte massagetraining.",
-    fullDescription: "Professionele klachtgerichte massagetraining. Leer specifieke pijngebieden en bewegingsklachten behandelen. Maximaal 2 personen per training.",
-    duration: "Meerdere sessies",
-    price: "Op aanvraag",
+    fullDescription: "Volledige opleiding klachtgerichte massage, 7-8 ochtenden of middagen van 2 weekenddagen, dagdelen in overleg\n\n- Kennismaking, inventarisatie kennis niveau, persoonlijke doelen\n- Massage basics, do's and don'ts, contra indicaties\n- Anamnesegespreken formulier\n- Werkhouding\n- Uitgebreide anatomie van de belangrijkste botten en spieren\n- Een praktijk opstarten, waar moet je rekening mee houden\n- Lessen massage van de rug, nek, shoulders, armen, handen, achterkant en voorkant benen, hoofd, voeten, buik en borst\n- Herhalingsles en gelegenheid tot extra oefenen\n- Afsluitend praktijkexamen\n- Inclusief massageboek en diploma\n- Aan het einde van deze opleiding heb je alles in huis om zelf een praktijk te gaan starten, nadat je met casestudies praktijkervaring hebt opgedaan\n- Inclusief gratis klachtgerichte massage van een uur!",
+    duration: "7-8 ochtenden of middagen",
+    price: "€650 per persoon",
   },
   {
     id: "ontspanning-volledig",
-    title: "Volledige Opleiding Ontspanningsmassage",
-    description: "Volledige ontspanningsmassagetraining voor het hele lichaam.",
-    fullDescription: "Volledige ontspanningsmassagetraining voor het hele lichaam. Inclusief water, kruidenthee en cursusmateriaal. Beschikbaar in het Nederlands of Engels.",
-    duration: "Meerdere sessies",
-    price: "Op aanvraag",
+    title: "Volledige opleiding ontspanningsmassage",
+    description: "Volledige ontspanningsmassagetraining.",
+    fullDescription: "Volledige opleiding ontspanningsmassage, 7-8 ochtenden of middagen van ongeveer 3-3,5 uur of 2 weekenddagen, dagdelen in overleg\n\n- Kennismaking, inventarisatie kennis niveau, persoonlijke doelen\n- Massage basics, do's and don'ts, contra-indicaties\n- Werkhouding\n- Globale anatomie van de belangrijkste botten en spieren\n- Lessen massage van de rug, nek, shoulders, armen, handen, achterkant en voorkant benen, hoofd en voeten\n- Herhalingsles en gelegenheid tot extra oefenen\n- Afsluitend praktijkexamen\n- Inclusief massageboek en diploma\n- Een praktijk opstarten, waar moet je rekening mee houden\n- Aan het einde van deze opleiding heb je alles in huis om zelf een praktijk te gaan starten, nadat je met casestudies praktijkervaring hebt opgedaan\n- Inclusief gratis ontspanningsmassage van een uur!",
+    duration: "7-8 ochtenden of middagen",
+    price: "€650 per persoon",
   },
 ];
 
@@ -137,7 +105,7 @@ function WorkshopCard({ id, title, description, fullDescription, duration, price
               className="mt-4 p-4 rounded bg-white border"
               style={{ borderColor: "rgba(141,160,137,0.2)", backgroundColor: "rgba(141,160,137,0.05)" }}
             >
-              <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560" }}>
+              <p className="font-body text-sm leading-relaxed whitespace-pre-wrap" style={{ color: "#6B6560" }}>
                 {fullDescription}
               </p>
             </div>
@@ -148,17 +116,15 @@ function WorkshopCard({ id, title, description, fullDescription, duration, price
       {/* Divider */}
       <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
 
-      {/* Details */}
+      {/* Duration and Price */}
       <div className="p-6">
-        <div className="space-y-2 mb-6">
-          <div className="flex justify-between font-body text-sm">
-            <span style={{ color: "#6B6560" }}>Duur:</span>
-            <span style={{ color: "#8DA089", fontWeight: "600" }}>{duration}</span>
-          </div>
-          <div className="flex justify-between font-body text-sm">
-            <span style={{ color: "#6B6560" }}>Prijs:</span>
-            <span style={{ color: "#8DA089", fontWeight: "600" }}>{price}</span>
-          </div>
+        <div className="mb-3">
+          <p className="font-body text-sm mb-1" style={{ color: "#6B6560" }}>
+            <span style={{ fontWeight: "600" }}>Duur:</span> {duration}
+          </p>
+          <p className="font-body text-sm" style={{ color: "#8DA089", fontWeight: "600" }}>
+            {price}
+          </p>
         </div>
 
         {/* Contact Button */}
@@ -167,7 +133,7 @@ function WorkshopCard({ id, title, description, fullDescription, duration, price
           className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#8DA089" }}
         >
-          INTERESSE?
+          MEER INFO
         </a>
       </div>
     </div>
@@ -213,7 +179,7 @@ function TrainingCard({ id, title, description, fullDescription, duration, price
               className="mt-4 p-4 rounded bg-white border"
               style={{ borderColor: "rgba(141,160,137,0.2)", backgroundColor: "rgba(141,160,137,0.05)" }}
             >
-              <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560" }}>
+              <p className="font-body text-sm leading-relaxed whitespace-pre-wrap" style={{ color: "#6B6560" }}>
                 {fullDescription}
               </p>
             </div>
@@ -224,17 +190,15 @@ function TrainingCard({ id, title, description, fullDescription, duration, price
       {/* Divider */}
       <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
 
-      {/* Details */}
+      {/* Duration and Price */}
       <div className="p-6">
-        <div className="space-y-2 mb-6">
-          <div className="flex justify-between font-body text-sm">
-            <span style={{ color: "#6B6560" }}>Duur:</span>
-            <span style={{ color: "#8DA089", fontWeight: "600" }}>{duration}</span>
-          </div>
-          <div className="flex justify-between font-body text-sm">
-            <span style={{ color: "#6B6560" }}>Prijs:</span>
-            <span style={{ color: "#8DA089", fontWeight: "600" }}>{price}</span>
-          </div>
+        <div className="mb-3">
+          <p className="font-body text-sm mb-1" style={{ color: "#6B6560" }}>
+            <span style={{ fontWeight: "600" }}>Duur:</span> {duration}
+          </p>
+          <p className="font-body text-sm" style={{ color: "#8DA089", fontWeight: "600" }}>
+            {price}
+          </p>
         </div>
 
         {/* Contact Button */}
@@ -243,7 +207,7 @@ function TrainingCard({ id, title, description, fullDescription, duration, price
           className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#8DA089" }}
         >
-          INTERESSE?
+          MEER INFO
         </a>
       </div>
     </div>
@@ -251,11 +215,6 @@ function TrainingCard({ id, title, description, fullDescription, duration, price
 }
 
 export default function Workshops() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Workshops & Opleidingen | Balanergy";
-  }, []);
-
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#FCF9F5" }}>
       <Navigation />
@@ -269,7 +228,7 @@ export default function Workshops() {
               Workshops & Opleidingen
             </h1>
             <p className="font-body text-lg" style={{ color: "#8DA089" }}>
-              Leer massagetechnieken van Mascha en word zelf masseur
+              Leer massagetechnieken van een professioneel therapeut
             </p>
           </div>
         </section>
@@ -280,69 +239,58 @@ export default function Workshops() {
             <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
               Workshops
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {workshops.map((workshop) => (
-                <WorkshopCard key={workshop.id} {...workshop} />
+            <p className="font-body text-base mb-8 max-w-3xl" style={{ color: "#6B6560" }}>
+              Korte workshops waarin je de basisprincipes van massage leert. Perfecte introductie voor beginners of aanvulling voor ervaren therapeuten.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {workshops.map((w) => (
+                <WorkshopCard key={w.id} {...w} />
               ))}
             </div>
           </div>
         </section>
 
         {/* Trainings Section */}
-        <section className="py-12">
+        <section className="py-12 bg-white">
           <div className="container">
             <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
-              Opleidingen
+              Volledige Opleidingen
             </h2>
+            <p className="font-body text-base mb-8 max-w-3xl" style={{ color: "#6B6560" }}>
+              Volledige professionele opleidingen met certificering. Ideaal voor degenen die een massagepraktijk willen starten of hun vaardigheden willen verdiepen.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {trainings.map((training) => (
-                <TrainingCard key={training.id} {...training} />
+              {trainings.map((t) => (
+                <TrainingCard key={t.id} {...t} />
               ))}
             </div>
           </div>
         </section>
 
-        {/* Cancellation Policy Section */}
-        <section className="py-12 bg-white">
+        {/* Info Section */}
+        <section className="py-12">
           <div className="container max-w-3xl">
-            <div className="bg-yellow-50 border-l-4 p-6" style={{ borderColor: "#C69C6D", backgroundColor: "rgba(198,156,109,0.1)" }}>
-              <p className="font-body text-base font-semibold mb-3" style={{ color: "#3E3A37" }}>
-                ⚠️ Annuleringsbeleid
+            <div className="bg-white rounded-lg p-8" style={{ borderTop: "4px solid #C69C6D" }}>
+              <h3 className="font-display text-2xl font-bold mb-4" style={{ color: "#3E3A37" }}>
+                Meer informatie?
+              </h3>
+              <p className="font-body text-base leading-relaxed mb-6" style={{ color: "#6B6560" }}>
+                Heb je vragen over de workshops of opleidingen? Neem contact met ons op! We helpen je graag bij het kiezen van de juiste opleiding voor jouw doelen.
               </p>
-              <p className="font-body text-base leading-relaxed mb-3" style={{ color: "#6B6560" }}>
-                <strong>Let op:</strong> Vanwege de volle agenda worden afspraken die minder dan 24 uur van tevoren worden afgezegd, ongeacht de reden, in rekening gebracht.
-              </p>
-              <p className="font-body text-base leading-relaxed" style={{ color: "#6B6560" }}>
-                <strong>Uitzondering:</strong> Wanneer je iemand anders in jouw plaats laat komen voor dezelfde tijdsduur, dan geldt dit niet.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 md:py-24">
-          <div className="container text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6" style={{ color: "#3E3A37" }}>
-              Geïnteresseerd in een workshop of opleiding?
-            </h2>
-            <p className="font-body text-lg mb-8 max-w-2xl mx-auto" style={{ color: "#6B6560" }}>
-              Neem contact op met Mascha voor meer informatie en beschikbare data
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={`tel:${CONTACT_PHONE}`}
-                className="inline-block px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                style={{ backgroundColor: "#8DA089" }}
-              >
-                BEL: {CONTACT_PHONE}
-              </a>
-              <a
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="inline-block px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                style={{ backgroundColor: "#8DA089" }}
-              >
-                MAIL: {CONTACT_EMAIL}
-              </a>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <Phone size={20} style={{ color: "#8DA089" }} />
+                  <a href={`tel:${CONTACT_PHONE}`} className="font-body text-base" style={{ color: "#8DA089" }}>
+                    {CONTACT_PHONE}
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail size={20} style={{ color: "#8DA089" }} />
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="font-body text-base" style={{ color: "#8DA089" }}>
+                    {CONTACT_EMAIL}
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -368,6 +316,7 @@ export default function Workshops() {
                 <li><Link href="/workshops" className="opacity-80 hover:opacity-100">Workshops & Opleidingen</Link></li>
                 <li><Link href="/personal-training" className="opacity-80 hover:opacity-100">Personal Training</Link></li>
                 <li><Link href="/contact" className="opacity-80 hover:opacity-100">Contact</Link></li>
+                <li><Link href="/info" className="opacity-80 hover:opacity-100">Info</Link></li>
               </ul>
             </div>
             <div>
