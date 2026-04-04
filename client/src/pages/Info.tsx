@@ -18,7 +18,7 @@ const documents = [
   },
   {
     id: "persoonsgegevens",
-    title: "Persoonsgegevens Formulier",
+    title: "Privacyverklaring AVG",
     description: "Formulier voor het invullen van uw persoonsgegevens",
     date: "Op aanvraag",
     url: "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/Uwpersoonsgegevens_01ec79e5.pdf",
