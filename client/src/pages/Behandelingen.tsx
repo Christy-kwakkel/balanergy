@@ -7,6 +7,7 @@
 import { Link } from "wouter";
 import { Phone, Mail, Calendar } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import ExpandableCard from "@/components/ExpandableCard";
 
 const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 
@@ -17,6 +18,8 @@ const treatments = [
     subtitle: "Ontspanning",
     description:
       "Diepe ontspanningsmassage met essentiële oliën. Minimaal 45 minuten voor ware ontspanning. Kan steviger uitgevoerd worden als je dat wilt.",
+    fullDescription:
+      "Een diepe ontspanningsmassage met essentiële oliën naar keuze. Deze massage is speciaal ontworpen om je lichaam en geest volledig tot rust te brengen. Minimaal 45 minuten is aanbevolen voor een ware ontspanningservaring. De massage kan steviger uitgevoerd worden als je dat wilt, afhankelijk van je voorkeur en behoeften op dat moment.",
     prices: [
       { duration: "45 min", price: "€ 45,-" },
       { duration: "60 min", price: "€ 55,-" },
@@ -31,6 +34,8 @@ const treatments = [
     subtitle: "Klachtgericht",
     description:
       "Voor pijn, blessures en overbelasting van specifieke lichaamsdelen. Niet alleen voor sporters—voor iedereen met bewegingsklachten zoals hoofdpijn, rugpijn en nek-/schouderklachten.",
+    fullDescription:
+      "Sportmassage is niet alleen voor sporters! Deze gespecialiseerde massage behandelt pijn, blessures en overbelasting van specifieke lichaamsdelen. Het is perfect voor iedereen met bewegingsklachten zoals hoofdpijn, rugpijn en nek-/schouderklachten. De massage richt zich op het herstellen van de normale functie van spieren en gewrichten, en helpt bij het voorkomen van blessures.",
     prices: [
       { duration: "30 min", price: "€ 35,-" },
       { duration: "45 min", price: "€ 45,-" },
@@ -46,6 +51,8 @@ const treatments = [
     subtitle: "Combinatie",
     description:
       "Mix van ontspannings- en sportmassage. Behandelt specifieke probleemgebieden terwijl je overall ontspanning behoudt. Minimaal 45 minuten.",
+    fullDescription:
+      "De combinatiemassage is een perfecte mix van ontspannings- en sportmassage. Deze massage behandelt specifieke probleemgebieden met gerichte technieken, terwijl je overall ontspanning behoudt. Het is ideaal als je zowel ontspanning als therapeutische behandeling wilt. Minimaal 45 minuten is aanbevolen voor de beste resultaten.",
     prices: [
       { duration: "45 min", price: "€ 45,-" },
       { duration: "60 min", price: "€ 55,-" },
@@ -60,6 +67,8 @@ const treatments = [
     subtitle: "Gespecialiseerd",
     description:
       "Gespecialiseerde behandeling van boven- en onderrug met Thaise acupressuur en klachtgerichte massage. Gebruikt speciale Thaise balsem voor diep spierwerk.",
+    fullDescription:
+      "De rugpijnmassage is een gespecialiseerde behandeling van boven- en onderrug met Thaise acupressuur en klachtgerichte massagetechnieken. Deze massage maakt gebruik van speciale Thaise balsem voor diep spierwerk en helpt bij het verlichten van rugpijn en spanning. Perfect voor degenen die veel tijd achter een bureau doorbrengen of fysieke arbeid verrichten.",
     prices: [
       { duration: "30 min", price: "€ 35,-" },
       { duration: "45 min", price: "€ 45,-" },
@@ -71,6 +80,8 @@ const treatments = [
     subtitle: "Gespecialiseerd",
     description:
       "Drie gespecialiseerde typen: stress-/spanningsmigraine, nek-/schouder-gerelateerde hoofdpijn, en sinuscongestie-hoofdpijn met pepermuntolie en Thaise balsem.",
+    fullDescription:
+      "De hoofdpijnmassage behandelt drie gespecialiseerde typen hoofdpijn: stress-/spanningsmigraine, nek-/schouder-gerelateerde hoofdpijn, en sinuscongestie-hoofdpijn. Deze massage maakt gebruik van pepermuntolie en Thaise balsem om spanning te verlichten en bloedcirculatie te verbeteren. De behandeling richt zich op de specifieke oorzaak van je hoofdpijn voor optimale verlichting.",
     prices: [
       { duration: "30 min", price: "€ 35,-" },
     ],
@@ -81,6 +92,8 @@ const treatments = [
     subtitle: "Thais",
     description:
       "Traditionele Thaise yogamassage met strekking en acupressuurtechnieken. Geschikt voor iedereen van 10 tot 100 jaar oud.",
+    fullDescription:
+      "De traditionele Thaise yogamassage is een eeuwenoude techniek die strekking en acupressuurtechnieken combineert. Deze massage werkt met je energielijnen en helpt bij het herstellen van balans in je lichaam. Het is geschikt voor iedereen van 10 tot 100 jaar oud en kan zowel ontspannend als therapeutisch zijn, afhankelijk van je behoeften.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "75 min", price: "€ 69,-" },
@@ -94,6 +107,8 @@ const treatments = [
     subtitle: "Reflexologie",
     description:
       "Voetreflexologie en massage met Thaise en westerse technieken. Bij 60 minuten worden ook de onderbenen tot aan de knie gemasseerd.",
+    fullDescription:
+      "Voetreflexologie is gebaseerd op het principe dat bepaalde punten op je voeten corresponderen met verschillende organen en systemen in je lichaam. Deze massage combineert Thaise en westerse reflexologietechnieken. Bij 60 minuten worden ook de onderbenen tot aan de knie gemasseerd, wat zorgt voor een meer complete behandeling en betere circulatie.",
     prices: [
       { duration: "30 min", price: "€ 35,-" },
       { duration: "60 min", price: "€ 55,-" },
@@ -128,53 +143,21 @@ export default function Behandelingen() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {treatments.map((t) => (
-                <div
-                  key={t.id}
-                  className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
-                  style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
-                >
-                  <div className="p-6 flex-1 flex flex-col">
-                    {t.tag && (
-                      <span className="inline-block px-3 py-1 rounded text-xs font-semibold mb-3 w-fit" style={{ backgroundColor: "#C69C6D", color: "white" }}>
+                <div key={t.id}>
+                  {t.tag && (
+                    <div className="mb-2">
+                      <span className="inline-block px-3 py-1 rounded text-xs font-semibold" style={{ backgroundColor: "#C69C6D", color: "white" }}>
                         {t.tag}
                       </span>
-                    )}
-                    <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
-                      {t.title}
-                    </h3>
-                    <p className="font-body text-xs font-semibold mb-3" style={{ color: "#8DA089" }}>
-                      {t.subtitle}
-                    </p>
-                    <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
-                      {t.description}
-                    </p>
-                  </div>
-
-                  {/* Divider */}
-                  <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
-
-                  {/* Prices */}
-                  <div className="p-6">
-                    <div className="space-y-2 mb-6">
-                      {t.prices.map((p, idx) => (
-                        <div key={idx} className="flex justify-between font-body text-sm">
-                          <span style={{ color: "#6B6560" }}>{p.duration}</span>
-                          <span style={{ color: "#8DA089", fontWeight: "600" }}>{p.price}</span>
-                        </div>
-                      ))}
                     </div>
-
-                    {/* Book Button */}
-                    <a
-                      href={ONLINE_AGENDA_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
-                      style={{ backgroundColor: "#8DA089" }}
-                    >
-                      BOEK NU
-                    </a>
-                  </div>
+                  )}
+                  <ExpandableCard
+                    title={t.title}
+                    subtitle={t.subtitle}
+                    description={t.description}
+                    fullDescription={t.fullDescription}
+                    prices={t.prices}
+                  />
                 </div>
               ))}
             </div>
