@@ -49,7 +49,7 @@ const seizoensArrangementen = [
     description: "Stimulerende massage met westerse en oosterse technieken met essentiële olie naar keuze. Start met scrub van rug, nek, schouders en achterkant benen. Daarna massage van alle lichaamsdelen inclusief voeten.",
   },
   {
-    title: "Balsem Sinaasappel-Kaneel arrangement",
+    title: "Balsem sinaasappel-kaneel arrangement",
     subtitle: "Tafel",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
@@ -58,7 +58,7 @@ const seizoensArrangementen = [
     description: "Start met kaneel of sinaasappel etherische oliebad van voeten. Insmering met verwarmende therapeutische balsem, gevolgd door massage met verwarmde essentiële olie.",
   },
   {
-    title: "Balsem kaneel/sinaasappel arrangement Thais",
+    title: "Balsem sinaasappel-kaneel arrangement Thais",
     subtitle: "Mat",
     prices: [
       { duration: "60 min", price: "€ 62,50" },
