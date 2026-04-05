@@ -96,6 +96,7 @@ const vasteArrangementen = [
       { duration: "90 min", price: "€ 82,50" },
       { duration: "120 min", price: "€ 100,-" },
     ],
+    tag: "Meest geboekt",
   },
   {
     title: "Combi Thaise yogamassage en voetreflexologie",
