@@ -242,7 +242,7 @@ export default function Workshops() {
             <p className="font-body text-base mb-8 max-w-3xl" style={{ color: "#6B6560" }}>
               Korte workshops waarin je de basisprincipes van massage leert. Perfecte introductie voor beginners of aanvulling voor ervaren therapeuten.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 items-start">
               {workshops.map((w) => (
                 <WorkshopCard key={w.id} {...w} />
               ))}
@@ -259,7 +259,7 @@ export default function Workshops() {
             <p className="font-body text-base mb-8 max-w-3xl" style={{ color: "#6B6560" }}>
               Volledige professionele opleidingen met certificering. Ideaal voor degenen die een massagepraktijk willen starten of hun vaardigheden willen verdiepen.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
               {trainings.map((t) => (
                 <TrainingCard key={t.id} {...t} />
               ))}
