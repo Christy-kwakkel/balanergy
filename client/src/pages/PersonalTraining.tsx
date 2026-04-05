@@ -50,13 +50,7 @@ const trainings = [
     price: "€230,-",
     description: "Uitgebreide training met diepere focus op technieken en doelstellingen.",
   },
-  {
-    title: "Serie van 8 Lessen",
-    subtitle: "Personal Training",
-    duration: "8 × 60 minuten",
-    price: "Op aanvraag",
-    description: "Langdurige training met voortdurende begeleiding en progressie.",
-  },
+
 ];
 
 function TrainingCard({ title, subtitle, duration, price, description }: { title: string; subtitle: string; duration: string; price: string; description: string }) {
