@@ -16,7 +16,7 @@ const acties = [
   {
     title: "Kom kennis maken met Thaise yogamassage",
     description: "Krijg een massage tegen dit scherpe actietarief!",
-    fullDescription: "Per persoon eenmalig te boeken tegen dit scherpe actietarief. Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
+    fullDescription: "Per persoon eenmalig te boeken tegen dit scherpe actietarief. Niet cumuleerbaar met andere acties, kortingen of aanbiedingen. Weten wat Thaise yogamassage precies inhoudt? Klik dan hier.",
     prices: [
       { duration: "60 min", price: "€ 52,50" },
       { duration: "90 min", price: "€ 72,50" },
@@ -26,7 +26,7 @@ const acties = [
   {
     title: "Kom kennis maken met voetreflexologie",
     description: "Boek een behandeling met Thaise en westerse technieken.",
-    fullDescription: "Thaise en westerse technieken worden gecombineerd. Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
+    fullDescription: "Thaise en westerse technieken worden gecombineerd. Nieuwsgierig naar wat het precies inhoudt? Klik dan hier. Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
     prices: [
       { duration: "45 min", price: "€ 42,50" },
     ],
