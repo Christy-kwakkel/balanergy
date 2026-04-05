@@ -8,6 +8,7 @@ interface ExpandableCardProps {
   fullDescription?: string;
   prices: Array<{ duration: string; price: string }>;
   note?: string;
+  tag?: string;
 }
 
 export default function ExpandableCard({
@@ -17,14 +18,22 @@ export default function ExpandableCard({
   fullDescription,
   prices,
   note,
+  tag,
 }: ExpandableCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div
-      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
+      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between relative"
       style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
     >
+      {tag && (
+        <div className="absolute top-4 right-4 z-10">
+          <span className="inline-block px-3 py-1 rounded text-xs font-semibold" style={{ backgroundColor: "#C69C6D", color: "white" }}>
+            {tag}
+          </span>
+        </div>
+      )}
       <div className="p-6 flex-1 flex flex-col">
         <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
           {title}

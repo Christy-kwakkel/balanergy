@@ -143,22 +143,15 @@ export default function Behandelingen() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {treatments.map((t) => (
-                <div key={t.id}>
-                  {t.tag && (
-                    <div className="mb-2">
-                      <span className="inline-block px-3 py-1 rounded text-xs font-semibold" style={{ backgroundColor: "#C69C6D", color: "white" }}>
-                        {t.tag}
-                      </span>
-                    </div>
-                  )}
-                  <ExpandableCard
-                    title={t.title}
-                    subtitle={t.subtitle}
-                    description={t.description}
-                    fullDescription={t.fullDescription}
-                    prices={t.prices}
-                  />
-                </div>
+                <ExpandableCard
+                  key={t.id}
+                  title={t.title}
+                  subtitle={t.subtitle}
+                  description={t.description}
+                  fullDescription={t.fullDescription}
+                  prices={t.prices}
+                  tag={t.tag}
+                />
               ))}
             </div>
           </div>
