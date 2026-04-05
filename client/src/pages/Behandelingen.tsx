@@ -60,6 +60,7 @@ const treatments = [
       { duration: "90 min", price: "€ 75,-" },
       { duration: "120 min", price: "€ 95,-" },
     ],
+    tag: "Meest geboekt",
   },
   {
     id: "rugpijnmassage",
@@ -99,7 +100,6 @@ const treatments = [
       { duration: "75 min", price: "€ 69,-" },
       { duration: "90 min", price: "€ 79,-" },
     ],
-    tag: "Meest geboekt",
   },
   {
     id: "reflexology",
