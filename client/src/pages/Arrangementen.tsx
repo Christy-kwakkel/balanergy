@@ -94,6 +94,7 @@ const vasteArrangementen = [
     fullDescription: "Start op mat met voetbad, massage van armen, handen, voeten, benen en rug met yogastretches. Vervolgens op tafel rug, nek, schouders en hoofd.",
     prices: [
       { duration: "90 min", price: "€ 82,50" },
+      { duration: "120 min", price: "€ 100,-" },
     ],
   },
   {
