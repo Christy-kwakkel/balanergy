@@ -44,37 +44,6 @@ export default function ExpandableCard({
         <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
           {description}
         </p>
-
-        {/* Expandable Full Description */}
-        {fullDescription && (
-          <div className="mb-4">
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="inline-flex items-center gap-2 font-body text-sm font-semibold transition-all"
-              style={{ color: "#8DA089" }}
-            >
-              <span>{isExpanded ? "Lees minder" : "Lees meer"}</span>
-              <ChevronDown
-                size={16}
-                style={{
-                  transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
-                  transition: "transform 0.3s ease",
-                }}
-              />
-            </button>
-
-            {isExpanded && (
-              <div
-                className="mt-4 p-4 rounded bg-white border"
-                style={{ borderColor: "rgba(141,160,137,0.2)", backgroundColor: "rgba(141,160,137,0.05)" }}
-              >
-                <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560" }}>
-                  {fullDescription}
-                </p>
-              </div>
-            )}
-          </div>
-        )}
       </div>
 
       {/* Divider */}
@@ -95,16 +64,51 @@ export default function ExpandableCard({
             {note}
           </p>
         )}
+
+        {/* Expandable Full Description Button */}
+        {fullDescription && (
+          <div className="mb-4">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="inline-flex items-center gap-2 font-body text-sm font-semibold transition-all"
+              style={{ color: "#8DA089" }}
+            >
+              <span>{isExpanded ? "Lees minder" : "Lees meer"}</span>
+              <ChevronDown
+                size={16}
+                style={{
+                  transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
+                  transition: "transform 0.3s ease",
+                }}
+              />
+            </button>
+          </div>
+        )}
+
         <a
           href="https://www.supersaas.nl/schedule/balanergy/Balanergy"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-6 py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
+          className="inline-block px-6 py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90 w-full"
           style={{ backgroundColor: "#8DA089" }}
         >
           BOEK NU
         </a>
       </div>
+
+      {/* Expandable Full Description - Below Price */}
+      {fullDescription && isExpanded && (
+        <div className="px-6 pb-6">
+          <div
+            className="p-4 rounded bg-white border"
+            style={{ borderColor: "rgba(141,160,137,0.2)", backgroundColor: "rgba(141,160,137,0.05)" }}
+          >
+            <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560" }}>
+              {fullDescription}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
