@@ -47,10 +47,10 @@ export default function ExpandableCard({
 
         {/* Expandable Full Description */}
         {fullDescription && (
-          <div className="mb-4">
+          <div className="mb-4 w-full">
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="inline-flex items-center gap-2 font-body text-sm font-semibold transition-all"
+              className="flex items-center gap-2 font-body text-sm font-semibold transition-all w-full"
               style={{ color: "#8DA089" }}
             >
               <span>{isExpanded ? "Lees minder" : "Lees meer"}</span>
