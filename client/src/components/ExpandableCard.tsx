@@ -24,7 +24,7 @@ export default function ExpandableCard({
 
   return (
     <div
-      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between relative"
+      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative"
       style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
     >
       {tag && (
@@ -75,9 +75,6 @@ export default function ExpandableCard({
             )}
           </div>
         )}
-        
-        {/* Spacer to push prices down */}
-        <div className="flex-1"></div>
       </div>
 
       {/* Divider */}
