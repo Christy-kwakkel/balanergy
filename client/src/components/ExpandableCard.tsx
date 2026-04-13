@@ -34,18 +34,18 @@ export default function ExpandableCard({
           </span>
         </div>
       )}
-      <div className="p-6 flex-1 flex flex-col">
+      <div className="p-6 flex flex-col">
         <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
           {title}
         </h3>
         <p className="font-body text-xs font-semibold mb-3" style={{ color: "#8DA089" }}>
           {subtitle}
         </p>
-        <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
+        <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
           {description}
         </p>
 
-        {/* Expandable Full Description */}
+        {/* Expandable Full Description - Glued to Description */}
         {fullDescription && (
           <div className="mb-4 w-full">
             <button
@@ -75,6 +75,9 @@ export default function ExpandableCard({
             )}
           </div>
         )}
+        
+        {/* Spacer to push prices down */}
+        <div className="flex-1"></div>
       </div>
 
       {/* Divider */}
