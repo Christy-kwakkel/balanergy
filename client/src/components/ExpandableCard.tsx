@@ -41,13 +41,13 @@ export default function ExpandableCard({
         <p className="font-body text-xs font-semibold mb-3" style={{ color: "#8DA089" }}>
           {subtitle}
         </p>
-        <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
+        <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
           {description}
         </p>
 
         {/* Expandable Full Description - Glued to Description */}
         {fullDescription && (
-          <div className="mb-4 w-full">
+          <div className="mt-2 mb-4 w-full">
             <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="flex items-center gap-2 font-body text-sm font-semibold transition-all w-full"
