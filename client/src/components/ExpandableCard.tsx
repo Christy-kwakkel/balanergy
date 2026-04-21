@@ -25,7 +25,10 @@ export default function ExpandableCard({
   return (
     <div
       className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative"
-      style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
+      style={{
+        borderTop: "1px solid rgba(198,156,109,0.15)",
+        ...(isExpanded && { alignSelf: "start" })
+      }}
     >
       {tag && (
         <div className="absolute top-4 right-4 z-10">
