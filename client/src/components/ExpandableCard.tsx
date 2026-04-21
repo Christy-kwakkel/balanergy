@@ -24,10 +24,9 @@ export default function ExpandableCard({
 
   return (
     <div
-      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative"
+      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative h-full"
       style={{
-        borderTop: "1px solid rgba(198,156,109,0.15)",
-        ...(isExpanded && { alignSelf: "start" })
+        borderTop: "1px solid rgba(198,156,109,0.15)"
       }}
     >
       {tag && (
