@@ -168,7 +168,7 @@ export default function Arrangementen() {
             <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
               Acties
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
               {acties.map((a) => (
                 <ExpandableCard
                   key={a.id}
@@ -190,7 +190,7 @@ export default function Arrangementen() {
             <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
               Seizoen Arrangementen
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
               {seizoensArrangementen.map((a) => (
                 <ExpandableCard
                   key={a.id}
@@ -211,7 +211,7 @@ export default function Arrangementen() {
             <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
               Vaste Arrangementen
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
               {vasteArrangementen.map((a) => (
                 <ExpandableCard
                   key={a.id}

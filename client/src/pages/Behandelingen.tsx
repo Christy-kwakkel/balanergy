@@ -142,7 +142,7 @@ export default function Behandelingen() {
             <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
               Onze Behandelingen
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
               {treatments.map((t) => (
                 <ExpandableCard
                   key={t.id}
