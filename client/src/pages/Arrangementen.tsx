@@ -4,9 +4,8 @@
  * All arrangements, actions, and special offers on one page
  */
 
-import { useState } from "react";
 import { Link } from "wouter";
-import { Phone, Mail, Sparkles, ChevronDown } from "lucide-react";
+import { Phone, Mail, Sparkles } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import ExpandableCard from "@/components/ExpandableCard";
 
@@ -14,7 +13,9 @@ const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy
 
 const acties = [
   {
+    id: "thaise-actie",
     title: "Kom kennis maken met Thaise yogamassage",
+    subtitle: "Actie",
     description: "Krijg een massage tegen dit scherpe actietarief!",
     fullDescription: "Per persoon eenmalig te boeken tegen dit scherpe actietarief. Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
     prices: [
@@ -24,7 +25,9 @@ const acties = [
     note: "Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
   },
   {
+    id: "reflexologie-actie",
     title: "Kom kennis maken met voetreflexologie",
+    subtitle: "Actie",
     description: "Boek een behandeling met Thaise en westerse technieken.",
     fullDescription: "Thaise en westerse technieken worden gecombineerd. Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
     prices: [
@@ -33,7 +36,9 @@ const acties = [
     note: "Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
   },
   {
+    id: "scrub-actie",
     title: "Scrub, achterkant lichaam",
+    subtitle: "Actie",
     description: "Ontdoe je huid van dode huidcellen.",
     fullDescription: "Om je huid gezond en mooi te laten worden en houden, is het belangrijk deze zo nu en dan te ontdoen van dode huidcellen door deze te scrubben. Omdat je zelf niet bij je rug kunt kun je vanaf nu een scrub van de achterkant van je lichaam boeken (rug, billen indien gewenst, achterkant benen) voor slechts 6,95 extra bij je behandeling. Vermeld dit bij je boeking en krijg deze heerlijk scrub met een essentiële olie naar keuze bij je behandeling! Indien je via de online agenda reserveert voor een massage, vermeld dan in de opmerking erbij dat je ook graag een scrub behandeling wilt toevoegen.",
     prices: [
@@ -45,6 +50,7 @@ const acties = [
 
 const seizoensArrangementen = [
   {
+    id: "winter",
     title: "Winter arrangement",
     subtitle: "Tafel",
     description: "Stimulerende massage met westerse en oosterse technieken.",
@@ -55,6 +61,7 @@ const seizoensArrangementen = [
     ],
   },
   {
+    id: "balsem-sinaasappel",
     title: "Balsem sinaasappel-kaneel arrangement",
     subtitle: "Tafel",
     description: "Start met kaneel of sinaasappel etherische oliebad.",
@@ -65,6 +72,7 @@ const seizoensArrangementen = [
     ],
   },
   {
+    id: "balsem-thais",
     title: "Balsem kaneel/sinaasappel arrangement Thais",
     subtitle: "Mat",
     description: "Start met warm voetbad met essentiële olie.",
@@ -78,6 +86,7 @@ const seizoensArrangementen = [
 
 const vasteArrangementen = [
   {
+    id: "antistress",
     title: "Antistress massage",
     subtitle: "Tafel",
     description: "Ontspannende massage met zwaartepunt op rug, nek en schouders.",
@@ -88,6 +97,7 @@ const vasteArrangementen = [
     ],
   },
   {
+    id: "thai-western",
     title: "Thai Western massage",
     subtitle: "Mat & Tafel",
     description: "Start op mat met voetbad, massage met yogastretches.",
@@ -99,6 +109,7 @@ const vasteArrangementen = [
     tag: "Meest geboekt",
   },
   {
+    id: "combi-thai-reflexologie",
     title: "Combi Thaise yogamassage en voetreflexologie",
     subtitle: "Mat",
     description: "Thaise yogamassage met voetreflexologie en warm voetenbad.",
@@ -109,6 +120,7 @@ const vasteArrangementen = [
     ],
   },
   {
+    id: "indian-summer",
     title: "Indian summer arrangement",
     subtitle: "Tafel",
     description: "Start met voetenbad en kopje thee, daarna stevige scrub.",
@@ -119,6 +131,7 @@ const vasteArrangementen = [
     ],
   },
   {
+    id: "samui-zwangerschap",
     title: "Samui zwangerschapsarrangement",
     subtitle: "Tafel of Mat",
     description: "Speciaal voor zwangeren met warm voetenbad en lavendelolie.",
@@ -129,136 +142,6 @@ const vasteArrangementen = [
     ],
   },
 ];
-
-function ArrangementCard({ title, subtitle, prices, description, note }: { title: string; subtitle: string; prices: Array<{ duration: string; price: string }>; description: string; note?: string }) {
-  return (
-    <div
-      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
-      style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
-    >
-      <div className="p-6 flex-1 flex flex-col">
-        <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
-          {title}
-        </h3>
-        <p className="font-body text-xs font-semibold mb-3" style={{ color: "#8DA089" }}>
-          {subtitle}
-        </p>
-        <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
-          {description}
-        </p>
-      </div>
-
-      {/* Divider */}
-      <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
-
-      {/* Price and Duration */}
-      <div className="p-6">
-        <div className="space-y-2 mb-3">
-          {prices.map((p, idx) => (
-            <div key={idx} className="flex justify-between font-body text-sm">
-              <span style={{ color: "#6B6560" }}>{p.duration}</span>
-              <span style={{ color: "#8DA089", fontWeight: "600" }}>{p.price}</span>
-            </div>
-          ))}
-        </div>
-        {note && (
-          <p className="font-body text-xs mb-4 italic" style={{ color: "#C69C6D" }}>
-            {note}
-          </p>
-        )}
-
-        {/* Book Button */}
-        <a
-          href={ONLINE_AGENDA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
-          style={{ backgroundColor: "#8DA089" }}
-        >
-          BOEK NU
-        </a>
-      </div>
-    </div>
-  );
-}
-
-function ActieCard({ title, description, fullDescription, prices, note }: { title: string; description: string; fullDescription: string; prices: Array<{ duration: string; price: string }>; note: string }) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  return (
-    <div
-      className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col h-full justify-between"
-      style={{ borderTop: "1px solid rgba(198,156,109,0.15)" }}
-    >
-      <div className="p-6 flex-1 flex flex-col">
-        <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
-          {title}
-        </h3>
-        <p className="font-body text-sm leading-relaxed mb-6 flex-1" style={{ color: "#6B6560", height: "3em", overflow: "hidden" }}>
-          {description}
-        </p>
-
-        {/* Expandable Full Description */}
-        <div className="mb-4">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="inline-flex items-center gap-2 font-body text-sm font-semibold transition-all"
-            style={{ color: "#8DA089" }}
-          >
-            <span>{isExpanded ? "Lees minder" : "Lees meer"}</span>
-            <ChevronDown
-              size={16}
-              style={{
-                transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
-                transition: "transform 0.3s ease",
-              }}
-            />
-          </button>
-
-          {isExpanded && (
-            <div
-              className="mt-4 p-4 rounded bg-white border"
-              style={{ borderColor: "rgba(141,160,137,0.2)", backgroundColor: "rgba(141,160,137,0.05)" }}
-            >
-              <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560" }}>
-                {fullDescription}
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Divider */}
-      <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
-
-      {/* Price and Duration */}
-      <div className="p-6">
-        <div className="space-y-2 mb-3">
-          {prices.map((p, idx) => (
-            <div key={idx} className="flex justify-between font-body text-sm">
-              <span style={{ color: "#6B6560" }}>{p.duration}</span>
-              <span style={{ color: "#8DA089", fontWeight: "600" }}>{p.price}</span>
-            </div>
-          ))}
-        </div>
-        <p className="font-body text-xs mb-4 italic" style={{ color: "#C69C6D" }}>
-          {note}
-        </p>
-
-        {/* Book Button */}
-        <a
-          href={ONLINE_AGENDA_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full py-3 rounded font-body text-sm font-semibold text-white text-center transition-opacity hover:opacity-90"
-          style={{ backgroundColor: "#8DA089" }}
-        >
-          BOEK NU
-        </a>
-      </div>
-    </div>
-  );
-}
 
 export default function Arrangementen() {
   return (
@@ -274,7 +157,7 @@ export default function Arrangementen() {
               Arrangementen & Acties
             </h1>
             <p className="font-body text-lg" style={{ color: "#8DA089" }}>
-              Leuke acties en arrangementen speciaal samengesteld voor jouw welzijn
+              Speciale combinaties en aanbiedingen voor een unieke ervaring
             </p>
           </div>
         </section>
@@ -282,29 +165,41 @@ export default function Arrangementen() {
         {/* Acties Section */}
         <section className="py-12">
           <div className="container">
-            <div className="flex items-center gap-3 mb-8">
-              <Sparkles size={24} style={{ color: "#C69C6D" }} />
-              <h2 className="font-display text-3xl font-bold" style={{ color: "#3E3A37" }}>
-                Acties
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 items-stretch">
-              {acties.map((actie, idx) => (
-                <ActieCard key={idx} {...actie} />
+            <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
+              Acties
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+              {acties.map((a) => (
+                <ExpandableCard
+                  key={a.id}
+                  title={a.title}
+                  subtitle={a.subtitle}
+                  description={a.description}
+                  fullDescription={a.fullDescription}
+                  prices={a.prices}
+                  note={a.note}
+                />
               ))}
             </div>
           </div>
         </section>
 
-        {/* Seizoens Arrangementen Section */}
-        <section className="py-12">
+        {/* Seizoen Arrangementen Section */}
+        <section className="py-12 bg-white">
           <div className="container">
             <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
-              Seizoens- & Etherische Olie Arrangementen
+              Seizoen Arrangementen
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 items-stretch">
-              {seizoensArrangementen.map((arr, idx) => (
-                <ExpandableCard key={idx} {...arr} subtitle={arr.subtitle} />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+              {seizoensArrangementen.map((a) => (
+                <ExpandableCard
+                  key={a.id}
+                  title={a.title}
+                  subtitle={a.subtitle}
+                  description={a.description}
+                  fullDescription={a.fullDescription}
+                  prices={a.prices}
+                />
               ))}
             </div>
           </div>
@@ -316,95 +211,122 @@ export default function Arrangementen() {
             <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
               Vaste Arrangementen
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 items-stretch">
-              {vasteArrangementen.map((arr, idx) => (
-                <ExpandableCard key={idx} {...arr} subtitle={arr.subtitle} />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+              {vasteArrangementen.map((a) => (
+                <ExpandableCard
+                  key={a.id}
+                  title={a.title}
+                  subtitle={a.subtitle}
+                  description={a.description}
+                  fullDescription={a.fullDescription}
+                  prices={a.prices}
+                  tag={a.tag}
+                />
               ))}
             </div>
           </div>
         </section>
 
-        {/* Cancellation Policy Section */}
+        {/* Contact Section */}
         <section className="py-12 bg-white">
           <div className="container max-w-3xl">
-            <div className="bg-yellow-50 border-l-4 p-6" style={{ borderColor: "#C69C6D", backgroundColor: "rgba(198,156,109,0.1)" }}>
-              <p className="font-body text-base font-semibold mb-3" style={{ color: "#3E3A37" }}>
-                ⚠️ Annuleringsbeleid
+            <div className="text-center">
+              <h2 className="font-display text-3xl font-bold mb-6" style={{ color: "#3E3A37" }}>
+                Vragen over arrangementen?
+              </h2>
+              <p className="font-body text-lg mb-8" style={{ color: "#6B6560" }}>
+                Neem contact op voor meer informatie of om een arrangement naar wens samen te stellen.
               </p>
-              <p className="font-body text-base leading-relaxed mb-3" style={{ color: "#6B6560" }}>
-                <strong>Let op:</strong> Vanwege de volle agenda worden afspraken die minder dan 24 uur van tevoren worden afgezegd, ongeacht de reden, in rekening gebracht.
-              </p>
-              <p className="font-body text-base leading-relaxed" style={{ color: "#6B6560" }}>
-                <strong>Uitzondering:</strong> Wanneer je iemand anders in jouw plaats laat komen voor dezelfde tijdsduur, dan geldt dit niet.
-              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href={`tel:${CONTACT_PHONE}`}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: "#8DA089" }}
+                >
+                  <Phone size={18} />
+                  {CONTACT_PHONE}
+                </a>
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: "#8DA089" }}
+                >
+                  <Mail size={18} />
+                  {CONTACT_EMAIL}
+                </a>
+              </div>
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 md:py-24">
-          <div className="container text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6" style={{ color: "#3E3A37" }}>
-              Klaar om je afspraak in te boeken?
-            </h2>
-            <p className="font-body text-lg mb-8 max-w-2xl mx-auto" style={{ color: "#6B6560" }}>
-              Kies je arrangement en boek direct online via onze agenda
-            </p>
-            <a
-              href={ONLINE_AGENDA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
-              style={{ backgroundColor: "#8DA089" }}
-            >
-              ONLINE AGENDA
-            </a>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="mt-12 py-8" style={{ backgroundColor: "#3E3A37", color: "white" }}>
-        <div className="container">
+      <footer className="bg-white border-t" style={{ borderColor: "rgba(198,156,109,0.15)" }}>
+        <div className="container py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="font-display text-lg font-bold mb-4">Balanergy</h3>
-              <p className="font-body text-sm opacity-80">
-                Praktijk voor Thaise yogamassage & voetreflexologie in IJsselmuiden
-              </p>
+              <h3 className="font-display text-lg font-bold mb-4" style={{ color: "#3E3A37" }}>
+                Navigatie
+              </h3>
+              <nav className="space-y-2">
+                <Link href="/" className="block font-body text-sm hover:underline" style={{ color: "#6B6560" }}>
+                  Home
+                </Link>
+                <Link href="/behandelingen" className="block font-body text-sm hover:underline" style={{ color: "#6B6560" }}>
+                  Behandelingen
+                </Link>
+                <Link href="/over-mij" className="block font-body text-sm hover:underline" style={{ color: "#6B6560" }}>
+                  Over Mij
+                </Link>
+                <Link href="/arrangementen" className="block font-body text-sm hover:underline" style={{ color: "#6B6560" }}>
+                  Arrangementen
+                </Link>
+                <Link href="/workshops" className="block font-body text-sm hover:underline" style={{ color: "#6B6560" }}>
+                  Workshops & Opleidingen
+                </Link>
+                <Link href="/personal-training" className="block font-body text-sm hover:underline" style={{ color: "#6B6560" }}>
+                  Personal Training
+                </Link>
+                <Link href="/contact" className="block font-body text-sm hover:underline" style={{ color: "#6B6560" }}>
+                  Contact
+                </Link>
+              </nav>
             </div>
+
             <div>
-              <h4 className="font-body text-sm font-semibold mb-4">Snelle Links</h4>
-              <ul className="space-y-2 font-body text-sm">
-                <li><Link href="/" className="opacity-80 hover:opacity-100">Home</Link></li>
-                <li><Link href="/behandelingen" className="opacity-80 hover:opacity-100">Behandelingen</Link></li>
-                <li><Link href="/over-mij" className="opacity-80 hover:opacity-100">Over Mij</Link></li>
-                <li><Link href="/arrangementen" className="opacity-80 hover:opacity-100">Arrangementen</Link></li>
-                <li><Link href="/workshops" className="opacity-80 hover:opacity-100">Workshops & Opleidingen</Link></li>
-                <li><Link href="/personal-training" className="opacity-80 hover:opacity-100">Personal Training</Link></li>
-                <li><Link href="/contact" className="opacity-80 hover:opacity-100">Contact</Link></li>
-                <li><Link href="/info" className="opacity-80 hover:opacity-100">Info</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-body text-sm font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 font-body text-sm">
-                <div className="flex items-center gap-2">
-                  <Phone size={16} />
-                  <a href="tel:0642874405" className="opacity-80 hover:opacity-100">06-42874405</a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail size={16} />
-                  <a href="mailto:balanergy@hotmail.com" className="opacity-80 hover:opacity-100">balanergy@hotmail.com</a>
-                </div>
+              <h3 className="font-display text-lg font-bold mb-4" style={{ color: "#3E3A37" }}>
+                Contact
+              </h3>
+              <div className="space-y-2">
+                <a href={`tel:${CONTACT_PHONE}`} className="block font-body text-sm hover:underline" style={{ color: "#6B6560" }}>
+                  {CONTACT_PHONE}
+                </a>
+                <a href={`mailto:${CONTACT_EMAIL}`} className="block font-body text-sm hover:underline" style={{ color: "#6B6560" }}>
+                  {CONTACT_EMAIL}
+                </a>
               </div>
             </div>
+
+            <div>
+              <h3 className="font-display text-lg font-bold mb-4" style={{ color: "#3E3A37" }}>
+                Informatie
+              </h3>
+              <Link href="/info" className="block font-body text-sm hover:underline" style={{ color: "#6B6560" }}>
+                Algemene Informatie
+              </Link>
+            </div>
           </div>
-          <div className="border-t border-white border-opacity-20 pt-8 text-center font-body text-sm opacity-80">
-            <p>&copy; 2026 Balanergy. Alle rechten voorbehouden.</p>
+
+          <div className="border-t pt-8 text-center" style={{ borderColor: "rgba(198,156,109,0.15)" }}>
+            <p className="font-body text-sm" style={{ color: "#8DA089" }}>
+              © 2024 Balanergy. Alle rechten voorbehouden.
+            </p>
           </div>
         </div>
       </footer>
     </div>
   );
 }
+
+const CONTACT_PHONE = "06-42874405";
+const CONTACT_EMAIL = "balanergy@hotmail.com";
