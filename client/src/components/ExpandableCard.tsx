@@ -70,15 +70,9 @@ export default function ExpandableCard({
                 className="mt-4 p-4 rounded bg-white border"
                 style={{ borderColor: "rgba(141,160,137,0.2)", backgroundColor: "rgba(141,160,137,0.05)" }}
               >
-                <div className="font-body text-sm leading-relaxed" style={{ color: "#6B6560" }}>
-                  {fullDescription.split('|||').map((paragraph, idx) => (
-                    paragraph.trim() && (
-                      <p key={idx} className="mb-4 last:mb-0">
-                        {paragraph.trim()}
-                      </p>
-                    )
-                  ))}
-                </div>
+                <p className="font-body text-sm leading-relaxed" style={{ color: "#6B6560" }}>
+                  {fullDescription}
+                </p>
               </div>
             )}
           </div>
