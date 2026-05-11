@@ -68,9 +68,9 @@ export default function Home() {
                   AFSPRAAK BOEKEN
                 </a>
                 <Link href="/behandelingen">
-                  <a className="px-6 py-3 rounded font-body text-sm font-semibold border-2 text-center transition-all hover:opacity-90 w-full sm:w-auto" style={{ borderColor: "white", color: "white" }}>
+                  <button className="px-6 py-3 rounded font-body text-sm font-semibold border-2 text-center transition-all hover:opacity-90 w-full sm:w-auto" style={{ borderColor: "white", color: "white", backgroundColor: "transparent", cursor: "pointer" }}>
                     BEKIJK BEHANDELINGEN
-                  </a>
+                  </button>
                 </Link>
               </div>
             </div>
@@ -240,9 +240,9 @@ export default function Home() {
                 ONLINE AGENDA
               </a>
               <Link href="/contact">
-                <a className="px-8 py-3 rounded font-body text-sm font-semibold border-2 transition-all hover:opacity-90 w-full sm:w-auto" style={{ borderColor: "#8DA089", color: "#8DA089" }}>
+                <button className="px-8 py-3 rounded font-body text-sm font-semibold border-2 transition-all hover:opacity-90 w-full sm:w-auto" style={{ borderColor: "#8DA089", color: "#8DA089", backgroundColor: "transparent", cursor: "pointer" }}>
                   CONTACTEER ONS
-                </a>
+                </button>
               </Link>
             </div>
           </div>
