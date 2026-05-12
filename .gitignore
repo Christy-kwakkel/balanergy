@@ -3,9 +3,9 @@
 .pnpm-store/
 
 # Build outputs
-dist/
 build/
 *.dist
+# Note: docs/ is committed to repo for GitHub Pages deployment
 
 # Environment variables
 .env
