@@ -3,11 +3,9 @@
 .pnpm-store/
 
 # Build outputs
+dist/
 build/
 *.dist
-docs/
-public/
-# Note: Built assets in root (index.html, assets/, .nojekyll) are committed for GitHub Pages deployment
 
 # Environment variables
 .env
