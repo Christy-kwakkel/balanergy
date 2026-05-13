@@ -5,7 +5,9 @@
 # Build outputs
 build/
 *.dist
-# Note: docs/ is committed to repo for GitHub Pages deployment
+docs/
+public/
+# Note: Built assets in root (index.html, assets/, .nojekyll) are committed for GitHub Pages deployment
 
 # Environment variables
 .env
