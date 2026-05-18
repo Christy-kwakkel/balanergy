@@ -3,7 +3,7 @@
 .pnpm-store/
 
 # Build outputs
-dist/
+# dist/ - public/ is committed for GitHub Pages
 build/
 *.dist
 
