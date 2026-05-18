@@ -1,4 +1,7 @@
-# Netlify configuration for SPA routing
+[build]
+command = "pnpm build"
+publish = "public"
+
 [[redirects]]
 from = "/*"
 to = "/index.html"
