@@ -25,7 +25,7 @@ export default function OverMij() {
               Wie is Balanergy?
             </h1>
             <p className="font-body text-lg" style={{ color: "#8DA089" }}>
-              Ontmoet Mascha Kwakkel, therapeut en oprichter van Balanergy
+              Ontmoet Mascha Kwakkel, masseuse en oprichter van Balanergy
             </p>
           </div>
         </section>
@@ -33,15 +33,15 @@ export default function OverMij() {
         {/* About Section */}
         <section className="py-12">
           <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+              <div className="order-2 md:order-1">
                 <img
                   src={STUDIO_IMAGE}
                   alt="Mascha Kwakkel"
                   className="rounded-lg shadow-sm w-full h-auto"
                 />
               </div>
-              <div>
+              <div className="order-1 md:order-2">
                 <h2 className="font-display text-3xl font-bold mb-6" style={{ color: "#3E3A37" }}>
                   Balanergy is Mascha Kwakkel
                 </h2>
