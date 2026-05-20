@@ -8,7 +8,8 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 
-const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy";
+const ONLINE_AGENDA_URL =
+  "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -35,14 +36,17 @@ export default function Navigation() {
       <div className="container py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <a className="font-display text-2xl font-bold" style={{ color: "#3E3A37" }}>
+          <a
+            className="font-display text-2xl font-bold"
+            style={{ color: "#3E3A37" }}
+          >
             Balanergy
           </a>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex gap-6 items-center">
-          {navItems.map((item) => (
+          {navItems.map(item => (
             <Link key={item.href} href={item.href}>
               <a
                 className="font-body text-sm font-medium hover:opacity-70 transition-opacity"
@@ -87,7 +91,7 @@ export default function Navigation() {
           style={{ borderColor: "#E8D5C4", backgroundColor: "#FCF9F5" }}
         >
           <nav className="container py-4 flex flex-col gap-3">
-            {navItems.map((item) => (
+            {navItems.map(item => (
               <Link key={item.href} href={item.href}>
                 <a
                   className="font-body text-sm font-medium py-2 hover:opacity-70 transition-opacity block"
