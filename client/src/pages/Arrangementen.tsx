@@ -54,7 +54,7 @@ const seizoensArrangementen = [
     title: "Winter arrangement",
     subtitle: "Tafel",
     description: "Stimulerende massage met westerse en oosterse technieken.",
-    fullDescription: "Ben je toe aan je lijf voorbereiding op de winter? Dit arrangement maakt gebruik van een stevige maar rustige gegeven, stimulerende massage met zowel westerse als oosterse massagetechnieken met essentiële olie naar keuze om het lichaam energie te geven en op te peppen.|||Er wordt begonnen met een scrub van de rug, nek en shoulders en achterkant van de benen, precies die delen waar je zelf minder makkelijk bij kunt. Daarna volgt een massage van rug, nek en shoulders, gevolgd door de achterkant van de benen, armen en handen indien tijd over, het hoofd en ter afsluiting is er aandacht voor het meest belaste onderdeelvan je lijf: je voeten!|||Na de behandeling zul je je energiek en verfrist voelen en ben je klaar voor de winter!",
+    fullDescription: "Ben je toe aan je lijf voorbereiden op de winter? Dit arrangement maakt gebruik van een stevige maar rustige gegeven, stimulerende massage met zowel westerse als oosterse massagetechnieken met essentiële olie naar keuze om het lichaam energie te geven en op te peppen. Er wordt begonnen met een scrub van de rug, nek en schouders en achterkant van de benen, precies die delen waar je zelf minder makkelijk bij kunt. Daarna volgt een massage van rug, nek en schouders, gevolgd door de achterkant van de benen, armen en handen indien tijd over, het hoofd en ter afsluiting is er aandacht voor het meest belaste onderdeel van je lijf: je voeten! Na de behandeling zul je je energiek en verfrist voelen en ben je klaar voor de winter!",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
@@ -65,7 +65,7 @@ const seizoensArrangementen = [
     title: "Balsem sinaasappel-kaneel arrangement",
     subtitle: "Tafel",
     description: "Start met kaneel of sinaasappel etherische oliebad.",
-    fullDescription: "Je behandeling start met een kaneel of sinaasappel etherische oliebad van je voeten.|||Hierna worden bij een uur rug, nek, shoulders en indien gewenst de bilspieren ingesmeerd met verwarmende therapeutische balsem, bij 90 minuten ook de voor- en achterkant van de benen. Daarna volgt de massage met verwarmde, etherische olie van rug, nek, shoulders en bilspieren, aangevuld met een keuze uit voor- of achterkant benen, voeten, handen of hoofd.|||Bij 90 minuten komen al deze onderdelenaan de beurt en bepalen we in overleg waar jij behoefte aan hebt!",
+    fullDescription: "Je behandeling start met een kaneel of sinaasappel etherische oliebad van je voeten. Hierna worden bij een uur rug, nek, schouders en indien gewenst de bilspieren ingesmeerd  met verwarmende therapeutische balsem, bij 90 minuten ook de voor- en achterkant van de benen. Daarna volgt de massage met verwarmde, etherische olie van rug, nek, schouders en bilspieren, aangevuld met een keuze uit voor- of achterkant benen, voeten, handen of hoofd. Bij 90 minuten komen al deze onderdelen aan de beurt en bepalen we in overleg waar jij behoefte aan hebt!",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
@@ -90,7 +90,7 @@ const vasteArrangementen = [
     title: "Antistress massage",
     subtitle: "Tafel",
     description: "Ontspannende massage met zwaartepunt op rug, nek en schouders.",
-    fullDescription: "Ontspannende massage met zwaartepunt op rug, nek, schouders, handen, voeten en hoofd.|||Na afloop krijg je een miniflesje massageolie met anti-stress essentiële olie mee naar huis.",
+    fullDescription: "Deze ontspannen massages hebben het zwaartepunt in delen van het lichaam die het meest baat hebben bij ontspanning, te weten uiteraard de rug, nek en schouders maar ook de handen, voeten en het hoofd. In overleg bepalen we ter plaatse waar jij op dat moment het meest behoefte aan hebt om tot een diepe ontspanning te komen. Na afloop krijg je een miniflesje massageolie met anti stress essentiële olie mee naar huis om het thuis nog eens over te kunnen doen ter overbrugging naar je volgende massage!",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
@@ -101,7 +101,7 @@ const vasteArrangementen = [
     title: "Thai Western massage",
     subtitle: "Mat & Tafel",
     description: "Start op mat met voetbad, massage met yogastretches.",
-    fullDescription: "Start op mat met voetbad, massage van armen, handen, voeten, benen en rug met yogastretches.|||Vervolgens op tafel rug, nek, schouders en hoofd.",
+    fullDescription: "Na je voetbad wordt er bij 90 minuten gestart op de mat, waarbij je armen, handen, voeten, benen en rug gemasseerd worden in combinatie met yogastretches voor benen, heupen en rug, waarna de massage vervolgd wordt op de massagetafel en de rug, nek, schouders en hoofd gemasseerd worden. Deze massage is zowel ontspannend, therapeutisch als gecombineerd in te zetten.",
     prices: [
       { duration: "90 min", price: "€ 82,50" },
       { duration: "120 min", price: "€ 100,-" },
@@ -113,7 +113,7 @@ const vasteArrangementen = [
     title: "Combi Thaise yogamassage en voetreflexologie",
     subtitle: "Mat",
     description: "Thaise yogamassage met voetreflexologie en warm voetenbad.",
-    fullDescription: "Thaise yogamassage met ongeveer 15-20 minuten voetreflexologie.|||Start met warm voetenbad en kopje kruiden- of vruchtenthee naar keuze.",
+    fullDescription: "Heerlijke Thaise yogamassage met ongeveer 15 a 20 minuten voetreflexologie waarbij de belangrijkste reflexzones gestimuleerd worden ter opsporing en preventie van diverse aandoeningen en de rest Thaise yogamassage van de benen, armen, rug, handen, nek en schouders. Het arrangement start met een warm voetenbad. Bij 90 minuten komt het hele lichaam aan bod en is er meer tijd per onderdeel. Tijdens je voetbad geniet je van een kopje kruiden- of vruchtenthee naar keuze.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
@@ -124,7 +124,7 @@ const vasteArrangementen = [
     title: "Indian summer arrangement",
     subtitle: "Tafel",
     description: "Start met voetenbad en kopje thee, daarna stevige scrub.",
-    fullDescription: "Start met voetenbad en kopje thee, daarna stevige scrub van rug en achterkant benen, gevolgd door massage van rug, nek, schouders, achterkant benen en bilspieren.",
+    fullDescription: "Dit arrangement start met een kort voetenbad met een kopje kruiden- of vruchtenthee naar keuze en daarna stevige scrub van de rug en achterkant van de benen. Hierna volgt een stevige of ontspannende (naar keuze) massage van de rug, nek en schouders en de achterkant van de benen en indien nodig/gewenst ook de bilspieren, en in rugligging naar keuze hoofd of voeten. Bij 90 minuten wordt het hele lichaam gemasseerd.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
@@ -135,7 +135,7 @@ const vasteArrangementen = [
     title: "Samui zwangerschapsarrangement",
     subtitle: "Tafel of Mat",
     description: "Speciaal voor zwangeren met warm voetenbad en lavendelolie.",
-    fullDescription: "Speciaal voor zwangeren. Start met warm voetenbad met lavendelolie en kopje kruidenthee. Ontspannende massage van hoofd, gezicht, nek, schouders, armen, handen en voeten.",
+    fullDescription: "Deze massage speciaal voor zwangeren (maar ook te boeken als je dat niet bent) start met een kort maar heerlijk warm voetenbad met wat lavendelolie om even heerlijk tot rust te komen, met een lekker kopje kruidenthee naar keuze erbij. Hierna volgt een ontspannende massage van het hoofd en de hoofdhuid, gezicht, nek en schouders in rugligging, gevolgd door een massage van de armen en handen en ter afsluiting de voeten. Er wordt gebruik gemaakt van een essentiële Aziatische bloemenolie naar keuze voor een heerlijke, oosterse geur met bijpassende muziek. Deze massage is heel geschikt voor onder andere zwangeren die niet meer op hun buik kunnen liggen. Bij 90 minuten wordt ook de rug en de benen gemasseerd, voor een zwangere gebeurt dit op de zij in stabiele zijligging op de prettig brede tafel, ondersteund door kussens.",
     prices: [
       { duration: "60 min", price: "€ 59,-" },
       { duration: "90 min", price: "€ 79,-" },
