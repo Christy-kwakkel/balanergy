@@ -38,7 +38,7 @@ const workshops = [
     title: "Workshop klachtgerichte/sport massage",
     subtitle: "Workshop",
     description: "Leer klachtgerichte massage voor specifieke lichaamsdelen.",
-    fullDescription: "Je leert in vogelvlucht de belangrijkste grepen en technieken voor klacht gerichte massage van de nek, shoulders, rug en bil- en bekkenspierenovenbenenen achterkant, do's and don'ts, de opbouw van een massage, materiaalgebruik en houding. Inclusief handout met de grepen en basale kennis van je workshop om mee naar huis te nemen.|||Geef bij je boeking duidelijk aan of de workshop voor 1 of 2 personen moet worden. Indien je alleen komt, dan neem je een model mee op wie je kunt oefenen.",
+    fullDescription: "Je leert in vogelvlucht de belangrijkste grepen en technieken voor klacht gerichte massage van de nek, shoulders, rug en bil- en bekkenspierenovenbenenen achterkant, do's and don'ts, de opbouw van een massage, materiaalgebruik en houding. Inclusief handout met de grepen en basale kennis van je workshop om mee naar huis te nemen.\n\nGeef bij je boeking duidelijk aan of de workshop voor 1 of 2 personen moet worden. Indien je alleen komt, dan neem je een model mee op wie je kunt oefenen.",
     prices: [
       { duration: "3-3,5 uur", price: "€125 per persoon / €225 voor 2 personen" },
     ],
@@ -50,7 +50,7 @@ const trainings = [
     id: "thaise-level1",
     title: "Volledige opleiding Thaise yogamassage level 1",
     subtitle: "Opleiding",
-    description: "Wil je Thaise yogamassage leren?",    fullDescription: "Wil je Thaise yogamassage leren? Dat kan in duo's (of eventueel alleen, dan neem je een model mee), door de opleiding BalaneryThai Yoga massage te doen, volgens de principes en leermethoden van ITM Chiangmai. Iedereen kan zich aanmelden, zowel leken als (ervaren) masseurs.|||De opleiding certificeert je om daarna in te stromen op level 2, het gevorderden level met nog meer houdingenm.|||Wat leer je? 64 basisposities van Thaise yogamassage level 1, voorkant posities van voeten tot gezicht, de belangrijkste energielijnen (Sen lijnen), stretches en acupressuur punten, diepe buikmassage (Hara werk), en het juiste gebruik van je lichaamgewicht.|||Wat krijg je? Een duidelijk lesboek, praktijkexamen met internationale certificering, 6 lessen van 2,5-3 uur in overleg, gratis Thaise yogamassage van 60 minuten, onbeperkt water en kruidenthee, en onbeperkte mogelijkheid tot vragen stellen na de opleiding.", prices: [
+    description: "Wil je Thaise yogamassage leren?",    fullDescription: "Wil je Thaise yogamassage leren? Dat kan in duo's (of eventueel alleen, dan neem je een model mee), door de opleiding BalaneryThai Yoga massage te doen, volgens de principes en leermethoden van ITM Chiangmai. Iedereen kan zich aanmelden, zowel leken als (ervaren) masseurs.\n\nDe opleiding certificeert je om daarna in te stromen op level 2, het gevorderden level met nog meer houdingenm.|||Wat leer je? 64 basisposities van Thaise yogamassage level 1, voorkant posities van voeten tot gezicht, de belangrijkste energielijnen (Sen lijnen), stretches en acupressuur punten, diepe buikmassage (Hara werk), en het juiste gebruik van je lichaamgewicht.|||Wat krijg je? Een duidelijk lesboek, praktijkexamen met internationale certificering, 6 lessen van 2,5-3 uur in overleg, gratis Thaise yogamassage van 60 minuten, onbeperkt water en kruidenthee, en onbeperkte mogelijkheid tot vragen stellen na de opleiding.", prices: [
       { duration: "6 lessen van 2,5-3 uur", price: "€699 per persoon" },
     ],
   },
@@ -59,7 +59,7 @@ const trainings = [
     title: "Volledige opleiding klachtgerichte massage",
     subtitle: "Opleiding",
     description: "Professionele klachtgerichte massagetraining.",
-    fullDescription: "Volledige opleiding klachtgerichte massage, 7-8 ochtenden of middagen van 2 weekenddagen, dagdelen in overleg.|||Kennismaking, inventarisatie kennis niveau, persoonlijke doelen, massage basics, do's and don'ts, contra indicaties, anamnesegespreken formulier, werkhouding, en uitgebreide anatomie van de belangrijkste botten en spieren.|||Lessen massage van de rug, nek, shoulders, armen, handen, achterkant en voorkant benen, hoofd, voeten, buik en borst, met herhalingsles en gelegenheid tot extra oefenen.|||Afsluitend praktijkexamen, inclusief massageboek en diploma. Aan het einde heb je alles in huis om zelf een praktijk te gaan starten, inclusief gratis klachtgerichte massage van een uur!",
+    fullDescription: "Volledige opleiding klachtgerichte massage, 7-8 ochtenden of middagen van 2 weekenddagen, dagdelen in overleg.\n\nKennismaking, inventarisatie kennis niveau, persoonlijke doelen, massage basics, do's and don'ts, contra indicaties, anamnesegespreken formulier, werkhouding, en uitgebreide anatomie van de belangrijkste botten en spieren.|||Lessen massage van de rug, nek, shoulders, armen, handen, achterkant en voorkant benen, hoofd, voeten, buik en borst, met herhalingsles en gelegenheid tot extra oefenen.\n\nAfsluitend praktijkexamen, inclusief massageboek en diploma. Aan het einde heb je alles in huis om zelf een praktijk te gaan starten, inclusief gratis klachtgerichte massage van een uur!",
     prices: [
       { duration: "7-8 ochtenden of middagen", price: "€650 per persoon" },
     ],
@@ -69,7 +69,7 @@ const trainings = [
     title: "Volledige opleiding ontspanningsmassage",
     subtitle: "Opleiding",
     description: "Volledige ontspanningsmassagetraining.",
-    fullDescription: "Volledige opleiding ontspanningsmassage, 7-8 ochtenden of middagen van ongeveer 3-3,5 uur of 2 weekenddagen, dagdelen in overleg.|||Kennismaking, inventarisatie kennis niveau, persoonlijke doelen, massage basics, do's and don'ts, contra-indicaties, werkhouding, en globale anatomie van de belangrijkste botten en spieren.|||Lessen massage van de rug, nek, shoulders, armen, handen, achterkant en voorkant benen, hoofd en voeten, met herhalingsles en gelegenheid tot extra oefenen.|||Afsluitend praktijkexamen, inclusief massageboek en diploma. Aan het einde heb je alles in huis om zelf een praktijk te gaan starten, inclusief gratis ontspanningsmassage van een uur!",
+    fullDescription: "Volledige opleiding ontspanningsmassage, 7-8 ochtenden of middagen van ongeveer 3-3,5 uur of 2 weekenddagen, dagdelen in overleg.\n\nKennismaking, inventarisatie kennis niveau, persoonlijke doelen, massage basics, do's and don'ts, contra-indicaties, werkhouding, en globale anatomie van de belangrijkste botten en spieren.\n\nLessen massage van de rug, nek, shoulders, armen, handen, achterkant en voorkant benen, hoofd en voeten, met herhalingsles en gelegenheid tot extra oefenen.\n\nAfsluitend praktijkexamen, inclusief massageboek en diploma. Aan het einde heb je alles in huis om zelf een praktijk te gaan starten, inclusief gratis ontspanningsmassage van een uur!",
     prices: [
       { duration: "7-8 ochtenden of middagen", price: "€650 per persoon" },
     ],
@@ -102,7 +102,7 @@ export default function Workshops() {
               Workshops
             </h2>
             <p className="font-body text-lg mb-8" style={{ color: "#6B6560" }}>
-              Korte workshops waarin je de basisprincipes van massage leert. Perfecte introductie voor beginners of aanvulling voor ervaren therapeuten.
+              Onze workshops zijn korte, intensieve trainingen waarin je de basisprincipes en technieken van massage leert. Ze zijn perfect voor beginners die hun eerste stappen in de massagewereld willen zetten, maar ook een waardevolle aanvulling voor ervaren therapeuten die hun vaardigheden willen uitbreiden. Alle workshops zijn beschikbaar voor 1 of 2 personen. Indien je alleen komt, neem je een model mee om op te oefenen. Elke workshop eindigt met een handout met alle grepen en basale kennis om mee naar huis te nemen.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
               {workshops.map((w) => (
@@ -126,7 +126,7 @@ export default function Workshops() {
               Volledige Opleidingen
             </h2>
             <p className="font-body text-lg mb-8" style={{ color: "#6B6560" }}>
-              Volledige professionele opleidingen met certificering. Ideaal voor degenen die een massagepraktijk willen starten of hun vaardigheden willen verdiepen.
+              Onze volledige opleidingen zijn professionele trainingen met internationale certificering. Ze zijn ontworpen voor iedereen die een massagepraktijk wil starten of hun vaardigheden en kennis dieper wil verdiepen. Of je nu een beginner bent of al ervaring hebt, je leert alles wat je nodig hebt om zelfstandig te werken. Elke opleiding bevat theoretische kennis, praktische training, een praktijkexamen en een diploma. Daarnaast krijg je een gratis massagebehandeling en heb je onbeperkte mogelijkheid tot vragen stellen na de opleiding.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
               {trainings.map((t) => (
