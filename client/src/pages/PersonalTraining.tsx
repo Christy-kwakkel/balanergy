@@ -110,7 +110,7 @@ export default function PersonalTraining() {
 
         {/* Intro Section */}
         <section className="py-12 bg-white">
-          <div className="container max-w-3xl">
+          <div className="container max-w-3xl text-left">
             <p className="font-body text-base leading-relaxed mb-6" style={{ color: "#6B6560" }}>
               Wil jij yoga of Body Balance op een individueel afgestemde manier leren? Bij Balanergy bieden we persoonlijke trainingen waarbij jij centraal staat. Of je nu beginner bent of al ervaring hebt, we passen het programma volledig aan jouw kennis, ervaring en persoonlijke doelen.
             </p>
@@ -158,7 +158,7 @@ export default function PersonalTraining() {
 
         {/* Info Section */}
         <section className="py-12 bg-white">
-          <div className="container max-w-3xl">
+          <div className="container max-w-3xl text-left">
             <h2 className="font-display text-2xl font-bold mb-6" style={{ color: "#3E3A37" }}>
               Hoe Werkt Het?
             </h2>
