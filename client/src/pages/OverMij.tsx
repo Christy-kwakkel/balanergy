@@ -39,9 +39,10 @@ export default function OverMij() {
                   src={STUDIO_IMAGE}
                   alt="Mascha Kwakkel"
                   className="rounded-lg shadow-sm w-full h-auto"
+                  style={{ marginTop: "-75px" }}
                 />
               </div>
-              <div className="order-1 md:order-2">
+              <div className="order-1 md:order-2" style={{ marginTop: "-80px" }}>
                 <h2 className="font-display text-3xl font-bold mb-6" style={{ color: "#3E3A37" }}>
                   Balanergy is Mascha Kwakkel
                 </h2>
