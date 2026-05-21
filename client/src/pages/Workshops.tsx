@@ -96,7 +96,7 @@ export default function Workshops() {
         </section>
 
         {/* Workshops Section */}
-        <section className="py-12">
+        <section className="py-12" style={{ marginTop: "-80px" }}>
           <div className="container">
             <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
               Workshops
