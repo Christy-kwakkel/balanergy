@@ -9,7 +9,8 @@ import { Phone, Mail, Calendar } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import ExpandableCard from "@/components/ExpandableCard";
 
-const ONLINE_AGENDA_URL = "https://www.supersaas.nl/schedule/balanergy/Balanergy";
+const ONLINE_AGENDA_URL =
+  "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 
 const treatments = [
   {
@@ -83,9 +84,7 @@ const treatments = [
       "Drie gespecialiseerde typen: stress-/spanningsmigraine, nek-/schouder-gerelateerde hoofdpijn, en sinuscongestie-hoofdpijn met pepermuntolie en Thaise balsem.",
     fullDescription:
       "Regelmatig optredende hoofdpijn komt helaas vaak en veel voor en kan diverse oorzaken hebben, zoals hoofdpijn door spanning, door verstopte holtes, of hoofdpijn die veroorzaakt wordt door klachten vanuit de nek en/of schouders. Voor elk type heeft Balanergy een aparte massage ontwikkeld om deze klachten aan te pakken. \n\n\nHoofdpijnmassage door stress en spanning:\nDeze uiterst ontspannende massage wordt spanning in het lichaam die vaak in de bovenrug gaat vastzitten losgewerkt. Ook het hoofd, waar de spanning letterlijk en figuurlijk vandaan komt, wordt uitgebreid meegenomen. \n\n\nHoofdpijnmassage door nek- en schouderklachten:\nBij deze massage worden westerse en Thaise technieken gecombineerd om het schouder- en nekgebied bij een aantal belangrijke spieren los te maken, waardoor knopen en strengen verminderen en daarmee de toevoer van zuurstofrijk bloed naar het hoofd bevorderd wordt.\n\n\nHoofdpijnmassage door verstopte holtes:\nBij deze massage wordt het hoofd, het gezicht en de bovenkant van de rug, nek en schouders gemasseerd. Door massage van het gezicht en dan met name bij de holtes krijg je meer lucht. Er wordt gemasseerd met pepermuntolie en Thaise balsem die het kunnen doorademen via de neus verbeteren.",
-    prices: [
-      { duration: "30 min", price: "€ 35,-" },
-    ],
+    prices: [{ duration: "30 min", price: "€ 35,-" }],
   },
   {
     id: "thai",
@@ -119,7 +118,10 @@ const treatments = [
 
 export default function Behandelingen() {
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#FCF9F5" }}>
+    <div
+      className="min-h-screen flex flex-col"
+      style={{ backgroundColor: "#FCF9F5" }}
+    >
       <Navigation />
 
       {/* Main Content */}
@@ -127,11 +129,15 @@ export default function Behandelingen() {
         {/* Hero Section */}
         <section className="py-12 md:py-16">
           <div className="container">
-            <h1 className="font-display text-4xl md:text-5xl font-bold mb-2" style={{ color: "#3E3A37" }}>
+            <h1
+              className="font-display text-4xl md:text-5xl font-bold mb-2"
+              style={{ color: "#3E3A37" }}
+            >
               Behandelingen & Prijzen
             </h1>
             <p className="font-body text-lg" style={{ color: "#8DA089" }}>
-              Van ontspannend tot therapeutisch — er is altijd een behandeling die op dit moment bij jou past
+              Van ontspannend tot therapeutisch — er is altijd een behandeling
+              die op dit moment bij jou past
             </p>
           </div>
         </section>
@@ -139,11 +145,14 @@ export default function Behandelingen() {
         {/* Treatments Grid */}
         <section className="py-12">
           <div className="container">
-            <h2 className="font-display text-3xl font-bold mb-8" style={{ color: "#3E3A37" }}>
+            <h2
+              className="font-display text-3xl font-bold mb-8"
+              style={{ color: "#3E3A37" }}
+            >
               Onze Behandelingen
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-              {treatments.map((t) => (
+              {treatments.map(t => (
                 <ExpandableCard
                   key={t.id}
                   title={t.title}
@@ -161,15 +170,33 @@ export default function Behandelingen() {
         {/* Cancellation Policy Section */}
         <section className="py-12 bg-white">
           <div className="container max-w-3xl">
-            <div className="bg-yellow-50 border-l-4 p-6" style={{ borderColor: "#C69C6D", backgroundColor: "rgba(198,156,109,0.1)" }}>
-              <p className="font-body text-base font-semibold mb-3" style={{ color: "#3E3A37" }}>
+            <div
+              className="bg-yellow-50 border-l-4 p-6"
+              style={{
+                borderColor: "#C69C6D",
+                backgroundColor: "rgba(198,156,109,0.1)",
+              }}
+            >
+              <p
+                className="font-body text-base font-semibold mb-3"
+                style={{ color: "#3E3A37" }}
+              >
                 ⚠️ Annuleringsbeleid
               </p>
-              <p className="font-body text-base leading-relaxed mb-3" style={{ color: "#6B6560" }}>
-                <strong>Let op:</strong> Vanwege de volle agenda worden afspraken die minder dan 24 uur van tevoren worden afgezegd, ongeacht de reden, in rekening gebracht.
+              <p
+                className="font-body text-base leading-relaxed mb-3"
+                style={{ color: "#6B6560" }}
+              >
+                <strong>Let op:</strong> Vanwege de volle agenda worden
+                afspraken die minder dan 24 uur van tevoren worden afgezegd,
+                ongeacht de reden, in rekening gebracht.
               </p>
-              <p className="font-body text-base leading-relaxed" style={{ color: "#6B6560" }}>
-                <strong>Uitzondering:</strong> Wanneer je iemand anders in jouw plaats laat komen voor dezelfde tijdsduur, dan geldt dit niet.
+              <p
+                className="font-body text-base leading-relaxed"
+                style={{ color: "#6B6560" }}
+              >
+                <strong>Uitzondering:</strong> Wanneer je iemand anders in jouw
+                plaats laat komen voor dezelfde tijdsduur, dan geldt dit niet.
               </p>
             </div>
           </div>
@@ -178,10 +205,16 @@ export default function Behandelingen() {
         {/* CTA Section */}
         <section className="py-16 md:py-24">
           <div className="container text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6" style={{ color: "#3E3A37" }}>
+            <h2
+              className="font-display text-3xl md:text-4xl font-bold mb-6"
+              style={{ color: "#3E3A37" }}
+            >
               Klaar om je afspraak in te boeken?
             </h2>
-            <p className="font-body text-lg mb-8 max-w-2xl mx-auto" style={{ color: "#6B6560" }}>
+            <p
+              className="font-body text-lg mb-8 max-w-2xl mx-auto"
+              style={{ color: "#6B6560" }}
+            >
               Kies je behandeling en boek direct online via onze agenda
             </p>
             <a
@@ -198,26 +231,82 @@ export default function Behandelingen() {
       </main>
 
       {/* Footer */}
-      <footer className="mt-12 py-8" style={{ backgroundColor: "#3E3A37", color: "white" }}>
+      <footer
+        className="mt-12 py-8"
+        style={{ backgroundColor: "#3E3A37", color: "white" }}
+      >
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="font-display text-lg font-bold mb-4">Balanergy</h3>
               <p className="font-body text-sm opacity-80">
-                Praktijk voor Thaise yogamassage & voetreflexologie in IJsselmuiden
+                Praktijk voor Thaise yogamassage & voetreflexologie in
+                IJsselmuiden
               </p>
             </div>
             <div>
-              <h4 className="font-body text-sm font-semibold mb-4">Snelle Links</h4>
+              <h4 className="font-body text-sm font-semibold mb-4">
+                Snelle Links
+              </h4>
               <ul className="space-y-2 font-body text-sm">
-                <li><Link href="/" className="opacity-80 hover:opacity-100">Home</Link></li>
-                <li><Link href="/behandelingen" className="opacity-80 hover:opacity-100">Behandelingen</Link></li>
-                <li><Link href="/over-mij" className="opacity-80 hover:opacity-100">Over Mij</Link></li>
-                <li><Link href="/arrangementen" className="opacity-80 hover:opacity-100">Arrangementen</Link></li>
-                <li><Link href="/workshops" className="opacity-80 hover:opacity-100">Workshops & Opleidingen</Link></li>
-                <li><Link href="/personal-training" className="opacity-80 hover:opacity-100">Personal Training</Link></li>
-                <li><Link href="/contact" className="opacity-80 hover:opacity-100">Contact</Link></li>
-                <li><Link href="/info" className="opacity-80 hover:opacity-100">Info</Link></li>
+                <li>
+                  <Link href="/" className="opacity-80 hover:opacity-100">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/behandelingen"
+                    className="opacity-80 hover:opacity-100"
+                  >
+                    Behandelingen
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/over-mij"
+                    className="opacity-80 hover:opacity-100"
+                  >
+                    Over Mij
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/arrangementen"
+                    className="opacity-80 hover:opacity-100"
+                  >
+                    Arrangementen
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/workshops"
+                    className="opacity-80 hover:opacity-100"
+                  >
+                    Workshops & Opleidingen
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/personal-training"
+                    className="opacity-80 hover:opacity-100"
+                  >
+                    Personal Training
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="opacity-80 hover:opacity-100"
+                  >
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/info" className="opacity-80 hover:opacity-100">
+                    Info
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
@@ -225,11 +314,21 @@ export default function Behandelingen() {
               <div className="space-y-2 font-body text-sm">
                 <div className="flex items-center gap-2">
                   <Phone size={16} />
-                  <a href="tel:0642874405" className="opacity-80 hover:opacity-100">06-42874405</a>
+                  <a
+                    href="tel:0642874405"
+                    className="opacity-80 hover:opacity-100"
+                  >
+                    06-42874405
+                  </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail size={16} />
-                  <a href="mailto:balanergy@hotmail.com" className="opacity-80 hover:opacity-100">balanergy@hotmail.com</a>
+                  <a
+                    href="mailto:balanergy@hotmail.com"
+                    className="opacity-80 hover:opacity-100"
+                  >
+                    balanergy@hotmail.com
+                  </a>
                 </div>
               </div>
             </div>
