@@ -12,7 +12,7 @@ import Contact from "./pages/Contact";
 import Workshops from "./pages/Workshops";
 import PersonalTraining from "./pages/PersonalTraining";
 import Info from "./pages/Info";
-
+import { Analytics } from "@vercel/analytics/react";
 
 function Router() {
   return (
@@ -40,12 +40,11 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
           <Router />
+          <Analytics />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

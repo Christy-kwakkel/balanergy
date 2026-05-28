@@ -26,24 +26,36 @@ export default function ExpandableCard({
     <div
       className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative h-full"
       style={{
-        borderTop: "1px solid rgba(198,156,109,0.15)"
+        borderTop: "1px solid rgba(198,156,109,0.15)",
       }}
     >
       {tag && (
         <div className="absolute top-4 right-4 z-10">
-          <span className="inline-block px-3 py-1 rounded text-xs font-semibold" style={{ backgroundColor: "#C69C6D", color: "white" }}>
+          <span
+            className="inline-block px-3 py-1 rounded text-xs font-semibold"
+            style={{ backgroundColor: "#C69C6D", color: "white" }}
+          >
             {tag}
           </span>
         </div>
       )}
       <div className="p-6 flex flex-col">
-        <h3 className="font-display text-xl font-bold mb-1" style={{ color: "#3E3A37" }}>
+        <h3
+          className="font-display text-xl font-bold mb-1"
+          style={{ color: "#3E3A37" }}
+        >
           {title}
         </h3>
-        <p className="font-body text-xs font-semibold mb-3" style={{ color: "#8DA089" }}>
+        <p
+          className="font-body text-xs font-semibold mb-3"
+          style={{ color: "#8DA089" }}
+        >
           {subtitle}
         </p>
-        <p className="font-body text-sm leading-relaxed mb-6" style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}>
+        <p
+          className="font-body text-sm leading-relaxed mb-6"
+          style={{ color: "#6B6560", height: "6.5em", overflow: "hidden" }}
+        >
           {description}
         </p>
 
@@ -68,9 +80,15 @@ export default function ExpandableCard({
             {isExpanded && (
               <div
                 className="mt-4 p-4 rounded bg-white border"
-                style={{ borderColor: "rgba(141,160,137,0.2)", backgroundColor: "rgba(141,160,137,0.05)" }}
+                style={{
+                  borderColor: "rgba(141,160,137,0.2)",
+                  backgroundColor: "rgba(141,160,137,0.05)",
+                }}
               >
-                <p className="font-body text-sm leading-relaxed whitespace-pre-wrap" style={{ color: "#6B6560" }}>
+                <p
+                  className="font-body text-sm leading-relaxed whitespace-pre-wrap"
+                  style={{ color: "#6B6560" }}
+                >
                   {fullDescription}
                 </p>
               </div>
@@ -80,7 +98,10 @@ export default function ExpandableCard({
       </div>
 
       {/* Divider */}
-      <div className="border-t" style={{ borderColor: "rgba(141,160,137,0.2)" }} />
+      <div
+        className="border-t"
+        style={{ borderColor: "rgba(141,160,137,0.2)" }}
+      />
 
       {/* Price and Duration */}
       <div className="p-6">
@@ -88,12 +109,17 @@ export default function ExpandableCard({
           {prices.map((p, idx) => (
             <div key={idx} className="flex justify-between font-body text-sm">
               <span style={{ color: "#6B6560" }}>{p.duration}</span>
-              <span style={{ color: "#8DA089", fontWeight: "600" }}>{p.price}</span>
+              <span style={{ color: "#8DA089", fontWeight: "600" }}>
+                {p.price}
+              </span>
             </div>
           ))}
         </div>
         {note && (
-          <p className="font-body text-xs mb-4 italic" style={{ color: "#C69C6D" }}>
+          <p
+            className="font-body text-xs mb-4 italic"
+            style={{ color: "#C69C6D" }}
+          >
             {note}
           </p>
         )}

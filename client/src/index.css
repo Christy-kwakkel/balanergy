@@ -50,56 +50,56 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   /* Balanergy Brand Colors */
-  --color-cream: #FCF9F5;
-  --color-sage: #8DA089;
-  --color-sage-dark: #6B7D68;
-  --color-sage-deep: #3D4A3E;
-  --color-gold: #C69C6D;
-  --color-gold-light: #D4B896;
-  --color-warm-beige: #F5EFE6;
-  --color-text-dark: #3E3A37;
-  --color-text-medium: #6B6560;
-  --color-text-light: #9B948E;
+  --color-cream: #fcf9f5;
+  --color-sage: #8da089;
+  --color-sage-dark: #6b7d68;
+  --color-sage-deep: #3d4a3e;
+  --color-gold: #c69c6d;
+  --color-gold-light: #d4b896;
+  --color-warm-beige: #f5efe6;
+  --color-text-dark: #3e3a37;
+  --color-text-medium: #6b6560;
+  --color-text-light: #9b948e;
 }
 
 :root {
   /* Balanergy Color Palette */
-  --primary: oklch(0.60 0.06 145);        /* sage green #8DA089 */
-  --primary-foreground: oklch(0.99 0 0);  /* white */
-  --secondary: oklch(0.73 0.07 65);       /* soft gold #C69C6D */
+  --primary: oklch(0.6 0.06 145); /* sage green #8DA089 */
+  --primary-foreground: oklch(0.99 0 0); /* white */
+  --secondary: oklch(0.73 0.07 65); /* soft gold #C69C6D */
   --secondary-foreground: oklch(0.25 0.02 65); /* dark text */
-  --accent: oklch(0.95 0.02 80);          /* warm beige #F5EFE6 */
+  --accent: oklch(0.95 0.02 80); /* warm beige #F5EFE6 */
   --accent-foreground: oklch(0.25 0.02 65);
 
   --radius: 0.5rem;
-  --background: oklch(0.99 0.01 80);      /* warm cream #FCF9F5 */
-  --foreground: oklch(0.25 0.02 65);      /* dark anthracite #3E3A37 */
-  --card: oklch(0.97 0.015 80);           /* warm beige #F5EFE6 */
+  --background: oklch(0.99 0.01 80); /* warm cream #FCF9F5 */
+  --foreground: oklch(0.25 0.02 65); /* dark anthracite #3E3A37 */
+  --card: oklch(0.97 0.015 80); /* warm beige #F5EFE6 */
   --card-foreground: oklch(0.25 0.02 65);
   --popover: oklch(0.99 0.01 80);
   --popover-foreground: oklch(0.25 0.02 65);
   --muted: oklch(0.95 0.015 80);
-  --muted-foreground: oklch(0.50 0.02 65);
+  --muted-foreground: oklch(0.5 0.02 65);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.88 0.02 80);
   --input: oklch(0.88 0.02 80);
-  --ring: oklch(0.60 0.06 145);
+  --ring: oklch(0.6 0.06 145);
 
-  --chart-1: oklch(0.60 0.06 145);
+  --chart-1: oklch(0.6 0.06 145);
   --chart-2: oklch(0.73 0.07 65);
-  --chart-3: oklch(0.50 0.05 145);
+  --chart-3: oklch(0.5 0.05 145);
   --chart-4: oklch(0.85 0.04 80);
-  --chart-5: oklch(0.30 0.04 145);
+  --chart-5: oklch(0.3 0.04 145);
 
   --sidebar: oklch(0.97 0.015 80);
   --sidebar-foreground: oklch(0.25 0.02 65);
-  --sidebar-primary: oklch(0.60 0.06 145);
+  --sidebar-primary: oklch(0.6 0.06 145);
   --sidebar-primary-foreground: oklch(0.99 0 0);
   --sidebar-accent: oklch(0.95 0.02 80);
   --sidebar-accent-foreground: oklch(0.25 0.02 65);
   --sidebar-border: oklch(0.88 0.02 80);
-  --sidebar-ring: oklch(0.60 0.06 145);
+  --sidebar-ring: oklch(0.6 0.06 145);
 }
 
 @layer base {
@@ -108,16 +108,20 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 400;
     line-height: 1.7;
   }
-  h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+  h1,
+  h2,
+  h3 {
+    font-family: "Playfair Display", serif;
     line-height: 1.2;
   }
-  h4, h5, h6 {
-    font-family: 'Source Sans 3', sans-serif;
+  h4,
+  h5,
+  h6 {
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
   }
   button:not(:disabled),
@@ -164,64 +168,72 @@
 
   /* Balanergy brand utilities */
   .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
   }
 
   .font-body {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: "Source Sans 3", sans-serif;
   }
 
   .font-accent {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: "Cormorant Garamond", serif;
     font-style: italic;
   }
 
   .text-sage {
-    color: #8DA089;
+    color: #8da089;
   }
 
   .text-gold {
-    color: #C69C6D;
+    color: #c69c6d;
   }
 
   .bg-cream {
-    background-color: #FCF9F5;
+    background-color: #fcf9f5;
   }
 
   .bg-sage {
-    background-color: #8DA089;
+    background-color: #8da089;
   }
 
   .bg-sage-deep {
-    background-color: #3D4A3E;
+    background-color: #3d4a3e;
   }
 
   .bg-warm-beige {
-    background-color: #F5EFE6;
+    background-color: #f5efe6;
   }
 
   .bg-gold {
-    background-color: #C69C6D;
+    background-color: #c69c6d;
   }
 
   .border-gold {
-    border-color: #C69C6D;
+    border-color: #c69c6d;
   }
 
   .border-sage {
-    border-color: #8DA089;
+    border-color: #8da089;
   }
 
   /* Gold divider line */
   .gold-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, #C69C6D 30%, #C69C6D 70%, transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #c69c6d 30%,
+      #c69c6d 70%,
+      transparent
+    );
     opacity: 0.5;
   }
 
   /* Treatment card hover effect */
   .treatment-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
   .treatment-card:hover {
@@ -233,7 +245,9 @@
   .fade-up {
     opacity: 0;
     transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
   }
 
   .fade-up.visible {
@@ -243,53 +257,57 @@
 
   /* CTA Button styles */
   .btn-primary {
-    background-color: #8DA089;
+    background-color: #8da089;
     color: white;
     padding: 0.75rem 2rem;
     border-radius: 4px;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
     display: inline-block;
     min-height: 44px;
     min-width: 44px;
   }
 
   .btn-primary:hover {
-    background-color: #6B7D68;
+    background-color: #6b7d68;
     transform: translateY(-1px);
   }
 
   .btn-gold {
-    background-color: #C69C6D;
+    background-color: #c69c6d;
     color: white;
     padding: 0.75rem 2rem;
     border-radius: 4px;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      transform 0.2s ease;
     display: inline-block;
     min-height: 44px;
     min-width: 44px;
   }
 
   .btn-gold:hover {
-    background-color: #B08050;
+    background-color: #b08050;
     transform: translateY(-1px);
   }
 
   .btn-outline-sage {
-    border: 2px solid #8DA089;
-    color: #8DA089;
+    border: 2px solid #8da089;
+    color: #8da089;
     padding: 0.7rem 2rem;
     border-radius: 4px;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
     font-size: 0.95rem;
     letter-spacing: 0.05em;
@@ -301,7 +319,7 @@
   }
 
   .btn-outline-sage:hover {
-    background-color: #8DA089;
+    background-color: #8da089;
     color: white;
   }
 }
