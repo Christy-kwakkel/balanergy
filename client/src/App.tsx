@@ -13,6 +13,7 @@ import Workshops from "./pages/Workshops";
 import PersonalTraining from "./pages/PersonalTraining";
 import Info from "./pages/Info";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function Router() {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Toaster />
           <Router />
           <Analytics />
+          <SpeedInsights />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
