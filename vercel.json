@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/wie-is-balanergy-cito",
+      "destination": "/contact",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
