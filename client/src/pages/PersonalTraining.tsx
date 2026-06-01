@@ -147,7 +147,7 @@ export default function PersonalTraining() {
 
         {/* Intro Section */}
         <section className="py-12 bg-white">
-          <div className="container max-w-3xl text-left" style={{ marginRight: "0px", marginLeft: "40px" }}>
+          <div className="container max-w-3xl text-left" style={{ marginRight: "0px", marginLeft: "105px" }}>
             <p
               className="font-body text-base leading-relaxed mb-6"
               style={{ color: "#6B6560" }}
