@@ -1,4 +1,4 @@
-/*
+/**
  * BALANERGY BEHANDELINGEN PAGE
  * Design: "Warme Aarde – Organisch & Sensueel"
  * All treatments on one page, no submenus
@@ -14,6 +14,22 @@ const ONLINE_AGENDA_URL =
 
 const treatments = [
   {
+    id: "thai",
+    title: "Thaise Yogamassage",
+    subtitle: "Thais",
+    description:
+      "Traditionele Thaise yogamassage met strekking en acupressuurtechnieken. Geschikt voor iedereen van 10 tot 100 jaar oud.",
+    fullDescription:
+      "Dit is de traditionele vorm van yogamassage, zoals die in Noord-Thailand ook het meest wordt gegeven, en deze vindt plaats op een comfortabele traditionele Thaise rolmatras van kapok katoen. Hiermee is er optimale bewegingsvrijheid om de yoga stretches te kunnen doen, in combinatie met acupressuur massage.\n\nHoe langer de tijdsduur, hoe meer tijd er per lichaamdsdeel is. Deze massage kan niet op locatie gegeven worden.",
+    prices: [
+      { duration: "60 min", price: "€ 59,-" },
+      { duration: "75 min", price: "€ 69,-" },
+      { duration: "90 min", price: "€ 79,-" },
+      { duration: "120 min", price: "€ 99,-" },
+    ],
+    tag: "Signature Dish!",
+  },
+  {
     id: "ontspanning",
     title: "Ontspanningsmassage",
     subtitle: "Ontspanning",
@@ -22,23 +38,6 @@ const treatments = [
     fullDescription:
       "Ontspanningsmassages hebben als doel tot een diepe ontspanning komen en alles even kunnen loslaten. Er wordt gemasseerd met een essentiële olie naar keuze (gemengd met een basisolie).\n\nEen ontspanningsmassage wordt aangeboden vanaf minimaal 45 minuten, omdat écht loslaten en ontspannen nauwelijks lukt in 30 minuten. Een ontspanningsmassage kan beslist ook steviger worden uitgevoerd voor wie dat prettig vindt, ontspanning kent vele vormen. Wil je graag dat eventuele knopen of triggerpoints ook worden aangepakt tijdens je massage en behandeld worden met magnesiumolie en/of Thaise balsems? Boek dan een combinatie massage.",
     prices: [
-      { duration: "45 min", price: "€ 45,-" },
-      { duration: "60 min", price: "€ 55,-" },
-      { duration: "75 min", price: "€ 65,-" },
-      { duration: "90 min", price: "€ 75,-" },
-      { duration: "120 min", price: "€ 95,-" },
-    ],
-  },
-  {
-    id: "sportmassage",
-    title: "Sportmassage",
-    subtitle: "Klachtgericht",
-    description:
-      "Voor pijn, blessures en overbelasting van specifieke lichaamsdelen. Niet alleen voor sporters—voor iedereen met bewegingsklachten zoals hoofdpijn, rugpijn en nek-/schouderklachten.",
-    fullDescription:
-      "Een sportmassage richt zich op één of meer klachten in de vorm van pijn, blessures of overbelasting van specifieke lichaamsdelen, wat niet voorbehouden is aan sporters, maar voor iedereen met klachten in het bewegingsapparaat. Hierbij kan gedacht worden aan hoofdpijn, onderrugklachten, bekkenklachten, nek- en schouderklachten. Deze massage is vaak steviger dan de ontspannende massage en er wordt gewerkt met andere petrissage, frictie en tapotage technieken en elementen uit de Thaise acupressuur massage om dieper te kunnen inwerken op het spierweefsel. Er wordt onder meer gewerkt met een speciale massagebalsem of magnesiumolie voor overbelaste of pijnlijke spieren om het effect van de massage nog verder te versterken. Ook als je geen concrete klachten hebt, is een massage nooit overbodige luxe, doordat je je lichaam en hoofd ermee in balans kunt houden en daarmee preventief werkt.",
-    prices: [
-      { duration: "30 min", price: "€ 35,-" },
       { duration: "45 min", price: "€ 45,-" },
       { duration: "60 min", price: "€ 55,-" },
       { duration: "75 min", price: "€ 65,-" },
@@ -64,6 +63,23 @@ const treatments = [
     tag: "Meest geboekt",
   },
   {
+    id: "sportmassage",
+    title: "Sportmassage",
+    subtitle: "Klachtgericht",
+    description:
+      "Voor pijn, blessures en overbelasting van specifieke lichaamsdelen. Niet alleen voor sporters—voor iedereen met bewegingsklachten zoals hoofdpijn, rugpijn en nek-/schouderklachten.",
+    fullDescription:
+      "Een sportmassage richt zich op één of meer klachten in de vorm van pijn, blessures of overbelasting van specifieke lichaamsdelen, wat niet voorbehouden is aan sporters, maar voor iedereen met klachten in het bewegingsapparaat. Hierbij kan gedacht worden aan hoofdpijn, onderrugklachten, bekkenklachten, nek- en schouderklachten. Deze massage is vaak steviger dan de ontspannende massage en er wordt gewerkt met andere petrissage, frictie en tapotage technieken en elementen uit de Thaise acupressuur massage om dieper te kunnen inwerken op het spierweefsel. Er wordt onder meer gewerkt met een speciale massagebalsem of magnesiumolie voor overbelaste of pijnlijke spieren om het effect van de massage nog verder te versterken. Ook als je geen concrete klachten hebt, is een massage nooit overbodige luxe, doordat je je lichaam en hoofd ermee in balans kunt houden en daarmee preventief werkt.",
+    prices: [
+      { duration: "30 min", price: "€ 35,-" },
+      { duration: "45 min", price: "€ 45,-" },
+      { duration: "60 min", price: "€ 55,-" },
+      { duration: "75 min", price: "€ 65,-" },
+      { duration: "90 min", price: "€ 75,-" },
+      { duration: "120 min", price: "€ 95,-" },
+    ],
+  },
+  {
     id: "rugpijnmassage",
     title: "Rugpijnmassage",
     subtitle: "Gespecialiseerd",
@@ -85,21 +101,6 @@ const treatments = [
     fullDescription:
       "Regelmatig optredende hoofdpijn komt helaas vaak en veel voor en kan diverse oorzaken hebben, zoals hoofdpijn door spanning, door verstopte holtes, of hoofdpijn die veroorzaakt wordt door klachten vanuit de nek en/of schouders. Voor elk type heeft Balanergy een aparte massage ontwikkeld om deze klachten aan te pakken. \n\n\nHoofdpijnmassage door stress en spanning:\nDeze uiterst ontspannende massage wordt spanning in het lichaam die vaak in de bovenrug gaat vastzitten losgewerkt. Ook het hoofd, waar de spanning letterlijk en figuurlijk vandaan komt, wordt uitgebreid meegenomen. \n\n\nHoofdpijnmassage door nek- en schouderklachten:\nBij deze massage worden westerse en Thaise technieken gecombineerd om het schouder- en nekgebied bij een aantal belangrijke spieren los te maken, waardoor knopen en strengen verminderen en daarmee de toevoer van zuurstofrijk bloed naar het hoofd bevorderd wordt.\n\n\nHoofdpijnmassage door verstopte holtes:\nBij deze massage wordt het hoofd, het gezicht en de bovenkant van de rug, nek en schouders gemasseerd. Door massage van het gezicht en dan met name bij de holtes krijg je meer lucht. Er wordt gemasseerd met pepermuntolie en Thaise balsem die het kunnen doorademen via de neus verbeteren.",
     prices: [{ duration: "30 min", price: "€ 35,-" }],
-  },
-  {
-    id: "thai",
-    title: "Thaise Yogamassage",
-    subtitle: "Thais",
-    description:
-      "Traditionele Thaise yogamassage met strekking en acupressuurtechnieken. Geschikt voor iedereen van 10 tot 100 jaar oud.",
-    fullDescription:
-      "Dit is de traditionele vorm van yogamassage, zoals die in Noord-Thailand ook het meest wordt gegeven, en deze vindt plaats op een comfortabele traditionele Thaise rolmatras van kapok katoen. Hiermee is er optimale bewegingsvrijheid om de yoga stretches te kunnen doen, in combinatie met acupressuur massage.\n\nHoe langer de tijdsduur, hoe meer tijd er per lichaamdsdeel is. Deze massage kan niet op locatie gegeven worden.",
-    prices: [
-      { duration: "60 min", price: "€ 59,-" },
-      { duration: "75 min", price: "€ 69,-" },
-      { duration: "90 min", price: "€ 79,-" },
-    ],
-    tag: "Signature Dish!",
   },
   {
     id: "reflexology",
@@ -202,142 +203,62 @@ export default function Behandelingen() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 md:py-24">
-          <div className="container text-center">
+        {/* Contact Section */}
+        <section className="py-12">
+          <div className="container max-w-3xl">
             <h2
-              className="font-display text-3xl md:text-4xl font-bold mb-6"
+              className="font-display text-2xl font-bold mb-6"
               style={{ color: "#3E3A37" }}
             >
-              Klaar om je afspraak in te boeken?
+              Vragen over behandelingen?
             </h2>
-            <p
-              className="font-body text-lg mb-8 max-w-2xl mx-auto"
-              style={{ color: "#6B6560" }}
-            >
-              Kies je behandeling en boek direct online via onze agenda
-            </p>
-            <a
-              href={ONLINE_AGENDA_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
-              style={{ backgroundColor: "#8DA089" }}
-            >
-              ONLINE AGENDA
-            </a>
-          </div>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <footer
-        className="mt-12 py-8"
-        style={{ backgroundColor: "#3E3A37", color: "white" }}
-      >
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="font-display text-lg font-bold mb-4">Balanergy</h3>
-              <p className="font-body text-sm opacity-80">
-                Praktijk voor Thaise yogamassage & voetreflexologie in
-                IJsselmuiden
-              </p>
-            </div>
-            <div>
-              <h4 className="font-body text-sm font-semibold mb-4">
-                Snelle Links
-              </h4>
-              <ul className="space-y-2 font-body text-sm">
-                <li>
-                  <Link href="/" className="opacity-80 hover:opacity-100">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/behandelingen"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    Behandelingen
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/over-mij"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    Over Mij
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/arrangementen"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    Arrangementen
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/workshops"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    Workshops & Opleidingen
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/personal-training"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    Personal Training
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/info" className="opacity-80 hover:opacity-100">
-                    Info
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-body text-sm font-semibold mb-4">Contact</h4>
-              <div className="space-y-2 font-body text-sm">
-                <div className="flex items-center gap-2">
-                  <Phone size={16} />
-                  <a
-                    href="tel:0642874405"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    06-42874405
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Mail size={16} />
-                  <a
-                    href="mailto:balanergy@hotmail.com"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    balanergy@hotmail.com
-                  </a>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <Phone size={32} style={{ color: "#8DA089" }} className="mx-auto mb-3" />
+                <p
+                  className="font-body text-sm font-semibold mb-1"
+                  style={{ color: "#3E3A37" }}
+                >
+                  Bel
+                </p>
+                <p className="font-body text-sm" style={{ color: "#6B6560" }}>
+                  +31 (0)6 12 34 56 78
+                </p>
+              </div>
+              <div className="text-center">
+                <Mail size={32} style={{ color: "#8DA089" }} className="mx-auto mb-3" />
+                <p
+                  className="font-body text-sm font-semibold mb-1"
+                  style={{ color: "#3E3A37" }}
+                >
+                  E-mail
+                </p>
+                <p className="font-body text-sm" style={{ color: "#6B6560" }}>
+                  info@balanergy.nl
+                </p>
+              </div>
+              <div className="text-center">
+                <Calendar size={32} style={{ color: "#8DA089" }} className="mx-auto mb-3" />
+                <p
+                  className="font-body text-sm font-semibold mb-1"
+                  style={{ color: "#3E3A37" }}
+                >
+                  Agenda
+                </p>
+                <a
+                  href={ONLINE_AGENDA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm hover:opacity-70 transition-opacity"
+                  style={{ color: "#8DA089" }}
+                >
+                  Bekijk beschikbaarheid
+                </a>
               </div>
             </div>
           </div>
-          <div className="border-t border-white border-opacity-20 pt-8 text-center font-body text-sm opacity-80">
-            <p>&copy; 2026 Balanergy. Alle rechten voorbehouden.</p>
-          </div>
-        </div>
-      </footer>
+        </section>
+      </main>
     </div>
   );
 }
