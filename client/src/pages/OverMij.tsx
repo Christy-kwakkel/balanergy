@@ -47,7 +47,7 @@ export default function OverMij() {
                   src={STUDIO_IMAGE}
                   alt="Mascha Kwakkel"
                   className="rounded-lg shadow-sm w-full h-auto"
-                  style={{ marginTop: "-75px" }}
+                  style={{ marginTop: "-25px" }}
                 />
               </div>
               <div
