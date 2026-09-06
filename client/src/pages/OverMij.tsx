@@ -25,7 +25,7 @@ export default function OverMij() {
       {/* Main Content */}
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-16">
+        <section className="py-8 md:py-10">
           <div className="container">
             <h1
               className="font-display text-4xl md:text-5xl font-bold mb-2"
@@ -51,7 +51,7 @@ export default function OverMij() {
         </section>
 
         {/* About Section */}
-        <section className="py-8 md:py-10">
+        <section className="pt-4 pb-6 md:pt-6 md:pb-8">
           <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-start">
               <div className="order-2 md:order-1 md:-mt-4">
@@ -61,7 +61,7 @@ export default function OverMij() {
                   className="rounded-lg shadow-sm w-full h-auto"
                 />
               </div>
-              <div className="order-1 md:order-2 md:-mt-12">
+              <div className="order-1 md:order-2">
                 <h2
                   className="font-display text-3xl font-bold mb-4"
                   style={{ color: "#3E3A37" }}
@@ -98,7 +98,7 @@ export default function OverMij() {
 
         {/* Thailand Journey */}
         <section
-          className="py-12"
+          className="pt-6 pb-8 md:pt-8 md:pb-10"
           style={{ backgroundColor: "rgba(141,160,137,0.05)" }}
         >
           <div className="container">
@@ -135,7 +135,7 @@ export default function OverMij() {
         </section>
 
         {/* Philosophy */}
-        <section className="py-12">
+        <section className="pt-6 pb-8 md:pt-8 md:pb-10">
           <div className="container">
             <div className="max-w-3xl">
               <h2
@@ -180,7 +180,7 @@ export default function OverMij() {
 
         {/* Qualifications */}
         <section
-          className="py-12"
+          className="pt-6 pb-8 md:pt-8 md:pb-10"
           style={{ backgroundColor: "rgba(141,160,137,0.05)" }}
         >
           <div className="container">
@@ -395,7 +395,7 @@ export default function OverMij() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12">
+        <section className="py-6 md:py-8">
           <div className="container text-center">
             <h2
               className="font-display text-2xl font-bold mb-4"

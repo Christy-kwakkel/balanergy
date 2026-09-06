@@ -14,3 +14,10 @@
 - [x] Verify responsive sizing and spacing on desktop and mobile.
 - [x] Save a checkpoint after verification.
 
+
+## Current request
+- [x] Inspect the six Over Mij sections referenced by the visual editor comments.
+- [x] Reduce the top or bottom whitespace as requested while preserving responsive spacing.
+- [x] Verify the page on desktop and mobile and run the project checks.
+- [x] Save a checkpoint after verification.
+
