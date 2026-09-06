@@ -12,6 +12,7 @@ const ONLINE_AGENDA_URL =
   "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 const STUDIO_IMAGE =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/about-mascha-dvPzjAqj7qTAQ57W5UwV4y.webp";
+const MASCHA_PHOTO = "/manus-storage/fotoMascha_fd942e35.webp";
 
 export default function OverMij() {
   return (
@@ -35,6 +36,17 @@ export default function OverMij() {
             <p className="font-body text-lg" style={{ color: "#8DA089" }}>
               Ontmoet Mascha Kwakkel, massage therapeut en oprichter van Balanergy
             </p>
+          </div>
+        </section>
+
+        {/* Personal Photo */}
+        <section className="-mt-4 pb-8 md:-mt-6 md:pb-10">
+          <div className="container">
+            <img
+              src={MASCHA_PHOTO}
+              alt="Mascha tijdens een yogahouding in de bergen"
+              className="w-full h-auto max-h-[520px] object-cover object-center rounded-lg shadow-sm"
+            />
           </div>
         </section>
 

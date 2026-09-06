@@ -7,3 +7,10 @@
 - [x] Verify the final wording and run the project checks before saving a checkpoint.
 - [x] Save a checkpoint after verification.
 
+
+## Current request
+- [x] Prepare the provided fotoMascha.webp asset for the website.
+- [x] Place the photo between the Over Mij intro paragraph and the “Balanergy is Mascha Kwakkel” heading.
+- [x] Verify responsive sizing and spacing on desktop and mobile.
+- [x] Save a checkpoint after verification.
+
