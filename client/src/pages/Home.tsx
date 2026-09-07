@@ -5,11 +5,14 @@
  */
 
 import { Link } from "wouter";
-import { Phone, Mail, ArrowRight } from "lucide-react";
+import { Phone, Mail, MessageCircle, ArrowRight } from "lucide-react";
+import FaqSection from "@/components/FaqSection";
 import Navigation from "@/components/Navigation";
 
 const ONLINE_AGENDA_URL =
   "https://www.supersaas.nl/schedule/balanergy/Balanergy";
+const CONTACT_PHONE = "06-42874405";
+const WHATSAPP_URL = "https://wa.me/31642874405";
 const HERO_IMAGE =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/hero-massage-7TjQGLyDBijKFozQs3yYZd.webp";
 
@@ -133,6 +136,77 @@ export default function Home() {
                   versterken en je ontspanning te waarborgen, door door te gaan
                   waar de gemiddelde massage eindigt.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Complaint-focused Section */}
+        <section className="py-16 md:py-24">
+          <div className="container">
+            <div className="max-w-3xl">
+              <p
+                className="font-body text-xs font-semibold uppercase tracking-widest mb-4"
+                style={{ color: "#8DA089" }}
+              >
+                Waarvoor kun je terecht?
+              </p>
+              <h2
+                className="font-display text-4xl md:text-5xl font-bold mb-6"
+                style={{ color: "#3E3A37" }}
+              >
+                Aandacht voor wat jij nu nodig hebt
+              </h2>
+              <p className="font-body text-lg leading-relaxed mb-8" style={{ color: "#6B6560" }}>
+                Je hoeft niet altijd met een duidelijke klacht binnen te komen. Misschien voel je spanning in je nek of schouders, heb je een vermoeide rug of wil je herstellen na het sporten. Ook wanneer je hoofd vol zit door stress, overprikkeling of een intensieve periode kan een rustig moment met aandacht voor je lichaam waardevol zijn.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                {[
+                  {
+                    title: "Lichamelijke spanning",
+                    text: "Bijvoorbeeld een stijve nek, vastzittende schouders, rugspanning of spiervermoeidheid.",
+                  },
+                  {
+                    title: "Stress & overprikkeling",
+                    text: "Een moment om te vertragen, weer contact te maken met je lichaam en ruimte te ervaren.",
+                  },
+                  {
+                    title: "Herstel & balans",
+                    text: "Ondersteuning bij herstel na sporten, lang zitten of een periode waarin je veel hebt gevraagd van jezelf.",
+                  },
+                ].map(item => (
+                  <div key={item.title} className="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 className="font-display text-2xl font-bold mb-3" style={{ color: "#3E3A37" }}>
+                      {item.title}
+                    </h3>
+                    <p className="font-body text-base leading-relaxed" style={{ color: "#6B6560" }}>
+                      {item.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <p className="font-body text-base leading-relaxed mb-8" style={{ color: "#6B6560" }}>
+                Balanergy stelt geen medische diagnose. Bij ernstige, nieuwe of aanhoudende klachten is het belangrijk om ook contact op te nemen met je huisarts of behandelaar.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href={`tel:${CONTACT_PHONE.replace(/[^0-9]/g, "")}`}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: "#8DA089" }}
+                >
+                  <Phone size={17} />
+                  Bel 06-42874405
+                </a>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded font-body text-sm font-semibold transition-opacity hover:opacity-80"
+                  style={{ border: "2px solid #8DA089", color: "#8DA089" }}
+                >
+                  <MessageCircle size={17} />
+                  App via WhatsApp
+                </a>
               </div>
             </div>
           </div>
@@ -343,6 +417,8 @@ export default function Home() {
           </div>
         </section>
 
+        <FaqSection />
+
         {/* CTA Section */}
         <section className="py-16 md:py-24">
           <div className="container">
@@ -463,12 +539,22 @@ export default function Home() {
               <div className="space-y-2 font-body text-sm">
                 <div className="flex items-center gap-2">
                   <Phone size={16} />
-                  <a
-                    href="tel:0642874405"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    06-42874405
-                  </a>
+                  <div className="flex flex-col gap-1">
+                    <a
+                      href="tel:0642874405"
+                      className="opacity-80 hover:opacity-100"
+                    >
+                      Bel 06-42874405
+                    </a>
+                    <a
+                      href={WHATSAPP_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-80 hover:opacity-100"
+                    >
+                      App via WhatsApp
+                    </a>
+                  </div>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail size={16} />

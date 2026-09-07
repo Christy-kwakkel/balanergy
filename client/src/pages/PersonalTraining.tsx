@@ -12,6 +12,7 @@ const ONLINE_AGENDA_URL =
   "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 const CONTACT_PHONE = "06-42874405";
 const CONTACT_EMAIL = "balanergy@hotmail.com";
+const WHATSAPP_URL = "https://wa.me/31642874405";
 
 const benefits = [
   "Yoga of Body Balance op individueel afgestemde manier",
@@ -313,7 +314,16 @@ export default function PersonalTraining() {
                     className="font-body text-base"
                     style={{ color: "#8DA089" }}
                   >
-                    {CONTACT_PHONE}
+                    Bel {CONTACT_PHONE}
+                  </a>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block font-body text-sm mt-1 hover:opacity-70"
+                    style={{ color: "#8DA089" }}
+                  >
+                    App via WhatsApp
                   </a>
                 </div>
               </div>
@@ -483,15 +493,25 @@ export default function PersonalTraining() {
             <div>
               <h4 className="font-body text-sm font-semibold mb-4">Contact</h4>
               <div className="space-y-2 font-body text-sm">
-                <div className="flex items-center gap-2">
-                  <Phone size={16} />
-                  <a
-                    href={`tel:${CONTACT_PHONE}`}
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    {CONTACT_PHONE}
-                  </a>
-                </div>
+                  <div className="flex items-start gap-2">
+                    <Phone size={16} className="mt-0.5 shrink-0" />
+                    <div className="flex flex-col gap-1">
+                      <a
+                        href={`tel:${CONTACT_PHONE}`}
+                        className="opacity-80 hover:opacity-100"
+                      >
+                        Bel {CONTACT_PHONE}
+                      </a>
+                      <a
+                        href={WHATSAPP_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="opacity-80 hover:opacity-100"
+                      >
+                        App via WhatsApp
+                      </a>
+                    </div>
+                  </div>
                 <div className="flex items-center gap-2">
                   <Mail size={16} />
                   <a

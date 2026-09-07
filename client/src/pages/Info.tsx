@@ -7,6 +7,7 @@
 import { Link } from "wouter";
 import { Phone, Mail, Download } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import FaqSection from "@/components/FaqSection";
 
 const documents = [
   {
@@ -118,6 +119,8 @@ export default function Info() {
           </div>
         </section>
 
+        <FaqSection />
+
         {/* Info Section */}
         <section className="py-12">
           <div className="container max-w-3xl">
@@ -145,7 +148,16 @@ export default function Info() {
                   style={{ backgroundColor: "#8DA089" }}
                 >
                   <Phone size={16} />
-                  bel: 06-42874405
+                  Bel 06-42874405
+                </a>
+                <a
+                  href="https://wa.me/31642874405"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-6 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: "#8DA089" }}
+                >
+                  App via WhatsApp
                 </a>
                 <a
                   href="mailto:balanergy@hotmail.com"
@@ -243,15 +255,25 @@ export default function Info() {
             <div>
               <h4 className="font-body text-sm font-semibold mb-4">Contact</h4>
               <div className="space-y-2 font-body text-sm">
-                <div className="flex items-center gap-2">
-                  <Phone size={16} />
-                  <a
-                    href="tel:0642874405"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    06-42874405
-                  </a>
-                </div>
+                  <div className="flex items-start gap-2">
+                    <Phone size={16} className="mt-0.5 shrink-0" />
+                    <div className="flex flex-col gap-1">
+                      <a
+                        href="tel:0642874405"
+                        className="opacity-80 hover:opacity-100"
+                      >
+                        Bel 06-42874405
+                      </a>
+                      <a
+                        href="https://wa.me/31642874405"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="opacity-80 hover:opacity-100"
+                      >
+                        App via WhatsApp
+                      </a>
+                    </div>
+                  </div>
                 <div className="flex items-center gap-2">
                   <Mail size={16} />
                   <a

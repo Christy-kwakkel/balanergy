@@ -12,7 +12,9 @@ const ONLINE_AGENDA_URL =
   "https://www.supersaas.nl/schedule/balanergy/Balanergy";
 const STUDIO_IMAGE =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663495181631/fJXKTVuKN2f6PMKBQCtqnD/about-mascha-dvPzjAqj7qTAQ57W5UwV4y.webp";
-const MASCHA_PHOTO = "/manus-storage/fotoMascha_fd942e35.webp";
+const MASCHA_PHOTO =
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310519663495181631/GAsEOPHZfyWVbgwD.webp";
+const WHATSAPP_URL = "https://wa.me/31642874405";
 
 export default function OverMij() {
   return (
@@ -496,15 +498,25 @@ export default function OverMij() {
             <div>
               <h4 className="font-body text-sm font-semibold mb-4">Contact</h4>
               <div className="space-y-2 font-body text-sm">
-                <div className="flex items-center gap-2">
-                  <Phone size={16} />
-                  <a
-                    href="tel:0642874405"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    06-42874405
-                  </a>
-                </div>
+                  <div className="flex items-start gap-2">
+                    <Phone size={16} className="mt-0.5 shrink-0" />
+                    <div className="flex flex-col gap-1">
+                      <a
+                        href="tel:0642874405"
+                        className="opacity-80 hover:opacity-100"
+                      >
+                        Bel 06-42874405
+                      </a>
+                      <a
+                        href={WHATSAPP_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="opacity-80 hover:opacity-100"
+                      >
+                        App via WhatsApp
+                      </a>
+                    </div>
+                  </div>
                 <div className="flex items-center gap-2">
                   <Mail size={16} />
                   <a

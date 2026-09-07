@@ -5,12 +5,13 @@
  */
 
 import { Link } from "wouter";
-import { Phone, Mail, BookOpen } from "lucide-react";
+import { Phone, Mail, MessageCircle, BookOpen } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import ExpandableCard from "@/components/ExpandableCard";
 
 const CONTACT_PHONE = "06-42874405";
 const CONTACT_EMAIL = "balanergy@hotmail.com";
+const WHATSAPP_URL = "https://wa.me/31642874405";
 
 const workshops = [
   {
@@ -204,7 +205,17 @@ export default function Workshops() {
                   style={{ backgroundColor: "#8DA089" }}
                 >
                   <Phone size={18} />
-                  {CONTACT_PHONE}
+                  Bel {CONTACT_PHONE}
+                </a>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded font-body text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  style={{ backgroundColor: "#8DA089" }}
+                >
+                  <MessageCircle size={18} />
+                  App via WhatsApp
                 </a>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
@@ -300,7 +311,16 @@ export default function Workshops() {
                   className="block font-body text-sm hover:underline"
                   style={{ color: "#6B6560" }}
                 >
-                  {CONTACT_PHONE}
+                  Bel {CONTACT_PHONE}
+                </a>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block font-body text-sm hover:underline"
+                  style={{ color: "#6B6560" }}
+                >
+                  App via WhatsApp
                 </a>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}

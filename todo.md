@@ -21,3 +21,21 @@
 - [x] Verify the page on desktop and mobile and run the project checks.
 - [x] Save a checkpoint after verification.
 
+
+## Current request
+- [x] Inspect the current user-provided photo reference and repository asset structure.
+- [x] Move the current photo to a Vercel-compatible Vercel asset location.
+- [x] Document the future workflow for all user-provided photos.
+- [x] Verify image loading and production build integrity.
+- [x] Save a local checkpoint without pushing to GitHub.
+
+
+## Current request
+- [x] Read the provided website analysis and inspect existing pages and phone-number usage.
+- [x] Draft a Dutch FAQ focused on treatments, preparation, safety, and booking.
+- [x] Add complaint-oriented physical and mental-wellbeing content, including stress and burnout support, with careful non-medical wording.
+- [x] Add the phone number to the homepage and label every phone occurrence as callable and WhatsApp-enabled.
+- [x] Keep the existing treatment-page pricing approach; do not add a homepage tariff section.
+- [x] Verify routes, responsive layout, phone links, and production build.
+- [x] Save a checkpoint without pushing to GitHub.
+

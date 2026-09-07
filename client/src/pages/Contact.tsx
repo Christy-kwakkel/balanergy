@@ -83,14 +83,17 @@ export default function Contact() {
                       className="font-body text-base font-semibold hover:opacity-70"
                       style={{ color: "#8DA089" }}
                     >
-                      06-42874405
+                      Bel 06-42874405
                     </a>
-                    <p
-                      className="font-body text-sm mt-2"
-                      style={{ color: "#6B6560" }}
+                    <a
+                      href="https://wa.me/31642874405"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block font-body text-sm mt-2 hover:opacity-70"
+                      style={{ color: "#8DA089" }}
                     >
-                      Ook bereikbaar via WhatsApp
-                    </p>
+                      App via WhatsApp
+                    </a>
                   </div>
                 </div>
               </div>
@@ -162,7 +165,7 @@ export default function Contact() {
                     <ul className="space-y-3 ml-4">
                       <li>✓ Online agenda (direct beschikbaarheid zien)</li>
                       <li>
-                        ✓ Telefonisch/app:{" "}
+                        ✓ Bel of app via WhatsApp:{" "}
                         <a
                           href="tel:0642874405"
                           className="font-semibold hover:opacity-70"
@@ -328,15 +331,25 @@ export default function Contact() {
             <div>
               <h4 className="font-body text-sm font-semibold mb-4">Contact</h4>
               <div className="space-y-2 font-body text-sm">
-                <div className="flex items-center gap-2">
-                  <Phone size={16} />
-                  <a
-                    href="tel:0642874405"
-                    className="opacity-80 hover:opacity-100"
-                  >
-                    06-42874405
-                  </a>
-                </div>
+                  <div className="flex items-start gap-2">
+                    <Phone size={16} className="mt-0.5 shrink-0" />
+                    <div className="flex flex-col gap-1">
+                      <a
+                        href="tel:0642874405"
+                        className="opacity-80 hover:opacity-100"
+                      >
+                        Bel 06-42874405
+                      </a>
+                      <a
+                        href="https://wa.me/31642874405"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="opacity-80 hover:opacity-100"
+                      >
+                        App via WhatsApp
+                      </a>
+                    </div>
+                  </div>
                 <div className="flex items-center gap-2">
                   <Mail size={16} />
                   <a
