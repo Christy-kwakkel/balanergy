@@ -19,7 +19,7 @@ const acties = [
     subtitle: "Actie",
     description: "Krijg een massage tegen dit scherpe actietarief!",
     fullDescription:
-      "Per persoon eenmalig te boeken tegen dit scherpe actietarief.|||Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
+      "Per persoon eenmalig te boeken tegen dit scherpe actietarief.\n\nNiet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
     prices: [
       { duration: "60 min", price: "€ 52,50" },
       { duration: "90 min", price: "€ 72,50" },
@@ -32,7 +32,7 @@ const acties = [
     subtitle: "Actie",
     description: "Boek een behandeling met Thaise en westerse technieken.",
     fullDescription:
-      "Thaise en westerse technieken worden gecombineerd.|||Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
+      "Thaise en westerse technieken worden gecombineerd.\n\nNiet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
     prices: [{ duration: "45 min", price: "€ 42,50" }],
     note: "Niet cumuleerbaar met andere acties, kortingen of aanbiedingen.",
   },
@@ -42,7 +42,7 @@ const acties = [
     subtitle: "Actie",
     description: "Ontdoe je huid van dode huidcellen.",
     fullDescription:
-      "Om je huid gezond en mooi te laten worden en houden, is het belangrijk deze zo nu en dan te ontdoen van dode huidcellen door deze te scrubben.|||Omdat je zelf niet bij je rug kunt kun je vanaf nu een scrub van de achterkant van je lichaam boeken (rug, billen indien gewenst, achterkant benen) voor slechts 6,95 extra bij je behandeling. Vermeld dit bij je boeking en krijg deze heerlijk scrub met een essentiële olie naar keuze bij je behandeling!|||Indien je via de online agenda reserveert voor een massage, vermeld dan in de opmerking erbij dat je ook graag een scrub behandeling wilt toevoegen.",
+      "Om je huid gezond en mooi te laten worden en houden, is het belangrijk deze zo nu en dan te ontdoen van dode huidcellen door deze te scrubben.\n\nOmdat je zelf niet bij je rug kunt kun je vanaf nu een scrub van de achterkant van je lichaam boeken (rug, billen indien gewenst, achterkant benen) voor slechts 6,95 extra bij je behandeling. Vermeld dit bij je boeking en krijg deze heerlijk scrub met een essentiële olie naar keuze bij je behandeling!\n\nIndien je via de online agenda reserveert voor een massage, vermeld dan in de opmerking erbij dat je ook graag een scrub behandeling wilt toevoegen.",
     prices: [{ duration: "Extra", price: "€ 6,95" }],
     note: "Voeg toe bij je boeking in de opmerkingen.",
   },
@@ -82,7 +82,7 @@ const seizoensArrangementen = [
     description:
       "Warm voetbad met kaneel of sinaasappel olie, therapeutische balsem en Thaise massage met acupressuur en stretch technieken. Keuze tussen ontspannende of therapeutische massage.",
     fullDescription:
-      "Deze massage start met een warm voetbad met essentiële naar keuze kaneel of sinaasappel olie. Vervolgens worden rug, nek, shoulders, indien gewenst bilspieren, en achterkant benen ingesmeerd met een verwarmende therapeutische balsem, waardoor de acupressuur en stretch massage technieken extra functioneel worden en je spieren nog beter loskomen.|||Hierna trek je een joggingbroek en shirt of vest met lange mouwen aan volgt een Thaise massage van 60 of 90 minuten, met keuze uit een ontspannende of therapeutische massage. Bij 60 minuten betekent dat voeten, benen, armen, handen, achterkant benen, bilspieren, rug, nek, en shoulders en als afsluiter een zittende houding waarin je shoulders gestrekt en gemasseerd worden.|||Bij 90 minuten wordt zijligging toegevoegd en krijg je ook een hoofdmassage. In overleg is de inhoud persoonlijk af te stemmen.",
+      "Deze massage start met een warm voetbad met essentiële naar keuze kaneel of sinaasappel olie. Vervolgens worden rug, nek, shoulders, indien gewenst bilspieren, en achterkant benen ingesmeerd met een verwarmende therapeutische balsem, waardoor de acupressuur en stretch massage technieken extra functioneel worden en je spieren nog beter loskomen.\n\nHierna trek je een joggingbroek en shirt of vest met lange mouwen aan volgt een Thaise massage van 60 of 90 minuten, met keuze uit een ontspannende of therapeutische massage. Bij 60 minuten betekent dat voeten, benen, armen, handen, achterkant benen, bilspieren, rug, nek, en shoulders en als afsluiter een zittende houding waarin je shoulders gestrekt en gemasseerd worden.\n\nBij 90 minuten wordt zijligging toegevoegd en krijg je ook een hoofdmassage. In overleg is de inhoud persoonlijk af te stemmen.",
     prices: [
       { duration: "60 min", price: "€ 62,50" },
       { duration: "90 min", price: "€ 82,50" },

@@ -39,3 +39,27 @@
 - [x] Verify routes, responsive layout, phone links, and production build.
 - [x] Save a checkpoint without pushing to GitHub.
 
+
+## Workflow preference
+- [ ] Automatically create a rollback checkpoint after each completed website change.
+- [ ] Do not push or sync to GitHub unless the user explicitly requests it.
+- [ ] Before creating a checkpoint, verify whether the checkpoint mechanism can avoid GitHub synchronization; ask permission if it cannot.
+
+
+## Current request
+- [x] Inspect the current Manus preview service status.
+- [x] Refresh or restart the preview service if needed.
+- [x] Verify the new preview URL and report it to the user.
+
+
+## Current request
+- [x] Inspect the preview service and temporary certificate status.
+- [x] Refresh or replace the preview endpoint without publishing.
+- [x] Test the refreshed preview and report the result.
+
+
+## Current request
+- [ ] Find all `|||` separators in arrangement descriptions.
+- [ ] Replace them with real paragraph line breaks without changing the wording.
+- [ ] Verify no arrangement still contains `|||` and save a local checkpoint without pushing.
+
